@@ -57,7 +57,9 @@ document.addEventListener("DOMContentLoaded", () => {
         acc.addEventListener("click", (ev) => {
             ev.preventDefault();
             const isOpen = panelOf(acc).classList.contains("open");
-            accordions.forEach((t) => { if (t !== acc) setState(t, false); });
+            // solo cierra las entradas de la MISMA sección (01 / 02 / 03 son independientes)
+            const scope = acc.closest("section") || document;
+            scope.querySelectorAll(".accordion-trigger").forEach((t) => { if (t !== acc) setState(t, false); });
             setState(acc, !isOpen);
         });
     });
