@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Adrián Valencia — IA & RRHH</title>
+    <meta name="description" content="Junior en selección y procesos. Aplico la IA a proyectos sin ceder el criterio — humano.">
+    <meta name="author" content="Adrián Valencia Ríos">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Adrián Valencia — IA & RRHH">
+    <meta property="og:description" content="Junior en selección y procesos. Aplico la IA a proyectos sin ceder el criterio — humano.">
+    <meta property="og:locale" content="es_ES">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter Tight', 'sans-serif'],
+                        body: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        'carbon': '#0A0A0A',
+                        'off-white': '#FAFAFA',
+                        'accent': '#FF3B30',
+                    },
+                    spacing: {
+                        'container': '5vw',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-off-white text-carbon selection:bg-carbon selection:text-white antialiased overflow-x-hidden font-body">
+
+    <div class="noise-overlay" aria-hidden="true"></div>
+    <div class="custom-cursor hidden md:block" id="cursor" aria-hidden="true"></div>
+
+    <!-- NAV -->
+    <nav id="navbar" class="fixed top-0 w-full z-50 px-6 md:px-container py-6 flex justify-between items-center mix-blend-difference text-white transition-all duration-500">
+        <a href="#" class="font-semibold tracking-tight text-xl relative z-10 font-sans" id="nav-logo" aria-label="Inicio">A.V.</a>
+
+        <div class="flex items-center gap-4 md:gap-6 relative z-10">
+            <span id="time" class="hidden md:block font-mono text-[10px] opacity-70" aria-live="off">00:00:00</span>
+            <a href="public/docs/cv.pdf" download="CV-Adrian-Valencia.pdf" type="application/pdf" id="nav-btn" class="group relative inline-flex items-center gap-2 px-5 py-2.5 bg-white text-carbon rounded-full font-mono text-[11px] uppercase tracking-wider font-bold overflow-hidden transition-all duration-300 hover:shadow-lg" aria-label="Descargar CV en PDF">
+                <span class="relative z-10 btn-text transition-colors duration-300 group-hover:text-white">Descargar CV</span>
+                <div class="absolute inset-0 bg-carbon transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300 ease-out z-0" aria-hidden="true"></div>
+            </a>
+        </div>
+    </nav>
+
+    <main>
+        <!-- HERO -->
+        <section id="hero" class="hero flex flex-col justify-end px-6 md:px-container max-w-[1920px] mx-auto pt-32 md:pt-40 pb-16 md:pb-24" aria-label="Presentación">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-end">
+                <div class="lg:col-span-7">
+                    <div class="mb-6 md:mb-8">
+                        <span class="inline-flex items-center gap-2 border border-carbon/20 rounded-full px-3 py-1 font-mono text-[10px] uppercase tracking-wide bg-white/50 backdrop-blur-sm">
+                            <span class="relative flex h-1.5 w-1.5" aria-hidden="true">
+                                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75"></span>
+                                <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-green-500"></span>
+                            </span>
+                            IA & RRHH.
+                        </span>
+                    </div>
+                    <h1 class="font-sans text-[17vw] md:text-[10vw] leading-[0.9] hero-name -ml-1 font-medium">Adrián<br>Valencia<span class="text-accent">.</span></h1>
+                </div>
+
+                <div class="lg:col-span-5 lg:pb-4">
+                    <p class="hero-bio text-lg md:text-xl lg:text-2xl font-light leading-relaxed mb-10 max-w-md text-carbon/90">Junior en selección y procesos. Aplico la IA a proyectos sin ceder el criterio — humano.</p>
+
+                    <div class="grid grid-cols-2 gap-8 border-t border-black/10 pt-6 font-mono text-xs uppercase tracking-wider text-carbon/60">
+                        <div>
+                            <span class="block text-carbon mb-2 font-medium">Ubicación</span>
+                            Sevilla, ES
+                        </div>
+                        <div>
+                            <span class="block text-carbon mb-2 font-medium">Enfoque</span>
+                            Selección / Personal / IA
+                        </div>
+                    </div>
+
+                    <div class="flex gap-6 mt-8">
+                        <a href="https://www.linkedin.com/in/adrianvalenciarios" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="text-carbon/80 hover:text-accent transition-colors transform hover:scale-110 duration-300">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                        </a>
+                        <a href="https://adrianvalencia.framer.website/" target="_blank" rel="noopener noreferrer" aria-label="Web personal" class="text-carbon/80 hover:text-accent transition-colors transform hover:scale-110 duration-300">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M12 21a9 9 0 100-18 9 9 0 000 18z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M3.6 9h16.8M3.6 15h16.8M12 3c2.5 2.7 3.8 5.8 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.8-3.8-9s1.3-6.3 3.8-9z"/></svg>
+                        </a>
+                        <a href="mailto:adrianvalencia.rrhh@gmail.com" aria-label="Email" class="text-carbon/80 hover:text-accent transition-colors transform hover:scale-110 duration-300">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- (01) TRABAJO SELECCIONADO -->
+        <section id="trabajo" class="px-6 md:px-container max-w-[1920px] mx-auto mb-24 md:mb-40 pt-8 md:pt-12" aria-labelledby="work-label">
+            <div class="flex items-end justify-between gap-4 mb-4 md:mb-8 border-b border-black pb-4">
+                <span id="work-label" class="font-mono text-xs uppercase tracking-widest text-carbon/50">(01) — Trabajo seleccionado</span>
+                <span class="font-mono text-xs uppercase tracking-widest text-carbon/50 whitespace-nowrap">2025 / 2026</span>
+            </div>
+
+            <!-- E1 · AGENTES (abierta por defecto) -->
+            <article class="group border-b border-black/10">
+                <button type="button" class="accordion-trigger w-full py-8 md:py-14 flex items-center justify-between text-left transition-opacity duration-300 hover:opacity-60" aria-expanded="true" aria-controls="panel-e1">
+                    <div class="flex flex-col gap-2 min-w-0">
+                        <span class="w-fit border border-accent text-accent px-2 py-0.5 rounded text-[10px] uppercase font-mono tracking-wide">Sistema propio</span>
+                        <h3 class="entry-title font-sans font-medium tracking-tighter group-hover:translate-x-2 transition-transform duration-500">AGENTES</h3>
+                    </div>
+                    <div class="flex items-center gap-6 md:gap-12 shrink-0 pl-4">
+                        <div class="hidden md:block text-right font-mono text-xs uppercase tracking-wider opacity-60">IA | Notion</div>
+                        <span class="arrow text-2xl w-6 text-center" aria-hidden="true">↓</span>
+                    </div>
+                </button>
+                <div id="panel-e1" class="accordion-content open" role="region" aria-label="AGENTES">
+                    <div class="accordion-inner">
+                        <div class="entry-body pb-10 md:pb-14">
+                            <div class="md:hidden font-mono text-[10px] uppercase tracking-wider text-carbon/50 mb-5">IA | Notion</div>
+                            <div class="entry-grid">
+                                <div class="entry-text">
+                                    <p class="entry-copy text-base md:text-lg font-light leading-relaxed">Sistema agéntico personal con múltiples agentes especializados. Memoria compartida en Notion, Grok Bot como escenario de actuación y un método común: protocolos, skills y prompt engineering para adecuar la red a mí. Utilicé este proyecto para planificar mi estrategia profesional y personal a largo plazo. Rediseñé mi perfil en LinkedIn, creé una web personal y ordené mi formación hacia el perfil que busco.</p>
+                                    <div class="entry-link"><a href="https://adrianvalenciarrhh-rgb.github.io/Gabinete-/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 border-b border-carbon pb-1 hover:text-accent hover:border-accent transition-colors font-mono text-xs uppercase tracking-wide">Visitar Proyecto ↗</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- E2 · CRAFTING VISIBILITY -->
+            <article class="group border-b border-black/10">
+                <button type="button" class="accordion-trigger w-full py-8 md:py-14 flex items-center justify-between text-left transition-opacity duration-300 hover:opacity-60" aria-expanded="false" aria-controls="panel-e2">
+                    <div class="min-w-0">
+                        <h3 class="entry-title font-sans font-medium tracking-tighter group-hover:translate-x-2 transition-transform duration-500">CRAFTING VISIBILITY</h3>
+                    </div>
+                    <div class="flex items-center gap-6 md:gap-12 shrink-0 pl-4">
+                        <div class="hidden md:block text-right font-mono text-xs uppercase tracking-wider opacity-60">Marca, personal</div>
+                        <span class="arrow text-2xl w-6 text-center" aria-hidden="true">↓</span>
+                    </div>
+                </button>
+                <div id="panel-e2" class="accordion-content" role="region" aria-label="CRAFTING VISIBILITY">
+                    <div class="accordion-inner">
+                        <div class="entry-body pb-10 md:pb-14">
+                            <div class="md:hidden font-mono text-[10px] uppercase tracking-wider text-carbon/50 mb-5">Marca, personal</div>
+                            <div class="entry-grid entry-grid--media">
+                                <div class="entry-text">
+                                    <p class="entry-copy text-base md:text-lg font-light leading-relaxed">Diseño de mi propia imagen como un proyecto: ser significativo. Construí mi plataforma personal en Framer y alineé LinkedIn con ella, mostrando quién soy. Colaboré en una comunidad digital defendiendo mi criterio y pensamientos, logrando +25k likes en una publicación única. Empecé por mi propio relato — lo externo es una consecuencia más.</p>
+                                    <div class="entry-link"><a href="https://adrianvalencia.framer.website/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 border-b border-carbon pb-1 hover:text-accent hover:border-accent transition-colors font-mono text-xs uppercase tracking-wide">Visitar Proyecto ↗</a></div>
+                                </div>
+                                <div class="project-figure project-figure--square relative shadow-xl rounded overflow-hidden bg-carbon/5 entry-media"><img src="public/img/crafting-visibility.jpg" alt="Atardecer en el campo con un eucalipto en primer plano, imagen de la marca personal de Adrián Valencia" width="1000" height="1000" loading="lazy" decoding="async" class="w-full h-full object-cover"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- E3 · SONIDO -->
+            <article class="group border-b border-black/10">
+                <button type="button" class="accordion-trigger w-full py-8 md:py-14 flex items-center justify-between text-left transition-opacity duration-300 hover:opacity-60" aria-expanded="false" aria-controls="panel-e3">
+                    <div class="min-w-0">
+                        <h3 class="entry-title font-sans font-medium tracking-tighter group-hover:translate-x-2 transition-transform duration-500">SONIDO</h3>
+                    </div>
+                    <div class="flex items-center gap-6 md:gap-12 shrink-0 pl-4">
+                        <div class="hidden md:block text-right font-mono text-xs uppercase tracking-wider opacity-60">Instagram | Conexión</div>
+                        <span class="arrow text-2xl w-6 text-center" aria-hidden="true">↓</span>
+                    </div>
+                </button>
+                <div id="panel-e3" class="accordion-content" role="region" aria-label="SONIDO">
+                    <div class="accordion-inner">
+                        <div class="entry-body pb-10 md:pb-14">
+                            <div class="md:hidden font-mono text-[10px] uppercase tracking-wider text-carbon/50 mb-5">Instagram | Conexión</div>
+                            <div class="entry-grid entry-grid--media">
+                                <div class="entry-text">
+                                    <p class="entry-copy text-base md:text-lg font-light leading-relaxed">Desde octubre de 2025 colaboro en remoto como Music Content Collaborator en @weloveurban, plataforma urbana de cultura musical en el cruce entre el arte y la sensibilidad (EN/ES). Mi trabajo marcó a personas y les dio fuerzas para continuar. Comunidad: +200K seguidores · +3.000 posts.</p>
+                                    <div class="entry-link"><a href="https://www.instagram.com/weloveurban/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 border-b border-carbon pb-1 hover:text-accent hover:border-accent transition-colors font-mono text-xs uppercase tracking-wide">Visitar Proyecto ↗</a></div>
+                                </div>
+                                <div class="project-figure project-figure--square relative shadow-xl rounded overflow-hidden bg-carbon/5 entry-media"><img src="public/img/weloveurban.jpg" alt="Logotipo de WE ♥ URBAN sobre una fotografía desenfocada de tonos verdes y rojos, publicación de @weloveurban" width="1000" height="1000" loading="lazy" decoding="async" class="w-full h-full object-cover"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- E4 · CARLOS V EDUCATION -->
+            <article class="group border-b border-black/10">
+                <button type="button" class="accordion-trigger w-full py-8 md:py-14 flex items-center justify-between text-left transition-opacity duration-300 hover:opacity-60" aria-expanded="false" aria-controls="panel-e4">
+                    <div class="min-w-0">
+                        <h3 class="entry-title font-sans font-medium tracking-tighter text-carbon/70 group-hover:translate-x-2 transition-transform duration-500">CARLOS V EDUCATION</h3>
+                    </div>
+                    <div class="flex items-center gap-6 md:gap-12 shrink-0 pl-4">
+                        <div class="hidden md:block text-right font-mono text-xs uppercase tracking-wider opacity-60">Selección | Admin. Personal</div>
+                        <span class="arrow text-2xl w-6 text-center" aria-hidden="true">↓</span>
+                    </div>
+                </button>
+                <div id="panel-e4" class="accordion-content" role="region" aria-label="CARLOS V EDUCATION">
+                    <div class="accordion-inner">
+                        <div class="entry-body pb-10 md:pb-14">
+                            <div class="md:hidden font-mono text-[10px] uppercase tracking-wider text-carbon/50 mb-5">Selección | Admin. Personal</div>
+                            <div class="entry-grid">
+                                <div class="entry-text">
+                                    <p class="entry-copy text-base md:text-lg font-light leading-relaxed">Selección y administración de personal en una escuela de idiomas de Sevilla. Participé en la contratación del equipo del Summer Camp con más de 100 incorporaciones y en su gestión laboral de principio a fin. Contribuí a digitalizar los procesos del área, con herramientas como Sésame o Gescontrata, e incorporé la IA en los procedimientos.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- (02) FORMACIÓN -->
+        <section id="formacion" class="px-6 md:px-container max-w-[1920px] mx-auto mb-24 md:mb-40" aria-labelledby="form-label">
+            <div class="flex items-end justify-between gap-4 mb-4 md:mb-8 border-b border-black pb-4">
+                <span id="form-label" class="font-mono text-xs uppercase tracking-widest text-carbon/50">(02) — Formación</span>
+                <span class="font-mono text-xs uppercase tracking-widest text-carbon/50 whitespace-nowrap">2021 / 2026</span>
+            </div>
+
+            <article class="edu-entry border-b border-black/10 py-8 md:py-12">
+                <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-2 md:gap-8 mb-4 md:mb-6">
+                    <h3 class="edu-title font-sans font-medium tracking-tighter">UNIVERSIDAD DE SEVILLA</h3>
+                    <span class="font-mono text-[10px] md:text-xs uppercase tracking-wider text-carbon/50 md:text-right shrink-0">Grado | RRLL y RRHH</span>
+                </div>
+                <p class="entry-copy text-base md:text-lg font-light leading-relaxed text-carbon/90">Grado en Relaciones Laborales y Recursos Humanos (2021–2026), con foco en selección, gestión de personas y organización del trabajo.</p>
+            </article>
+
+            <article class="edu-entry border-b border-black/10 py-8 md:py-12">
+                <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-2 md:gap-8 mb-4 md:mb-6">
+                    <h3 class="edu-title font-sans font-medium tracking-tighter">IA & DIGITAL</h3>
+                    <span class="font-mono text-[10px] md:text-xs uppercase tracking-wider text-carbon/50 md:text-right shrink-0">Cursos 2025</span>
+                </div>
+                <ul class="course-list" aria-label="Cursos 2025">
+                    <li class="course-row"><span class="course-name">Prompting Responsable</span><span class="course-issuer">Microsoft</span></li>
+                    <li class="course-row"><span class="course-name">Introducción a la IA Generativa</span><span class="course-issuer">MIT PE</span></li>
+                    <li class="course-row"><span class="course-name">Transformación Digital</span><span class="course-issuer">MIT PE</span></li>
+                    <li class="course-row"><span class="course-name">Google IA y productividad</span><span class="course-issuer">Google</span></li>
+                    <li class="course-row"><span class="course-name">RRHH Contratación IT</span><span class="course-issuer">LinkedIn Learning</span></li>
+                    <li class="course-row"><span class="course-name">English Fundamentals</span><span class="course-issuer">UPenn</span></li>
+                </ul>
+            </article>
+
+            <article class="edu-entry border-b border-black/10 py-8 md:py-12">
+                <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-2 md:gap-8 mb-4 md:mb-6">
+                    <h3 class="edu-title font-sans font-medium tracking-tighter">McKINSEY.ORG FORWARD</h3>
+                    <span class="font-mono text-[10px] md:text-xs uppercase tracking-wider text-carbon/50 md:text-right shrink-0">Programa | En curso</span>
+                </div>
+                <p class="entry-copy text-base md:text-lg font-light leading-relaxed text-carbon/90">Seleccionado para el programa Forward de McKinsey.org (2026), centrado en resolución de problemas, comunicación y adaptabilidad en el trabajo. En curso.</p>
+            </article>
+
+            <article class="edu-entry border-b border-black/10 py-8 md:py-12">
+                <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-2 md:gap-8 mb-4 md:mb-6">
+                    <h3 class="edu-title font-sans font-medium tracking-tighter">INGLÉS</h3>
+                    <span class="font-mono text-[10px] md:text-xs uppercase tracking-wider text-carbon/50 md:text-right shrink-0">Preparando APTIS C1</span>
+                </div>
+                <p class="entry-copy text-base md:text-lg font-light leading-relaxed text-carbon/90">Preparación del APTIS C1 para trabajar con soltura en entornos internacionales.</p>
+            </article>
+        </section>
+
+        <!-- APTITUDES CLAVE -->
+        <section id="aptitudes" class="px-6 md:px-container max-w-[1920px] mx-auto mb-24 md:mb-40" aria-labelledby="apt-heading">
+            <div class="border-t border-black pt-12">
+                <h2 id="apt-heading" class="font-sans text-2xl md:text-3xl font-medium tracking-tight mb-10 md:mb-12">Aptitudes clave</h2>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-10 md:gap-12 font-mono text-[11px] md:text-xs uppercase tracking-wider">
+                    <div>
+                        <span class="block text-carbon/40 mb-4 border-b border-carbon/10 pb-2">PERSONAS</span>
+                        <ul class="space-y-3">
+                            <li>Selección de personal</li>
+                            <li>Reclutamiento</li>
+                            <li>Administración de personal</li>
+                            <li>Contratación laboral</li>
+                            <li>Entrevistas</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <span class="block text-carbon/40 mb-4 border-b border-carbon/10 pb-2">IA & DIGITAL</span>
+                        <ul class="space-y-3">
+                            <li>IA generativa</li>
+                            <li>Prompt Engineering</li>
+                            <li>Transformación digital</li>
+                            <li>Sistemas agénticos</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <span class="block text-carbon/40 mb-4 border-b border-carbon/10 pb-2">SOFT SKILLS</span>
+                        <ul class="space-y-3">
+                            <li>Comunicación</li>
+                            <li>Mediación</li>
+                            <li>Trabajo bajo presión</li>
+                            <li>Pensamiento crítico</li>
+                            <li>Criterio</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <span class="block text-carbon/40 mb-4 border-b border-carbon/10 pb-2">IDIOMAS</span>
+                        <ul class="space-y-3">
+                            <li>Español (nativo)</li>
+                            <li>Inglés (preparando APTIS C1)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-carbon text-white py-16 md:py-24 px-6 md:px-container relative overflow-hidden">
+        <div class="max-w-[1920px] mx-auto relative z-10 flex flex-col justify-between min-h-[30vh] md:min-h-[40vh]">
+            <h2 class="footer-name font-sans font-medium leading-[0.85] mb-12 hover-trigger selection:bg-accent">Adrián V.</h2>
+
+            <div class="flex flex-col md:flex-row justify-between md:items-end gap-10 md:gap-12 border-t border-white/15 pt-10 md:pt-12">
+                <div class="flex flex-col gap-4 min-w-0">
+                    <a href="mailto:adrianvalencia.rrhh@gmail.com" class="text-lg sm:text-xl md:text-2xl hover:text-accent transition-colors hover-trigger font-light break-all sm:break-normal">adrianvalencia.rrhh@gmail.com</a>
+                    <span class="font-mono text-sm text-white/50">Sevilla, España</span>
+                </div>
+                <div class="flex flex-wrap gap-6 md:gap-12 font-mono text-xs uppercase tracking-widest">
+                    <a href="https://www.linkedin.com/in/adrianvalenciarios" target="_blank" rel="noopener noreferrer" class="hover:text-accent transition-colors">LinkedIn</a>
+                    <a href="https://adrianvalencia.framer.website/" target="_blank" rel="noopener noreferrer" class="hover:text-accent transition-colors">Web personal</a>
+                    <a href="https://adrianvalenciarrhh-rgb.github.io/Gabinete-/" target="_blank" rel="noopener noreferrer" class="hover:text-accent transition-colors">Gabinete</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.29/dist/lenis.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
