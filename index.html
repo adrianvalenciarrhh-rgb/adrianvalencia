@@ -53,9 +53,13 @@
     <nav id="navbar" class="fixed top-0 w-full z-50 px-6 md:px-container py-6 flex justify-between items-center mix-blend-difference text-white transition-all duration-500">
         <a href="#" class="font-semibold tracking-tight text-xl relative z-10 font-sans" id="nav-logo" aria-label="Inicio">A.V.</a>
 
-        <div class="flex items-center gap-4 md:gap-6 relative z-10">
+        <div class="flex items-center gap-2 md:gap-4 relative z-10">
             <span id="time" class="hidden md:block font-mono text-[10px] opacity-70" aria-live="off">00:00:00</span>
-            <a href="public/docs/cv.pdf" download="CV-Adrian-Valencia.pdf" type="application/pdf" id="nav-btn" class="group relative inline-flex items-center gap-2 px-5 py-2.5 bg-white text-carbon rounded-full font-mono text-[11px] uppercase tracking-wider font-bold overflow-hidden transition-all duration-300 hover:shadow-lg" aria-label="Descargar CV en PDF">
+            <a href="https://adrianvalencia.framer.website/" target="_blank" rel="noopener" id="nav-btn-web" class="group relative inline-flex items-center px-3.5 md:px-5 py-2.5 border border-white text-white rounded-full font-mono text-[10px] md:text-[11px] uppercase tracking-wider font-bold overflow-hidden transition-all duration-300" aria-label="Abrir mi web personal en una pestaña nueva">
+                <span class="relative z-10 btn-web-text transition-colors duration-300 group-hover:text-carbon">Web personal</span>
+                <div class="absolute inset-0 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300 ease-out z-0" aria-hidden="true"></div>
+            </a>
+            <a href="public/docs/cv.pdf" download="CV-Adrian-Valencia.pdf" type="application/pdf" id="nav-btn" class="group relative inline-flex items-center gap-2 px-3.5 md:px-5 py-2.5 bg-white text-carbon rounded-full font-mono text-[10px] md:text-[11px] uppercase tracking-wider font-bold overflow-hidden transition-all duration-300 hover:shadow-lg" aria-label="Descargar CV en PDF">
                 <span class="relative z-10 btn-text transition-colors duration-300 group-hover:text-white">Descargar CV</span>
                 <div class="absolute inset-0 bg-carbon transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300 ease-out z-0" aria-hidden="true"></div>
             </a>
@@ -387,7 +391,7 @@
     </main>
 
     <!-- FOOTER -->
-    <footer class="bg-carbon text-white py-16 md:py-24 px-6 md:px-container relative overflow-hidden">
+    <footer id="site-footer" class="text-white py-16 md:py-24 px-6 md:px-container relative overflow-hidden">
         <div class="max-w-[1920px] mx-auto relative z-10 flex flex-col justify-between min-h-[30vh] md:min-h-[40vh]">
             <h2 class="footer-name font-sans font-medium leading-[0.85] mb-12 hover-trigger selection:bg-accent">Adrián V.</h2>
 
