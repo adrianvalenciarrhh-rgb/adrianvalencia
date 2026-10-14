@@ -241,5 +241,5 @@ a:focus-visible {
 }
 #navbar { z-index: 10000; }
 
-#trabajo { scroll-margin-top: 6.5rem; }
-@media (min-width: 768px) { #trabajo { scroll-margin-top: 7.5rem; } }
+#trabajo { scroll-margin-top: 3.5rem; }
+@media (min-width: 768px) { #trabajo { scroll-margin-top: 4.25rem; } }
