@@ -240,3 +240,6 @@ a:focus-visible {
     z-index: 9999; /* mismo nivel que el ruido, pero después en el DOM: lo tapa */
 }
 #navbar { z-index: 10000; }
+
+#trabajo { scroll-margin-top: 6.5rem; }
+@media (min-width: 768px) { #trabajo { scroll-margin-top: 7.5rem; } }
