@@ -80,8 +80,11 @@ body { cursor: none; }
     overflow-wrap: anywhere;
 }
 
-/* HERO: sin min-h-screen, altura contenida */
-.hero { min-height: auto; }
+/* HERO: ocupa la primera pantalla (svh con vh de respaldo) */
+.hero { min-height: 100vh; min-height: 100svh; }
+.hero-scroll { position: absolute; left: 50%; bottom: 1.75rem; transform: translateX(-50%); font-size: 1.25rem; line-height: 1; padding: .5rem; animation: hero-scroll-bob 2.4s ease-in-out infinite; }
+@keyframes hero-scroll-bob { 0%,100% { transform: translate(-50%,0); } 50% { transform: translate(-50%,4px); } }
+@media (prefers-reduced-motion: reduce) { .hero-scroll { animation: none; } }
 
 /* FOOTER: nombre con contraste alto */
 .footer-name {
