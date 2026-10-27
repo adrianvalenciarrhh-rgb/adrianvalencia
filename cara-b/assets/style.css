@@ -379,8 +379,12 @@ a:hover .bw img,a:focus-visible .bw img,a.bw:hover img,a.bw:focus-visible img{fi
 .abody .prose.main em{font-family:"Archivo It",var(--sans);font-style:italic;font-weight:400;font-size:1em;line-height:inherit;color:inherit}
 .abody .prose.main p.p-x{margin-block:1.6em}
 /* Ley Innata: cita en cursiva separada de la frase siguiente por el mismo aire que entre párrafos */
-.abody .prose.main em.q-b{display:block;margin-bottom:1.25em}
-.abody .prose.main em.q-b+br{display:none}
+/* Citas sueltas (t161): mismo aire por encima y por debajo */
+.abody .prose.main .q-b{display:block;margin-block:2em}
+.abody .prose.main p>.q-b:first-child{margin-top:2em}
+.abody .prose.main .q-b+br{display:none}
+.abody .prose p.p-q{margin-block:2em}
+.abody .prose p.p-q:first-child{margin-top:0}
 /* Escuchar: gesto mono pequeño y atenuado bajo el título (o solo, si no hay título) */
 .abody .prose.main p.p-l{font:400 11.5px/1.6 var(--mono);letter-spacing:.08em;text-transform:uppercase;margin-bottom:2.4em}
 .abody .prose.main p.p-k:has(+p.p-l){margin-bottom:.9em}
