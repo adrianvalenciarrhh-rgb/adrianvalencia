@@ -2,6 +2,7 @@
 @font-face{font-family:"Archivo";src:url(fonts/Archivo-var.woff2) format("woff2");font-weight:300 900;font-stretch:62% 100%;font-display:swap}
 @font-face{font-family:"Instrument Serif";src:url(fonts/InstrumentSerif-Regular.woff2) format("woff2");font-weight:400;font-style:normal;font-display:swap}
 @font-face{font-family:"Instrument Serif";src:url(fonts/InstrumentSerif-Italic.woff2) format("woff2");font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:"Archivo It";src:url(fonts/Archivo-Italic.woff2) format("woff2");font-weight:400 600;font-style:italic;font-display:swap}
 @font-face{font-family:"JetBrains Mono";src:url(fonts/JetBrainsMono-Regular.woff2) format("woff2");font-weight:400;font-display:swap}
 @font-face{font-family:"Anton";src:url(fonts/Anton-Regular.woff2) format("woff2");font-weight:400;font-display:swap}
 :root{--ink:#0a0a0a;--ink2:#121212;--ink3:#1a1a1a;--bone:#efe9df;--mute:#9b968f;--line:rgba(239,233,223,.12);--line2:rgba(239,233,223,.26);--acc:#ff5b2e;
@@ -368,7 +369,25 @@ a:hover .bw img,a:focus-visible .bw img,a.bw:hover img,a.bw:focus-visible img{fi
 .ag img{width:100%;aspect-ratio:1;object-fit:cover}
 .abody{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:clamp(36px,4vw,64px) var(--gap);margin-top:clamp(64px,8vw,120px)}
 .abody .prose{grid-column:4/span 7}
-.abody .prose.main{font-size:clamp(18px,1.4vw,21px)}
+/* Journal · textos largos: mismo sistema que Proyectos (.prose-pd) */
+.abody .prose.main{line-height:1.8;max-width:60ch}
+.abody .prose.main p+p{margin-top:1.25em}
+.abody .prose.main p.p-k{font:500 12.5px/1.6 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--bone);margin-bottom:2.4em}
+.abody .prose.main p.p-k+p{margin-top:0}
+.abody .prose.main .sig{margin-top:2.6em;color:var(--mute)}
+/* Cursiva natural: misma familia, tamaño y color del cuerpo (Archivo Italic) */
+.abody .prose.main em{font-family:"Archivo It",var(--sans);font-style:italic;font-weight:400;font-size:1em;line-height:inherit;color:inherit}
+.abody .prose.main p.p-x{margin-block:1.6em}
+/* Ley Innata: cita en cursiva separada de la frase siguiente por el mismo aire que entre párrafos */
+.abody .prose.main em.q-b{display:block;margin-bottom:1.25em}
+.abody .prose.main em.q-b+br{display:none}
+/* Escuchar: gesto mono pequeño y atenuado bajo el título (o solo, si no hay título) */
+.abody .prose.main p.p-l{font:400 11.5px/1.6 var(--mono);letter-spacing:.08em;text-transform:uppercase;margin-bottom:2.4em}
+.abody .prose.main p.p-k:has(+p.p-l){margin-bottom:.9em}
+.abody .prose.main p.p-k+p.p-l{margin-top:0}
+.abody .prose.main p.p-l+p{margin-top:0}
+.abody .prose.main p.p-l a{color:var(--mute);text-decoration:none;display:inline-block;padding-block:6px;margin-block:-6px;transition:color .2s}
+.abody .prose.main p.p-l a:hover,.abody .prose.main p.p-l a:focus-visible{color:var(--bone)}
 .abody .prose.pull{grid-column:3/span 9;font:300 clamp(28px,3vw,48px)/1.16 var(--sans);letter-spacing:-.02em}
 .abody .prose.pull p::before{content:"“";color:var(--acc)}.abody .prose.pull p::after{content:"”";color:var(--acc)}
 .abody .prose.note{grid-column:4/span 6;color:var(--mute);font-size:16px;padding-left:20px;border-left:1px solid var(--line2)}
@@ -1098,6 +1117,9 @@ a.pi:hover img{transform:scale(1.04)}
 @media (max-width:600px){.pd-g .pd-in-s img{width:100%}}
 /* r10 — un bloque en negrita tras una línea vacía del original (.gap) no suma las dos separaciones: queda igual que los demás bloques (2em + .6em = 2.6em) */
 .prose-pd .gap+p.p-s{margin-top:.6em}
+/* Mi vida — enumeración breve (razones) agrupada y frase-eje final en cursiva natural, sin salto de cuerpo */
+.prose-pd p.p-r+p.p-r{margin-top:.45em}
+.prose-pd p.p-x em{font-family:"Archivo It",var(--sans);font-style:italic;font-weight:400;font-size:1em;color:inherit}
 @media (max-width:600px){.agal .ag-dm{display:none}.agal:has(.ag-dm) .ag img{object-fit:contain}}
 /* r14 · Variantes de datos de contacto (sólo /variantes/) */
 .cx-sec :is(a,button):focus-visible{outline:2px solid var(--acc);outline-offset:4px}
@@ -1203,3 +1225,4 @@ a.cx1-v:hover{color:var(--acc)}.cx1-v .ar{width:.5em;height:.5em;color:var(--acc
  .ci4{--w:min(clamp(100px,min(13vw,23svh),220px),calc((45cqh + var(--hang) - 32px)/1.2));bottom:calc(-1*var(--hang))}
  .ci2{--w:min(clamp(130px,min(18vw,32svh),300px),calc((54cqh - var(--d2) + var(--hang))/.98))}
 }
+
