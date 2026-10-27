@@ -1,6 +1,6 @@
 /* Adrián Valencia Ríos — v5. JS propio, sin dependencias (~5 KB). */
 (()=>{const d=document,de=d.documentElement,W=window;
-const RM=matchMedia('(prefers-reduced-motion: reduce)'),FINE=matchMedia('(pointer:fine)');let rm=RM.matches;
+const RM=matchMedia('(prefers-reduced-motion: reduce)'),FINE=matchMedia('(hover:hover) and (pointer:fine)');let rm=RM.matches;
 const $$=(s,c=d)=>[...c.querySelectorAll(s)];
 
 /* Ajuste de titulares a ancho (wordmark, 404, contacto) */
@@ -48,11 +48,11 @@ let vel=0,dir=1,last=performance.now();
 const par=$$('[data-par]').map(el=>({el,f:+el.dataset.par}));
 
 /* Vista previa de proyectos que sigue al cursor */
-let pv=null,px=0,py=0,tx=0,ty=0;
+let pv=null,px=0,py=0,tx=0,ty=0;const NARROW=matchMedia('(max-width:820px)');/* ≤820 la lista de proyectos ya muestra miniatura en línea */
 const lists=$$('.plist,.jlist,.tlist');
 if(FINE.matches&&lists.length){pv=d.createElement('div');pv.className='pv';pv.setAttribute('aria-hidden','true');pv.innerHTML='<img alt="">';d.body.append(pv);const pimg=pv.firstChild;
  lists.forEach(l=>{l.addEventListener('pointermove',e=>{tx=e.clientX;ty=e.clientY});
-  $$('a[data-img]',l).forEach(a=>a.addEventListener('pointerenter',e=>{if(pimg.getAttribute('src')!==a.dataset.img)pimg.src=a.dataset.img;pv.classList.toggle('sq',l.classList.contains('tlist'));if(!pv.classList.contains('on')){px=tx=e.clientX;py=ty=e.clientY}pv.classList.add('on')}));
+  $$('a[data-img]',l).forEach(a=>a.addEventListener('pointerenter',e=>{if(l.classList.contains('plist')&&NARROW.matches){pv.classList.remove('on');return}if(pimg.getAttribute('src')!==a.dataset.img)pimg.src=a.dataset.img;pv.classList.toggle('sq',l.classList.contains('tlist'));if(!pv.classList.contains('on')){px=tx=e.clientX;py=ty=e.clientY}pv.classList.add('on')}));
   l.addEventListener('pointerleave',()=>pv.classList.remove('on'));});}
 
 const isHome=d.body.classList.contains('home'),spb=d.querySelector('.sp-b');
@@ -178,4 +178,12 @@ $$('[data-rz]').forEach(rz=>{const tb=rz.querySelector('.rz-t'),Ls=$$('.rz-l',tb
  const re=()=>{if(cur)fit(cur.dataset.t);if(!raf||rm)pose(9)};
  let rt=0;addEventListener('resize',()=>{cancelAnimationFrame(rt);rt=requestAnimationFrame(re)});d.fonts&&d.fonts.ready.then(re);
  if(rm||!('IntersectionObserver' in W))pose(9);else{pose(0);new IntersectionObserver((es,o)=>{if(es[0].isIntersecting){o.disconnect();strike()}},{threshold:.45}).observe(tb)}});
+/* Formación: título mínimo del logo. Clic/toque lo fija (.open); toque fuera o Esc lo cierran. Hover/foco: CSS. */
+const lgs=$$('.logos .lg');
+if(lgs.length){const shut=x=>lgs.forEach(b=>{if(b!==x)b.classList.remove('open')});
+ lgs.forEach(b=>{b.addEventListener('click',()=>{shut(b);b.classList.toggle('open');b.parentNode.classList.remove('lg-x')});
+  b.addEventListener('blur',()=>{b.classList.remove('open');b.parentNode.classList.remove('lg-x')});
+  b.parentNode.addEventListener('pointerleave',e=>{b.parentNode.classList.remove('lg-x');if(e.pointerType==='mouse')b.classList.remove('open')})});
+ d.addEventListener('pointerdown',e=>{if(!e.target.closest('.logos li'))shut(null)},{passive:true});
+ d.addEventListener('keydown',e=>{if(e.key!=='Escape')return;shut(null);lgs.forEach(b=>{const li=b.parentNode;if(li.matches(':hover')||b===d.activeElement)li.classList.add('lg-x')})});}
 })();

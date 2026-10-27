@@ -101,26 +101,20 @@ a:hover .ar{transform:translate(2px,-2px) rotate(0deg)}
 .home .hd::before{background:linear-gradient(rgba(0,0,0,.6),transparent)}
 .sp{transition:opacity .45s var(--ease),transform .45s var(--ease),visibility .45s}
 .at-hero .sp{opacity:0;visibility:hidden;transform:translateY(14px)}
-/* Entrada (html.intro, script inline). Solo CSS con fill "backwards": al terminar cada animación rige el estilo por defecto (= portada completa).
-   1) 7 franjas de papel se recogen hacia arriba en cascada (expo in-out) mientras la foto se asienta (expo out);
-   2) el nombre sube por líneas tras una máscara; 3) barra superior y textos mono escalonados. */
-.strips{display:none}
-.intro .strips{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;position:fixed;inset:0;z-index:90;pointer-events:none;visibility:hidden;animation:vis 1.5s linear backwards}
-.intro.lite .strips{display:none}
-@keyframes vis{from,to{visibility:visible}}
-.strips i{background:var(--bone);transform-origin:50% 0;animation:sweep .92s var(--xio) calc(.12s + var(--i)*.065s) backwards}
-.strips i+i{box-shadow:inset 1px 0 rgba(13,12,11,.07)}
-@keyframes sweep{from{transform:scaleY(1)}to{transform:scaleY(0)}}
-.strips i{transform:scaleY(0)}
-.intro{--t0:1.0s}.intro.lite{--t0:.05s}
-.intro .hp-k{animation:settle 2s var(--xo) .12s backwards}
-@keyframes settle{from{transform:scale(1.24) translateY(3%);filter:brightness(.55)}}
-.intro .ni{animation:lineup 1s var(--xo) calc(var(--t0) + var(--l,0)*.11s) backwards}
-@keyframes lineup{from{transform:translateY(118%)}}
-.intro .hd{animation:drop .7s var(--xo) calc(var(--t0) + .5s) backwards}
-@keyframes drop{from{opacity:0;transform:translateY(-12px)}}
-.intro .hx{animation:rise .6s var(--xo) calc(var(--t0) + .6s + var(--s,0)*.08s) backwards}
-@keyframes rise{from{opacity:0;transform:translateY(14px)}}
+/* Entrada (html.intro, script inline): una sola, igual en primera visita y en recarga.
+   Espera a que la foto esté decodificada y la tipografía lista (html.go, tope 900 ms) para no parpadear;
+   mientras, todo queda en su fotograma inicial (fill "backwards"). Solo transform/opacity (compositor).
+   1) la foto aparece desde negro y se asienta; 2) el nombre sube por líneas tras una máscara; 3) barra y textos mono. */
+.intro:not(.go) .hp-k,.intro:not(.go) .ni,.intro:not(.go) .hd,.intro:not(.go) .hx{animation-play-state:paused}
+.intro{--t0:.18s}
+.intro .hp-k{animation:settle 1.9s var(--xo) backwards}
+@keyframes settle{from{opacity:0;transform:scale(1.07)}}
+.intro .ni{animation:lineup 1.05s var(--xo) calc(var(--t0) + var(--l,0)*.1s) backwards}
+@keyframes lineup{from{transform:translateY(150%)}}
+.intro .hd{animation:drop .8s var(--xo) calc(var(--t0) + .5s) backwards}
+@keyframes drop{from{opacity:0;transform:translateY(-10px)}}
+.intro .hx{animation:rise .7s var(--xo) calc(var(--t0) + .6s + var(--s,0)*.08s) backwards}
+@keyframes rise{from{opacity:0;transform:translateY(12px)}}
 .sp{position:fixed;right:clamp(14px,2vw,28px);bottom:clamp(14px,2vw,28px);z-index:40;display:flex;flex-direction:column;align-items:flex-end;gap:10px}
 .sp-b{display:inline-flex;align-items:center;gap:10px;background:rgba(22,21,19,.82);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid var(--line2);border-radius:999px;padding:11px 16px;font:400 11.5px var(--mono);letter-spacing:.08em;text-transform:uppercase;transition:border-color .3s}
 .sp-b:hover{border-color:var(--acc)}
@@ -187,6 +181,19 @@ a:hover .bw img,a:focus-visible .bw img,a.bw:hover img,a.bw:focus-visible img{fi
 .logos img{max-height:100%;width:auto;object-fit:contain;filter:grayscale(1) invert(1) contrast(1.3);mix-blend-mode:screen;opacity:.8;transition:opacity .3s}
 .logos li:hover img{opacity:1}
 .logos li:nth-child(6) img{filter:grayscale(1) brightness(.8) contrast(4)}
+/* Título de la formación: etiqueta mínima flotante sobre la celda (no ocupa espacio ni mueve nada).
+   Ratón: hover; teclado: foco; táctil/clic: aria-expanded (site.js); Esc o toque fuera la cierran. */
+.logos li{position:relative}
+.lg{display:grid;place-items:center;width:100%;height:100%;padding:0;margin:0;border:0;background:none;color:inherit;font:inherit;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.lg::before{content:"";position:absolute;inset:0}
+.lg:focus-visible{outline:none}.lg:focus-visible::before{outline:1px solid var(--acc);outline-offset:-1px}
+.lg-t{--tx:-50%;--ty:4px;position:absolute;bottom:calc(100% + 6px);left:50%;z-index:6;width:max-content;max-width:min(232px,calc(100vw - 32px));padding:6px 9px 5px;background:var(--ink3);border:1px solid var(--line2);color:var(--bone);font:400 10px/1.45 var(--mono);letter-spacing:.06em;text-transform:uppercase;text-align:left;text-wrap:balance;opacity:0;visibility:hidden;pointer-events:none;transform:translate(var(--tx),var(--ty));transition:opacity .2s,transform .2s var(--xo),visibility .2s}
+.logos li:nth-child(-n+2) .lg-t{left:0;--tx:0}
+.logos li:nth-child(n+5) .lg-t{left:auto;right:0;--tx:0}
+.lg:focus-visible+.lg-t,.lg.open+.lg-t,html:not(.js) .lg:focus+.lg-t{--ty:0;opacity:1;visibility:visible;pointer-events:auto}
+@media (hover:hover){.logos li:hover .lg-t{--ty:0;opacity:1;visibility:visible;pointer-events:auto}}
+.logos li.lg-x .lg-t{opacity:0!important;visibility:hidden!important}
+.lg:focus-visible img,.lg.open img{opacity:1}
 .manifesto{margin-top:var(--sec);font:300 clamp(32px,4.4vw,78px)/1.06 var(--sans);letter-spacing:-.03em;max-width:23ch}
 .manifesto em{font-style:normal;color:var(--acc)}
 .js .manifesto .w{opacity:.18;transition:opacity .45s}.js .manifesto .w.on{opacity:1}
@@ -454,8 +461,9 @@ a:hover .bw img,a:focus-visible .bw img,a.bw:hover img,a.bw:focus-visible img{fi
  .ct-img{max-width:220px}.ct-list li>.eyebrow{flex-basis:100%}.copy{margin-left:0}
  .vnav ol{grid-template-columns:1fr 1fr}.vnav li+li a{padding-left:0;border-left:0}.vnav li{border-bottom:1px solid var(--line)}
  .sp-l{display:none}.sp-b{padding:12px 13px}
- .pv{display:none}
 }
+/* Vista previa flotante: depende del puntero (ratón), no del ancho: funciona en pantalla partida */
+@media (hover:none),(pointer:coarse){.pv{display:none}}
 @media (max-width:480px){
  :root{--pad:20px}
  .eyebrow,.num,.sx-n,.sx-r{font-size:10.5px}
@@ -465,6 +473,9 @@ a:hover .bw img,a:focus-visible .bw img,a.bw:hover img,a.bw:focus-visible img{fi
  .am-g{grid-template-columns:1fr}.am-g .am:last-child{display:grid}
  .ct-list a,.ct-v{font-size:22px}
  .logos{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .logos li:nth-child(n) .lg-t{left:50%;right:auto;--tx:-50%}
+ .logos li:nth-child(3n+1) .lg-t{left:0;--tx:0}
+ .logos li:nth-child(3n) .lg-t{left:auto;right:0;--tx:0}
  .brand-t{display:none}
  .cult-a{grid-template-columns:repeat(2,minmax(0,1fr))}.cult-a li:nth-child(n+3){display:none}.cult-a li:first-child{grid-column:1/-1}.cult-a li:first-child img{aspect-ratio:4/3}.cult-a li:nth-child(3){display:block}
  .story-b ol{grid-auto-columns:82vw}
@@ -475,7 +486,6 @@ a:hover .bw img,a:focus-visible .bw img,a.bw:hover img,a.bw:focus-visible img{fi
  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}
  .js [data-r]{opacity:1;transform:none}.js .manifesto .w{opacity:1}
  .eq i{animation:none!important}
- .strips{display:none!important}
 }
 
 /* PORTADA MÓVIL r5 (≤600): retrato a sangre con encuadre muy cerrado, bio mono en el tercio inferior, nombre en una línea al pie */
@@ -499,7 +509,6 @@ a:hover .bw img,a:focus-visible .bw img,a.bw:hover img,a.bw:focus-visible img{fi
  .h-mbio{grid-column:1/-1;grid-row:1;margin:0 0 14px;font-size:14px;line-height:1.6;text-shadow:0 1px 3px rgba(0,0,0,.55),0 0 18px rgba(0,0,0,.4)}
  .h-reel{grid-column:1/-1;grid-row:2;justify-self:start;margin:0}
  .h-name{grid-row:4;margin-bottom:-.035em}
- .strips i:nth-child(n+5){display:none}
 }
 @media (max-width:370px){.h-mbio{font-size:13px;line-height:1.55}.hd-role{font-size:9.5px;letter-spacing:.06em}}
 /* ===================== v5 — combinación elegida por Adrián ===================== */
