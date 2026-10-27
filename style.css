@@ -237,3 +237,26 @@ a:focus-visible {
 
 #trabajo { scroll-margin-top: 3.5rem; }
 @media (min-width: 768px) { #trabajo { scroll-margin-top: 4.25rem; } }
+
+/* TABLET (t165) · 768–1023: composición propia, sin mezclar móvil y escritorio */
+@media (min-width: 768px) and (max-width: 1023px) {
+    /* Hero: sin pantalla completa en vertical; aire suficiente, no vacío */
+    .hero { min-height: 0; padding-top: 9rem; padding-bottom: 7rem; }
+    /* Títulos: tamaño que cabe en una línea junto a la etiqueta */
+    .entry-title { font-size: clamp(1.75rem, 5vw, 3rem); overflow-wrap: normal; }
+    /* Agentes y demás: texto + imagen en dos columnas */
+    .entry-grid--media {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 44%);   /* imagen ≈ alto del bloque de texto */
+        column-gap: 2.5rem;
+        align-items: start;
+    }
+    .entry-media { max-width: none; }
+}
+/* Etiqueta gris alineada con la primera línea del título si este se parte */
+@media (min-width: 768px) { .accordion-trigger { align-items: center; } }
+
+/* Tablet horizontal / portátil pequeño (1024–1279): imagen al 38 % para equilibrarla con el texto */
+@media (min-width: 1024px) and (max-width: 1279px) {
+    .entry-grid--media { grid-template-columns: minmax(0, 1fr) minmax(0, 38%); column-gap: 2.5rem; align-items: start; justify-content: normal; }
+    .entry-media { max-width: none; }
+}
