@@ -260,3 +260,9 @@ a:focus-visible {
     .entry-grid--media { grid-template-columns: minmax(0, 1fr) minmax(0, 38%); column-gap: 2.5rem; align-items: start; justify-content: normal; }
     .entry-media { max-width: none; }
 }
+
+/* t172 · tablet táctil: zonas de toque ampliadas sin cambio visual */
+@media (hover:none) and (min-width:760px) and (max-width:1279px){
+ #nav-logo,a[aria-label="LinkedIn"],a[aria-label="Web personal"],a[aria-label="Email"],a[href="#panel-e2"],footer a[href*="linkedin"]{position:relative}
+ #nav-logo::after,a[aria-label="LinkedIn"]::after,a[aria-label="Web personal"]::after,a[aria-label="Email"]::after,a[href="#panel-e2"]::after,footer a[href*="linkedin"]::after{content:"";position:absolute;inset:-10px}
+}
