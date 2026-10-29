@@ -95,6 +95,7 @@ if(dlg){const box=dlg.querySelector('.reel-v');let opener=null;
 /* Mini reproductor de Spotify (el iframe sólo se carga al abrir) */
 const sb=d.querySelector('.sp-b'),sp=d.getElementById('sp-panel');
 if(sb&&sp)sb.addEventListener('click',()=>{const o=sp.hidden;if(o&&!sp.querySelector('iframe'))sp.querySelector('.sp-f').innerHTML=`<iframe src="${sp.dataset.src}" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" title="Playlist de Spotify — Resonancia"></iframe>`;sp.hidden=!o;sb.setAttribute('aria-expanded',String(o))});
+if(sb&&sp){let eat=0;const shut=()=>{sp.hidden=true;sb.setAttribute('aria-expanded','false')};d.addEventListener('pointerdown',e=>{eat=0;if(sp.hidden||sp.contains(e.target)||sb.contains(e.target))return;eat=1;shut()},true);d.addEventListener('click',e=>{if(!eat)return;eat=0;e.preventDefault();e.stopPropagation()},true);d.addEventListener('pointercancel',()=>{eat=0},true);d.addEventListener('keydown',e=>{if(e.key==='Escape'&&!sp.hidden){shut();sb.focus()}})}
 
 /* Copiar email */
 $$('[data-copy]').forEach(b=>b.addEventListener('click',async()=>{const s=b.nextElementSibling;try{await navigator.clipboard.writeText(b.dataset.copy);s.textContent='Copiado ✓'}catch(e){s.textContent=b.dataset.copy}setTimeout(()=>s.textContent='',2400)}));
