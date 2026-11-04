@@ -235,8 +235,8 @@ a:focus-visible {
 }
 #navbar { z-index: 10000; }
 
-#trabajo { scroll-margin-top: 3.5rem; }
-@media (min-width: 768px) { #trabajo { scroll-margin-top: 4.25rem; } }
+#trabajo, #experiencia { scroll-margin-top: 3.5rem; }
+@media (min-width: 768px) { #trabajo, #experiencia { scroll-margin-top: 4.25rem; } }
 
 /* TABLET (t165) · 768–1023: composición propia, sin mezclar móvil y escritorio */
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -266,3 +266,10 @@ a:focus-visible {
  #nav-logo,a[aria-label="LinkedIn"],a[aria-label="Web personal"],a[aria-label="Email"],a[href="#panel-e2"],footer a[href*="linkedin"]{position:relative}
  #nav-logo::after,a[aria-label="LinkedIn"]::after,a[aria-label="Web personal"]::after,a[aria-label="Email"]::after,a[href="#panel-e2"]::after,footer a[href*="linkedin"]::after{content:"";position:absolute;inset:-10px}
 }
+
+/* t202 · zonas táctiles ≥44px sin cambio visual */
+.hit,.entry-link a{position:relative}
+.hit::after,.entry-link a::after{content:"";position:absolute;inset:-14px -6px}
+/* t202 · mismas zonas táctiles en móvil y escritorio (antes sólo tablet) */
+#nav-logo,a[aria-label="LinkedIn"],a[aria-label="Web personal"],a[aria-label="Email"],footer a[href^="mailto"]{position:relative}
+#nav-logo::after,a[aria-label="LinkedIn"]::after,a[aria-label="Web personal"]::after,a[aria-label="Email"]::after,footer a[href^="mailto"]::after,.hero-scroll::after{content:"";position:absolute;inset:-10px}
