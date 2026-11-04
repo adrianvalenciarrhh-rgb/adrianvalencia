@@ -1318,3 +1318,32 @@ a.cx1-v:hover{color:var(--acc)}.cx1-v .ar{width:.5em;height:.5em;color:var(--acc
  .home .hd-a{margin:0}
 }
 @media (prefers-reduced-motion:reduce){.hd-a{transition:none}}
+
+/* t202 · zonas táctiles ≥44px sin cambio visual */
+.ft-m a,.totop,.eyebrow a{position:relative}
+.ft-m a::after,.totop::after,.eyebrow a::after{content:"";position:absolute;inset:-15px -6px}
+/* t202 · zonas táctiles ampliadas en todos los anchos (antes sólo tablet) */
+.brand,.nav a,.lk,.ft-mail,.totop,.cx-cp,.h-reel,.ft-nav a,.eyebrow a,[aria-label="Menú móvil"] a{position:relative}
+.brand::after,.nav a::after,.lk::after,.ft-mail::after,.totop::after,.cx-cp::after,.h-reel::after,.ft-nav a::after,.eyebrow a::after,[aria-label="Menú móvil"] a::after{content:"";position:absolute;inset:-10px -6px}
+.totop::after{inset:-15px -6px}
+/* t204→t206 · etiquetas de rol: en móvil rejilla 2×2 con barra como prefijo (sin huérfanas); en tablet y escritorio vuelve la línea original con barras entre etiquetas */
+@media (max-width:600px){.roles{display:grid;grid-template-columns:repeat(2,max-content);gap:12px 32px}.roles li::before,.roles li+li::before{content:"/";margin:0 10px 0 0;color:var(--mute)}}
+
+/* t211 · portada móvil N1 a sangre: la foto cubre toda la portada (sin franjas negras), rostro centrado (nariz ≈48 % → object-position 46 %), degradados suaves para texto superior y nombre. Tablet y escritorio intactos */
+@media (max-width:600px){.hp{background:#111}
+.hp-k img{left:0!important;top:0!important;width:100%!important;height:100%!important;max-width:none;object-fit:cover;object-position:44% 50%;-webkit-mask-image:none!important;mask-image:none!important}
+.hp-fx{background:linear-gradient(180deg,rgba(0,0,0,.66) 0,rgba(0,0,0,.32) 15%,transparent 28%,transparent 68%,rgba(0,0,0,.4) 84%,rgba(0,0,0,.62) 100%)!important}}
+
+/* t211 · bloque bajo la portada (sustituye a la lista 01–04). Lenguaje de Resonancia: titular Anton, cuerpo Archivo, firma mono */
+.cb-in{padding-top:clamp(72px,9vw,152px)}
+.cb-in{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(16px,2vw,32px);align-items:start}
+.cb-in::before{content:"";grid-column:1/-1;grid-row:1;border-top:1px solid var(--line);margin-bottom:16px}
+.cb-in-w{grid-column:4/10;grid-row:4;font:300 clamp(17px,1.2vw,19px)/1.7 var(--sans);color:var(--mute);margin:.4em 0 0}
+.cb-in-w a{color:var(--bone);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.22em;text-decoration-color:rgba(239,233,223,.35);transition:text-decoration-color .2s}
+.cb-in-w a:hover,.cb-in-w a:focus-visible{text-decoration-color:currentColor}
+.cb-in-f{grid-column:1/4;grid-row:2;font:400 12px/1.5 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--acc);margin:0;padding-top:.5em}
+.cb-in-k{grid-column:4/11;grid-row:2;font:300 clamp(28px,3vw,52px)/1.12 var(--sans);letter-spacing:-.02em;color:var(--bone);max-width:22ch;text-wrap:balance;margin:0 0 clamp(18px,2vw,32px)}
+.cb-in-b{grid-column:4/10;grid-row:3;font:300 clamp(17px,1.2vw,19px)/1.7 var(--sans);color:var(--mute);max-width:46ch;text-wrap:pretty;margin:0}
+@media (max-width:900px){.cb-in{display:block}.cb-in::before{display:block}.cb-in-f{margin:24px 0 0;padding:0}}
+
+.lk+.lk-ca{margin-left:24px}
