@@ -527,11 +527,11 @@ a:hover .bw img,a:focus-visible .bw img,a.bw:hover img,a.bw:focus-visible img{fi
  .hp{background:#000}
  .hp-k img{-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 13%);mask-image:linear-gradient(180deg,transparent 0,#000 13%)}
  .hp-fx{background:linear-gradient(180deg,rgba(0,0,0,.62) 0,rgba(0,0,0,.42) 22%,rgba(0,0,0,.1) 36%,transparent 46%,transparent 80%,rgba(0,0,0,.4) 100%)}
- .hero-ui{grid-template-columns:1fr auto;grid-template-rows:auto auto minmax(0,1fr) auto;column-gap:12px;padding-top:calc(64px + 10px);padding-bottom:max(6px,env(safe-area-inset-bottom))}
+ .hero-ui{grid-template-columns:1fr auto;grid-template-rows:auto minmax(0,1fr) auto auto;column-gap:12px;padding-top:calc(64px + 10px);padding-bottom:max(6px,env(safe-area-inset-bottom))}
  .h-blk{display:contents}.h-st{display:none}
- .h-mbio{grid-column:1/-1;grid-row:1;margin:0 0 14px;font-size:14px;line-height:1.6;text-shadow:0 1px 3px rgba(0,0,0,.55),0 0 18px rgba(0,0,0,.4)}
- .h-reel{grid-column:1/-1;grid-row:2;justify-self:start;margin:0}
- .h-name{grid-row:4;margin-bottom:-.035em}
+ .h-reel{grid-column:1/-1;grid-row:1;justify-self:start;margin:0}
+ .h-mbio{grid-column:1/-1;grid-row:3;margin:0 0 10px;font-size:14px;line-height:1.55;text-shadow:0 1px 3px rgba(0,0,0,.55),0 0 18px rgba(0,0,0,.4)}
+ .h-name{grid-row:4;margin-bottom:-.035em;min-width:0;width:100%;max-width:100%;box-sizing:border-box;overflow:hidden}
 }
 @media (max-width:370px){.h-mbio{font-size:13px;line-height:1.55}.hd-role{font-size:9.5px;letter-spacing:.06em}}
 /* ===================== v5 — combinación elegida por Adrián ===================== */
@@ -1347,3 +1347,9 @@ a.cx1-v:hover{color:var(--acc)}.cx1-v .ar{width:.5em;height:.5em;color:var(--acc
 @media (max-width:900px){.cb-in{display:block}.cb-in::before{display:block}.cb-in-f{margin:24px 0 0;padding:0}}
 
 .lk+.lk-ca{margin-left:24px}
+.pp-x{margin-top:clamp(40px,5vw,72px);display:grid;gap:clamp(20px,2.4vw,32px)}
+.logos-pp{border:0;border-top:1px solid var(--line);max-width:none;grid-template-columns:repeat(6,minmax(0,1fr))}
+.logos-pp li{aspect-ratio:auto;height:clamp(68px,6vw,96px);padding:20px 26%;border:0}
+.logos-pp img{max-height:34px;opacity:.5}
+.logos-pp img[alt="Universidad de Sevilla"]{opacity:.85}
+@media (max-width:600px){.logos-pp{grid-template-columns:repeat(3,minmax(0,1fr))}.logos-pp li{height:64px;padding:16px 22%}.logos-pp img{max-height:28px}}
