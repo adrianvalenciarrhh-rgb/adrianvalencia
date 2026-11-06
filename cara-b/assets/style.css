@@ -1338,12 +1338,14 @@ a.cx1-v:hover{color:var(--acc)}.cx1-v .ar{width:.5em;height:.5em;color:var(--acc
 .cb-in{padding-top:clamp(72px,9vw,152px)}
 .cb-in{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(16px,2vw,32px);align-items:start}
 .cb-in::before{content:"";grid-column:1/-1;grid-row:1;border-top:1px solid var(--line);margin-bottom:16px}
-.cb-in-w{grid-column:4/10;grid-row:4;font:300 clamp(17px,1.2vw,19px)/1.7 var(--sans);color:var(--mute);margin:.4em 0 0}
+.cb-in-w{grid-column:4/10;grid-row:5;font:300 clamp(17px,1.2vw,19px)/1.7 var(--sans);color:var(--mute);margin:.4em 0 0}
 .cb-in-w a{color:var(--bone);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.22em;text-decoration-color:rgba(239,233,223,.35);transition:text-decoration-color .2s}
 .cb-in-w a:hover,.cb-in-w a:focus-visible{text-decoration-color:currentColor}
+.cb-in-r{grid-column:4/11;grid-row:2;font:400 12px/1.5 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--bone);margin:0 0 clamp(14px,1.4vw,22px);padding-top:.5em}
 .cb-in-f{grid-column:1/4;grid-row:2;font:400 12px/1.5 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--acc);margin:0;padding-top:.5em}
-.cb-in-k{grid-column:4/11;grid-row:2;font:300 clamp(28px,3vw,52px)/1.12 var(--sans);letter-spacing:-.02em;color:var(--bone);max-width:22ch;text-wrap:balance;margin:0 0 clamp(18px,2vw,32px)}
-.cb-in-b{grid-column:4/10;grid-row:3;font:300 clamp(17px,1.2vw,19px)/1.7 var(--sans);color:var(--mute);max-width:46ch;text-wrap:pretty;margin:0}
+.cb-in-k{grid-column:4/11;grid-row:3;font:300 clamp(28px,3vw,52px)/1.12 var(--sans);letter-spacing:-.02em;color:var(--bone);max-width:22ch;text-wrap:balance;margin:0 0 clamp(18px,2vw,32px)}
+.cb-in-b{grid-column:4/10;grid-row:4;font:300 clamp(17px,1.2vw,19px)/1.7 var(--sans);color:var(--mute);max-width:46ch;text-wrap:pretty;margin:0}
+@media (min-width:901px){.cb-in{display:block;padding-top:clamp(56px,5.6vw,88px);padding-bottom:clamp(24px,3vw,48px)}.cb-in::before{display:block;margin-bottom:0}.cb-in-r{font-size:clamp(16px,1.25vw,18px);font-weight:500;letter-spacing:.12em;color:var(--bone);margin:clamp(28px,2.8vw,48px) 0 clamp(24px,2.2vw,34px);padding:0}.cb-in-k,.cb-in-b,.cb-in-w{display:inline;font:300 clamp(26px,2.3vw,34px)/1.25 var(--sans);letter-spacing:-.02em;margin:0;max-width:none}.cb-in-k{color:var(--bone)}.cb-in-b,.cb-in-w{color:#a39e96}.cb-in-b,.cb-in-w{margin-left:.28em}.cb-in-w a{color:#cfc9c0}.cb-in-f{font-size:clamp(14px,1.05vw,15px);letter-spacing:.1em;margin:clamp(26px,2.4vw,38px) 0 0;padding:0}}
 @media (max-width:900px){.cb-in{display:block}.cb-in::before{display:block}.cb-in-f{margin:24px 0 0;padding:0}}
 
 .lk+.lk-ca{margin-left:24px}
@@ -1353,3 +1355,5 @@ a.cx1-v:hover{color:var(--acc)}.cx1-v .ar{width:.5em;height:.5em;color:var(--acc
 .logos-pp img{max-height:34px;opacity:.5}
 .logos-pp img[alt="Universidad de Sevilla"]{opacity:.85}
 @media (max-width:600px){.logos-pp{grid-template-columns:repeat(3,minmax(0,1fr))}.logos-pp li{height:64px;padding:16px 22%}.logos-pp img{max-height:28px}}
+
+@media (min-width:1200px){.cb-in{--cbx:clamp(0px,calc(100vw - 1180px),420px);padding-right:calc(var(--pad) + var(--cbx))}.cb-in::before{margin-right:calc(-1 * var(--cbx))}}
