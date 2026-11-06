@@ -188,3 +188,8 @@ if(lgs.length){const shut=x=>lgs.forEach(b=>{if(b!==x)b.classList.remove('open')
  d.addEventListener('pointerdown',e=>{if(!e.target.closest('.logos li'))shut(null)},{passive:true});
  d.addEventListener('keydown',e=>{if(e.key!=='Escape')return;shut(null);lgs.forEach(b=>{const li=b.parentNode;if(li.matches(':hover')||b===d.activeElement)li.classList.add('lg-x')})});}
 })();
+
+/* Vanta Radio — explicit playback with sound only */
+(()=>{document.querySelectorAll('figure.vt').forEach(f=>{const v=f.querySelector('video'),b=f.querySelector('.vt-play');
+b.addEventListener('click',()=>{v.muted=false;v.volume=1;v.controls=true;f.classList.add('is-on');v.currentTime=0;const p=v.play();if(p&&p.catch)p.catch(()=>{f.classList.remove('is-on');v.controls=false});});
+v.addEventListener('ended',()=>{v.controls=false;f.classList.remove('is-on');v.load();});});})();
