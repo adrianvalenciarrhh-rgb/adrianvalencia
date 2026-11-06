@@ -1471,3 +1471,9 @@ a.cx1-v:hover{color:var(--acc)}.cx1-v .ar{width:.5em;height:.5em;color:var(--acc
 /* t324: Journal — «Nuevo» en vez de miniatura fija */
 .j-new{display:inline-block;font:400 10px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--acc);border:1px solid var(--acc);border-radius:999px;padding:.42em .7em .32em;margin-right:12px;vertical-align:.08em}
 @media(min-width:821px){.j-new{display:table;margin:0 0 10px auto}}
+/* t327: «Nuevo» encima del 01, alineado con la parte superior del título */
+.jlist .num{position:relative}
+.jlist .num .j-new{margin:0;white-space:nowrap}
+@media(min-width:1100px){.jlist .num .j-new{position:absolute;left:0;display:inline-block;bottom:calc(100% + clamp(34px,4.2vw,72px)*.54 - 19.4px)}}
+@media(max-width:1099px){.jlist a .num:has(.j-new){align-self:start;padding-top:calc(clamp(34px,4.2vw,72px)*.14)}.jlist .num .j-new{display:table;margin:0 0 8px}}
+@media(max-width:820px){.jlist .num .j-new{font-size:8.5px;letter-spacing:.05em;padding:.42em .5em .32em}}
