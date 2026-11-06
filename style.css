@@ -273,3 +273,6 @@ a:focus-visible {
 /* t202 · mismas zonas táctiles en móvil y escritorio (antes sólo tablet) */
 #nav-logo,a[aria-label="LinkedIn"],a[aria-label="Web personal"],a[aria-label="Email"],footer a[href^="mailto"]{position:relative}
 #nav-logo::after,a[aria-label="LinkedIn"]::after,a[aria-label="Web personal"]::after,a[aria-label="Email"]::after,footer a[href^="mailto"]::after,.hero-scroll::after{content:"";position:absolute;inset:-10px}
+
+/* t309: centra «Nuevo» en su cápsula cuando el texto pasa a 18px */
+@media (min-width:768px){.nuevo-tag{padding-top:.33em!important;padding-bottom:.17em!important;vertical-align:.09em!important}}
