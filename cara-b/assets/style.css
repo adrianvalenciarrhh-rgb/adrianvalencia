@@ -1468,3 +1468,6 @@ a.cx1-v:hover{color:var(--acc)}.cx1-v .ar{width:.5em;height:.5em;color:var(--acc
 .prose .pd-live-l a.pd-live-sp{justify-self:start;margin-top:4px;font:400 11.5px/1.6 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--mute);text-decoration:none;display:inline-block;padding-block:6px;margin-block:-2px -6px;transition:color .2s}
 .prose .pd-live-l a.pd-live-sp:hover,.prose .pd-live-l a.pd-live-sp:focus-visible{color:var(--bone)}
 @media (max-width:600px){.ahead-g .lk+.lk-ca{display:flex;width:fit-content;margin:-14px 0 0}}
+/* t324: Journal — «Nuevo» en vez de miniatura fija */
+.j-new{display:inline-block;font:400 10px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--acc);border:1px solid var(--acc);border-radius:999px;padding:.42em .7em .32em;margin-right:12px;vertical-align:.08em}
+@media(min-width:821px){.j-new{display:table;margin:0 0 10px auto}}
