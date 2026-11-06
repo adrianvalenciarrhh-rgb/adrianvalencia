@@ -31,8 +31,7 @@ html.cc, html.cc * { cursor: none !important; }
 }
 html.cc .custom-cursor { display: block; }
 html.cc .custom-cursor.vis { opacity: 1; }
-/* Sobre enlaces/acordeones: anillo de 40 px (antes 60 px a opacity .1, casi invisible) */
-.custom-cursor.hovered { width: 40px; height: 40px; background-color: transparent; }
+/* Sin anillo: el punto no cambia de tamaño ni de forma en enlaces, botones ni secciones (t317). */
 @media (forced-colors: active) { html.cc, html.cc * { cursor: auto !important; } html.cc .custom-cursor { display: none; } }
 
 /* 3. ANIMACIÓN ACORDEÓN */

@@ -26,15 +26,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const root = document.documentElement;
     const FINE = window.matchMedia("(hover: hover) and (pointer: fine)");
     if (cursor) {
-        const HOVER = "a, button, .hover-trigger, .accordion-trigger, [role='button'], summary, label";
-        const off = () => { root.classList.remove("cc"); cursor.classList.remove("vis", "hovered"); };
+        const off = () => { root.classList.remove("cc"); cursor.classList.remove("vis"); };
         document.addEventListener("pointermove", (e) => {
             if (e.pointerType !== "mouse" || !FINE.matches) { off(); return; }
             cursor.style.transform = "translate3d(" + e.clientX + "px," + e.clientY + "px,0) translate(-50%,-50%)";
             if (!root.classList.contains("cc")) root.classList.add("cc");
             cursor.classList.add("vis");
-            const t = e.target && e.target.closest ? e.target.closest(HOVER) : null;
-            cursor.classList.toggle("hovered", !!t);
         }, { passive: true });
         document.addEventListener("pointerdown", (e) => { if (e.pointerType !== "mouse") off(); }, { passive: true });
         document.documentElement.addEventListener("mouseleave", () => cursor.classList.remove("vis"));

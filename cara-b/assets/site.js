@@ -189,7 +189,28 @@ if(lgs.length){const shut=x=>lgs.forEach(b=>{if(b!==x)b.classList.remove('open')
  d.addEventListener('keydown',e=>{if(e.key!=='Escape')return;shut(null);lgs.forEach(b=>{const li=b.parentNode;if(li.matches(':hover')||b===d.activeElement)li.classList.add('lg-x')})});}
 })();
 
-/* Vanta Radio — explicit playback with sound only */
-(()=>{document.querySelectorAll('figure.vt').forEach(f=>{const v=f.querySelector('video'),b=f.querySelector('.vt-play');
-b.addEventListener('click',()=>{v.muted=false;v.volume=1;v.controls=true;f.classList.add('is-on');v.currentTime=0;const p=v.play();if(p&&p.catch)p.catch(()=>{f.classList.remove('is-on');v.controls=false});});
+/* Vanta Radio — reproducción explícita con sonido. Botón «Escuchar» + controles nativos + clic/toque en cualquier parte del vídeo para reproducir o pausar (t317). */
+(()=>{document.querySelectorAll('figure.vt').forEach(f=>{const v=f.querySelector('video'),b=f.querySelector('.vt-play'),box=f.querySelector('.vt-box')||v.parentNode;
+const hit=document.createElement('div');hit.className='vt-hit';hit.setAttribute('aria-hidden','true');box.insertBefore(hit,b);
+const start=()=>{v.muted=false;v.defaultMuted=false;v.removeAttribute('muted');v.volume=1;v.controls=true;f.classList.add('is-on');if(v.ended)v.currentTime=0;const p=v.play();if(p&&p.catch)p.catch(()=>{f.classList.remove('is-on');v.controls=false});};
+b.addEventListener('click',()=>{v.currentTime=0;start();});
+hit.addEventListener('click',()=>{if(v.paused||v.ended)start();else v.pause();});
 v.addEventListener('ended',()=>{v.controls=false;f.classList.remove('is-on');v.load();});});})();
+
+/* En directo — carrusel accesible solo en móvil/tablet (≤820 px, t320): scroll-snap, tocar = siguiente en bucle, flechas y botones 01/02/03. En escritorio no hace nada y no deja atributos. */
+(()=>{const u=document.querySelector('.pd-strip-c');if(!u)return;const lis=[...u.children];if(lis.length<2)return;
+const MQ=matchMedia('(max-width: 820px)');const car=()=>MQ.matches;
+lis.forEach((li,i)=>{li.id=li.id||('pdc-'+(i+1))});
+const nav=document.createElement('div');nav.className='pd-car-dots';nav.setAttribute('role','group');nav.setAttribute('aria-label','Elegir foto');
+const bs=lis.map((li,i)=>{const b=document.createElement('button');b.type='button';b.textContent=String(i+1).padStart(2,'0');b.setAttribute('aria-label','Foto '+(i+1)+' de '+lis.length);b.setAttribute('aria-controls',li.id);nav.appendChild(b);return b});
+u.after(nav);
+const cur=()=>Math.round(u.scrollLeft/Math.max(1,u.clientWidth));
+const go=i=>{i=(i+lis.length)%lis.length;u.scrollTo({left:i*u.clientWidth,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'})};
+const mark=()=>{if(car()){u.setAttribute('aria-roledescription','carrusel');u.tabIndex=0;const i=cur();bs.forEach((b,k)=>b.setAttribute('aria-current',String(k===i)));lis.forEach((li,k)=>{li.setAttribute('role','group');li.setAttribute('aria-roledescription','foto');li.setAttribute('aria-label',(k+1)+' de '+lis.length);if(k!==i)li.setAttribute('aria-hidden','true');else li.removeAttribute('aria-hidden')})}
+ else{u.removeAttribute('aria-roledescription');u.removeAttribute('tabindex');u.scrollLeft=0;lis.forEach(li=>['role','aria-roledescription','aria-label','aria-hidden'].forEach(a=>li.removeAttribute(a)))}};
+bs.forEach((b,i)=>b.addEventListener('click',()=>go(i)));
+u.addEventListener('click',e=>{if(car()&&e.target.closest('img'))go(cur()+1)});
+u.addEventListener('keydown',e=>{if(!car())return;if(e.key==='ArrowRight'){e.preventDefault();go(cur()+1)}else if(e.key==='ArrowLeft'){e.preventDefault();go(cur()-1)}});
+let tm;u.addEventListener('scroll',()=>{clearTimeout(tm);tm=setTimeout(mark,60)},{passive:true});
+(MQ.addEventListener?MQ.addEventListener('change',mark):MQ.addListener(mark));addEventListener('resize',()=>{clearTimeout(tm);tm=setTimeout(mark,100)});mark();})();
+
