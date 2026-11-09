@@ -1477,3 +1477,27 @@ a.cx1-v:hover{color:var(--acc)}.cx1-v .ar{width:.5em;height:.5em;color:var(--acc
 @media(min-width:1100px){.jlist .num .j-new{position:absolute;left:0;display:inline-block;bottom:calc(100% + clamp(34px,4.2vw,72px)*.54 - 19.4px)}}
 @media(max-width:1099px){.jlist a .num:has(.j-new){align-self:start;padding-top:calc(clamp(34px,4.2vw,72px)*.14)}.jlist .num .j-new{display:table;margin:0 0 8px}}
 @media(max-width:820px){.jlist .num .j-new{font-size:8.5px;letter-spacing:.05em;padding:.42em .5em .32em}}
+
+/* t329 · tratamiento común de portadas del Journal: un punto más oscuras y menos saturadas; color pleno al pasar */
+.am .am-i img,.pv img{filter:saturate(.8) brightness(.86) contrast(1.06)}
+a.am:hover .am-i img,a.am:focus-visible .am-i img{filter:none}
+.am-i{position:relative}.am-i::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(10,10,10,0) 55%,rgba(10,10,10,.28))}
+
+/* t334 · Music · opción D «Impacto primero»: bloque ANÁLISIS (enlaces al Journal; acento solo en ↗) */
+.pd-an{margin-top:clamp(48px,6vw,88px)}
+.pd-an>.eyebrow{color:var(--mute);margin:0 0 clamp(18px,2vw,28px)}
+.prose .pd-an-go{display:inline-block;justify-self:start;margin-top:4px;padding-block:6px;font:400 11.5px/1.6 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--mute);text-decoration:none;transition:color .2s}
+.prose .pd-an-go:hover,.prose .pd-an-go:focus-visible{color:var(--bone)}
+.pd-an-ar{color:var(--acc);margin-left:.15em}
+.pd-an-q{margin-top:1.4em!important}
+.pd-an-q em{color:var(--bone)}
+.pd-an-big{margin:0 0 clamp(28px,3vw,44px);padding:0}
+.pd-an-big p{font-family:var(--serif);font-style:italic;font-size:clamp(22px,2.2vw,32px);line-height:1.28;color:var(--bone);margin:0}
+.pd-an-big footer{margin-top:14px}
+.pd-an-r{list-style:none;margin:1.2em 0 0;padding:0;border-top:1px solid var(--line)}
+.pd-an-r li{margin:0;border-bottom:1px solid var(--line)}
+.prose .pd-an-r a{display:grid;grid-template-columns:1fr auto auto;gap:14px;align-items:baseline;padding:14px 0;color:var(--bone);text-decoration:none}
+.pd-an-t{font-weight:500}
+.pd-an-m{font:400 11.5px/1.5 var(--mono);color:var(--mute);letter-spacing:.04em;text-align:right}
+.prose .pd-an-r a:hover .pd-an-t,.prose .pd-an-r a:focus-visible .pd-an-t{text-decoration:underline;text-underline-offset:.2em;text-decoration-thickness:1px}
+@media(max-width:600px){.prose .pd-an-r a{grid-template-columns:1fr auto}.pd-an-m{grid-column:1;grid-row:2;text-align:left}.pd-an-r .pd-an-ar{grid-column:2;grid-row:1}}
