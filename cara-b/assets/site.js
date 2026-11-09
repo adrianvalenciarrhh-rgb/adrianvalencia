@@ -227,3 +227,19 @@ let lock=0;const set=k=>bs.forEach((b,i)=>b.setAttribute('aria-current',String(i
 bs.forEach((b,i)=>b.addEventListener('click',()=>{lock=Date.now()+900;set(i);go(i)}));
 let t=0;const mark=()=>{if(Date.now()<lock)return;const x=w.scrollLeft;let k=0,best=1e9;cs.forEach((c,i)=>{const dd=Math.abs(c.offsetLeft-cs[0].offsetLeft-x);if(dd<best){best=dd;k=i}});if(w.scrollLeft+w.clientWidth>=w.scrollWidth-4)k=cs.length-1;set(k)};
 w.addEventListener('scroll',()=>{cancelAnimationFrame(t);t=requestAnimationFrame(mark)},{passive:true});})();
+
+/* t352 · carrusel de tiras finales (.fx-car, ≤820 px): botones 01/0N, tocar = siguiente en bucle, marca la visible. En escritorio no hace nada. */
+(()=>{const u=document.querySelector('.pd-s2 .fx,.pd-s2 .fxm');if(!u)return;
+if(!u.classList.contains('fx-car'))return;const lis=[...u.children],n=lis.length;if(n<2)return;const MQ=matchMedia('(max-width: 820px)');const RM=matchMedia('(prefers-reduced-motion: reduce)');
+const SPMQ=matchMedia('(max-width: 820px)');let vis=false;const spa=()=>document.documentElement.classList.toggle('sp-away',vis&&SPMQ.matches);new IntersectionObserver(es=>es.forEach(e=>{vis=e.isIntersecting;spa()})).observe(u.closest('.pd-s2'));SPMQ.addEventListener('change',spa);
+lis.forEach((li,i)=>li.id=li.id||'fx-'+(i+1));
+const nav=document.createElement('div');nav.className='fx-dots';nav.setAttribute('role','group');nav.setAttribute('aria-label','Elegir foto');
+const bs=lis.map((li,i)=>{const b=document.createElement('button');b.type='button';b.textContent=String(i+1).padStart(2,'0');b.setAttribute('aria-label','Foto '+(i+1)+' de '+n);b.setAttribute('aria-controls',li.id);nav.appendChild(b);return b});u.after(nav);
+const x0=()=>lis[0].offsetLeft;let want=null;const tgt=i=>Math.min(lis[i].offsetLeft-x0(),u.scrollWidth-u.clientWidth);const cur=()=>{if(want!==null&&Math.abs(u.scrollLeft-tgt(want))<4)return want;const x=u.scrollLeft;let k=0,b=1e9;lis.forEach((li,i)=>{const d=Math.abs(li.offsetLeft-x0()-x);if(d<b){b=d;k=i}});if(u.scrollLeft+u.clientWidth>=u.scrollWidth-4)k=n-1;return k};
+const go=i=>{i=(i+n)%n;want=i;setTimeout(()=>mark(),0);u.scrollTo({left:lis[i].offsetLeft-x0(),behavior:RM.matches?'auto':'smooth'})};
+const mark=()=>{const k=cur();bs.forEach((b,i)=>b.setAttribute('aria-current',String(i===k)));if(MQ.matches){u.tabIndex=0;u.setAttribute('aria-roledescription','carrusel')}else{u.removeAttribute('tabindex');u.removeAttribute('aria-roledescription')}};
+let t=0;u.addEventListener('scroll',()=>{cancelAnimationFrame(t);t=requestAnimationFrame(mark)},{passive:true});
+bs.forEach((b,i)=>b.addEventListener('click',()=>go(i)));lis.forEach(li=>li.querySelector('img').addEventListener('click',()=>{if(!MQ.matches)return;const k=cur();go(k===n-1?0:(u.scrollLeft+u.clientWidth>=u.scrollWidth-4&&want===null?0:k+1))}));
+['touchmove','wheel'].forEach(ev=>u.addEventListener(ev,()=>{want=null},{passive:true}));
+u.addEventListener('keydown',e=>{if(!MQ.matches)return;if(e.key==='ArrowRight'){e.preventDefault();go(cur()+1)}if(e.key==='ArrowLeft'){e.preventDefault();go(cur()-1)}});
+MQ.addEventListener('change',mark);mark();})();
