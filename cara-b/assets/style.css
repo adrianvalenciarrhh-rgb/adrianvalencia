@@ -1531,3 +1531,45 @@ a.am:hover .am-i img,a.am:focus-visible .am-i img{filter:none}
 @media (max-width:820px){.twc blockquote{font-size:16px;line-height:1.6}
  .tw-sys{display:flex;flex-direction:column}.tw-rail{display:block;order:2;margin-top:6px}.tw-rail .tw-hab,.tw-rail .tw-note{display:none}
  .tw-dots{display:flex;gap:18px}.tw-dots button{background:none;border:0;padding:8px 0;color:var(--mute);font:400 11.5px/1 var(--mono);letter-spacing:.08em;border-bottom:1px solid transparent}.tw-dots button[aria-current="true"]{color:var(--acc);border-bottom-color:var(--acc)}}
+
+/* ===== t352 · Tiras finales (Gabinete y Marca personal: carrusel ≤820; Marca personal escritorio = columnas «Más del Journal») por proyecto (espacio de nombres .fx; Music no usa nada de esto) ===== */
+.pd-s2 .fx{grid-column:4/-1;display:flex;flex-wrap:nowrap;align-items:flex-start;gap:var(--gap);list-style:none;margin:0;padding:0}
+.pd-s2 .fx>li{min-width:0}
+.pd-s2 .fx figure{margin:0}
+.pd-s2 .fx img{display:block;width:100%;height:auto}
+.pd-s2 .fx figcaption{display:flex;justify-content:space-between;gap:10px;margin-top:10px;color:var(--mute)}
+.pd-s2 .fx figcaption .num{color:var(--mute)}
+.fx-dots{display:none}
+@media (max-width:820px){.pd-s2 .fx{grid-column:1/-1}
+ .fx-dots{grid-column:1/-1;display:flex;gap:18px;margin:14px 0 0;padding:0}
+ .fx-dots button{background:none;border:0;padding:8px 0;margin:-8px 0;color:var(--mute);font:400 11.5px/1 var(--mono);letter-spacing:.08em;cursor:pointer;border-bottom:1px solid transparent}
+ .fx-dots button[aria-current="true"]{color:var(--bone);border-bottom-color:var(--acc)}
+ .fx-dots button:focus-visible{outline:1px solid var(--acc);outline-offset:3px}
+ /* carrusel (patrón En directo de Music): snap, tocar = siguiente, botones 01/0N */
+ .pd-s2 .fx-car{overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scrollbar-width:none}
+ .pd-s2 .fx-car::-webkit-scrollbar{display:none}
+ .pd-s2 .fx-car>li{scroll-snap-align:start;scroll-snap-stop:always}
+ .pd-s2 .fx-car img{cursor:pointer}
+ .pd-s2 .fx-car:focus-visible{outline:1px solid var(--acc);outline-offset:4px}
+}
+/* el reproductor flotante se retira mientras se ve una tira final (vuelve al salir; si está abierto no se mueve) */
+html.sp-away .sp:not(:has(.sp-panel:not([hidden]))){opacity:0!important;visibility:hidden!important;transform:translateY(14px)!important}
+
+@media (max-width:820px){.pd-s2 .fx-car{flex-wrap:nowrap}}
+@media (max-width:820px){.pd-s2 .fx-peek{--h:clamp(300px,min(60svh,calc(80vw / var(--armax,1))),560px);gap:12px;margin-right:calc(-1 * var(--pad));padding-right:var(--pad)}
+ .pd-s2 .fx-peek>li{flex:0 0 auto}.pd-s2 .fx-peek img{height:var(--h);width:auto;max-width:none}}
+/* Marca personal · escritorio (≥821): tres columnas iguales 4/5 a todo el ancho, como «Más del Journal» de Vanta */
+.pd-s2 .fx-va{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));align-items:start;grid-column:1/-1}
+.pd-s2 .fx-va img{aspect-ratio:4/5;object-fit:cover;object-position:50% 100%}
+.pd-s2 .fx-va>li:first-child img{object-position:0 50%}
+/* Marca personal · ≤820: carrusel A (4/5, la siguiente asoma; gimnasio y pies pierden solo techo/acera) */
+@media (max-width:820px){.pd-s2 .fx-va{display:flex;gap:12px;margin-right:calc(-1 * var(--pad));padding-right:var(--pad)}
+ .pd-s2 .fx-va>li{flex:0 0 min(80%,46svh)}.pd-s2 .fx-va>li:first-child img{object-position:28% 50%}}
+
+
+/* Mi vida · escritorio idéntico a live: reproduce las reglas de .pd-strip-c sin usar esa clase (la usa el JS de Music) */
+.pd-s2 .pd-c7{grid-column:4/span 7}.pd-s2 .pd-c7>li{flex:var(--ar) 1 0}.pd-s2 .pd-c7 figcaption{flex-wrap:wrap;row-gap:2px}
+@media (max-width:1100px){.pd-s2 .pd-c7{grid-column:4/span 9}}
+@media (max-width:820px){.pd-s2 .pd-c7{grid-column:1/-1}}
+/* Mi vida 1 · mismo carrusel que Gabinete/Marca, sin recorte: altura = la que deja la viñeta (casi cuadrada) a ancho de contenido */
+@media (max-width:820px){.pd-s2 .fx-mv1>li{flex:0 0 auto}.pd-s2 .fx-mv1{--h:clamp(300px,min(60svh,calc((100vw - 2 * var(--pad)) / var(--armax,1))),560px)}}
