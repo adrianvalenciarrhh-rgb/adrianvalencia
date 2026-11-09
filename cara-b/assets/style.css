@@ -1265,16 +1265,7 @@ a.cx1-v:hover{color:var(--acc)}.cx1-v .ar{width:.5em;height:.5em;color:var(--acc
 .sp-ic{color:var(--bone)}
 
 /* t186 · tablet táctil: Proyectos de la home en rejilla de 2 tarjetas (como /work), 16:10 */
-@media (hover:none) and (min-width:760px) and (max-width:1279px){
- .plist{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:var(--gap)}
- .prow{grid-template-columns:minmax(0,1fr) auto;row-gap:12px;align-items:start;height:100%}
- .prow .pn{grid-column:1;grid-row:1}
- .prow .ar{grid-column:2;grid-row:1}
- .prow .pt{grid-column:1/-1;grid-row:2;font-size:clamp(26px,3.3vw,40px)}
- .prow .pthumb{grid-column:1/-1;grid-row:3;margin-top:4px}
- .prow .pc{grid-column:1;grid-row:4}
- .prow .py{display:block;grid-column:2;grid-row:4}
-}
+/* t336: retirado el mosaico 2×2 con miniaturas de Proyectos en tablet táctil; ahora es la misma lista que Journal (texto). */
 
 /* t187 · Resonancia en teléfono: títulos más contenidos para que portada + 4 álbumes quepan en una pantalla */
 @media (max-width:620px){
@@ -1501,3 +1492,42 @@ a.am:hover .am-i img,a.am:focus-visible .am-i img{filter:none}
 .pd-an-m{font:400 11.5px/1.5 var(--mono);color:var(--mute);letter-spacing:.04em;text-align:right}
 .prose .pd-an-r a:hover .pd-an-t,.prose .pd-an-r a:focus-visible .pd-an-t{text-decoration:underline;text-underline-offset:.2em;text-decoration-thickness:1px}
 @media(max-width:600px){.prose .pd-an-r a{grid-template-columns:1fr auto}.pd-an-m{grid-column:1;grid-row:2;text-align:left}.pd-an-r .pd-an-ar{grid-column:2;grid-row:1}}
+
+/* t336 · Regla única para listas (Proyectos, Journal): las imágenes dependen del puntero, no del ancho.
+   Ratón/trackpad → texto + vista previa flotante al pasar (.pv, ya limitada a hover:hover y pointer:fine).
+   Táctil (móvil y tablet) → solo texto; las imágenes viven en /work y en cada artículo. */
+.pthumb{display:none!important}
+@media (hover:hover) and (pointer:fine){.plist:hover .prow,.jlist:hover a{color:rgba(239,233,223,.32)}.plist .prow:hover,.jlist a:hover{color:var(--bone)}}
+/* /work: de 600 a 759 px, dos columnas en vez de una con imágenes enormes */
+@media (min-width:600px) and (max-width:759px){.pgrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:48px var(--gap)}}
+
+
+/* t340 · Resonancia B: columna de portada variable (la fija el JS solo si no cabe) */
+.rz[style*="--cvs"] .rz-st{grid-template-columns:var(--cvs) minmax(0,1fr)}
+/* t340 · Resonancia C: además, lista de discos algo más compacta (solo pantallas ≥900 px de ancho y ≤860 px de alto) para que la portada pierda menos */
+@media (min-width:900px) and (max-height:860px){.rz-ix{margin-top:clamp(20px,1.8vw,28px)}.rz-k{padding:5px 0}.rz-gh{margin-bottom:10px}.rz-g{padding-top:14px}}
+
+/* ===== t344 · Sistema Cara B — presentación y Mi historia construidas con las reglas del sitio (ver DESIGN-carab.md) ===== */
+
+/* Mi historia: mismas tarjetas; en escritorio carril horizontal desde el lomo (col. 4) con índice 01–05 a la izquierda */
+.tw-rail{display:none}
+@media (min-width:821px){
+ .tw-sys{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:var(--gap);align-items:start}
+ .tw-rail{display:grid;grid-column:1/span 3;gap:clamp(28px,3vw,48px);position:sticky;top:110px}
+ .tw-dots{display:flex;flex-wrap:wrap;gap:6px 18px}
+ .tw-dots button{background:none;border:0;padding:8px 0;margin:-8px 0;color:var(--mute);font:400 12px/1 var(--mono);letter-spacing:.08em;cursor:pointer;border-bottom:1px solid transparent;transition:color .3s,border-color .3s}
+ .tw-dots button:hover{color:var(--bone)}
+ .tw-dots button[aria-current="true"]{color:var(--acc);border-bottom-color:var(--acc)}
+ .tw-sys .tw-w{grid-column:4/-1;margin-right:calc(-1*var(--pad));overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;padding:0 var(--pad) 8px 0}
+ .tw-sys .tw-w::-webkit-scrollbar{display:none}
+ .tw-sys .tw{display:grid;grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:clamp(320px,30vw,470px);gap:var(--gap)}
+ .tw-sys .twc{scroll-snap-align:start}
+ .tw-sys .twc blockquote{font-size:clamp(16px,1.15vw,18px);line-height:1.6}
+ .tw-f-sys{display:none}
+ .tw-note{margin:0!important;max-width:150px!important}
+}
+@media (min-width:821px) and (max-width:1100px){.tw-sys .twc:nth-child(n){margin-top:0}.tw-sys .twc:nth-child(even){margin-top:clamp(28px,4vw,64px)}}
+@media (prefers-reduced-motion:reduce){.tw-sys .tw-w{scroll-behavior:auto}}
+@media (max-width:820px){.twc blockquote{font-size:16px;line-height:1.6}
+ .tw-sys{display:flex;flex-direction:column}.tw-rail{display:block;order:2;margin-top:6px}.tw-rail .tw-hab,.tw-rail .tw-note{display:none}
+ .tw-dots{display:flex;gap:18px}.tw-dots button{background:none;border:0;padding:8px 0;color:var(--mute);font:400 11.5px/1 var(--mono);letter-spacing:.08em;border-bottom:1px solid transparent}.tw-dots button[aria-current="true"]{color:var(--acc);border-bottom-color:var(--acc)}}
