@@ -1601,3 +1601,80 @@ html.sp-away .sp:not(:has(.sp-panel:not([hidden]))){opacity:0!important;visibili
  .ja figure.wide.ja-w img{grid-column:1/-1}
  .ja .abody .prose.pull{grid-column:1/-1}
 }
+
+/* ===== t371 ===== */
+/* 1 · All I Need: segunda imagen a tamaño contenido (fuente 1058 px; nítida a DPR 2) */
+.ja .abody .prose.main figure.ja-in.ja-n{width:min(100%,440px);margin-inline:auto}
+@media (max-width:820px){.ja .abody .prose.main figure.ja-in.ja-n{width:min(100%,440px);margin-inline:auto}}
+/* 2–3 · aviso de lectura: etiqueta mono antes del análisis (misma voz que .p-k / .eyebrow) */
+.ak{font:400 12px/1.5 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--mute);margin:0 0 clamp(18px,2vw,28px)}
+.abody>.ak{grid-column:4/span 7}
+.prose .ak+p{margin-top:0}
+@media (max-width:820px){.abody>.ak{grid-column:1/-1}}
+/* 5 · Más del Journal: en escritorio cuelga del lomo (col. 4–12); tarjetas ≈320 px en vez de 440 */
+@media (min-width:1101px){
+ .amore .am-g{grid-template-columns:repeat(12,minmax(0,1fr))}
+ .amore .am{grid-column:span 3}
+ .amore .am:first-child{grid-column:4/span 3}
+}
+/* 6 · contacto: ¡ de apertura en el rótulo */
+.ct-h .wm .ch-o{margin-right:.02em}
+/* 7 · Marca, personal: títulos con la escala del sistema (Anton = palabra; Archivo 300 = voz) y filete */
+/* 9 · Presentación bajo la portada: una fila de tres zonas (índice | voz en el lomo | lateral) */
+@media (min-width:901px){
+ .cb-in{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gap);row-gap:0;align-items:start;padding-top:clamp(64px,6.4vw,104px);padding-bottom:0;padding-right:var(--pad)}
+ .cb-in::before{grid-column:1/-1;grid-row:1;margin:0 0 16px;margin-right:0}
+ .cb-in-r{grid-column:1/4;grid-row:2;font:400 12px/1.5 var(--mono);letter-spacing:.08em;color:var(--mute);margin:0;padding:.55em 1em 0 0;max-width:24ch}
+ .cb-in-f{grid-column:1/4;grid-row:3;align-self:start;font:400 12px/1.5 var(--mono);letter-spacing:.08em;margin:14px 0 0;padding:0}
+ .cb-in-k{display:block;grid-column:4/10;grid-row:2/4;font:300 clamp(20px,1.6vw,24px)/1.35 var(--sans);letter-spacing:-.012em;color:var(--bone);max-width:26ch;text-wrap:balance;margin:0;padding-top:.1em}
+ .cb-in-b,.cb-in-w{display:block;grid-column:10/-1;font:400 clamp(15px,1.05vw,16px)/1.6 var(--sans);letter-spacing:0;color:var(--mute);margin:0;max-width:none;text-wrap:pretty}
+ .cb-in-b{grid-row:2;padding-top:.3em}
+ .cb-in-w{grid-row:3;margin-top:.8em}
+ .cb-in-w a{color:var(--bone)}
+}
+@media (max-width:900px){
+ /* t375 · móvil M2: el grupo índice (rol + Tech + Heart.) arriba, como las col 1–3 de escritorio; luego la voz y el lateral; remata el enlace */
+ .cb-in{display:flex;flex-direction:column;align-items:flex-start;padding-bottom:0}
+ .cb-in::before{align-self:stretch;margin-bottom:16px}
+ .cb-in-r{order:1;color:var(--mute);margin:0;padding-top:0}
+ .cb-in-f{order:2;margin:6px 0 0}
+ .cb-in-k{order:3;font:300 clamp(21px,5.6vw,24px)/1.3 var(--sans);letter-spacing:-.012em;max-width:22ch;margin:clamp(28px,7vw,40px) 0 0}
+ .cb-in-b{order:4;font:400 15px/1.6 var(--sans);margin:16px 0 0;max-width:40ch}
+ .cb-in-w{order:5;font:400 15px/1.6 var(--sans);margin:.5em 0 0}
+}
+/* hero en móvil: que no se corte la tilde de ADRIÁN */
+@media (max-width:820px){.h-name .wm{padding-top:.17em}}
+/* t384 · Marca personal · Alt 1 «entrada de diccionario»: raya de lista (con espacio, RAE) + verbo en Anton al cuerpo del texto + punto; el párrafo sigue en la misma línea */
+.mr-1 .gap{display:none}
+.mr-1 .mp-in>p.p-s{margin-top:0}
+.mr-1 .mp-v,.mr-1 .mp-out{margin-top:2.6em}
+.mr-1 .mp-b::after{content:"";display:block;clear:both}
+.mr-1 .mp-v>p.p-s{float:left;clear:left;margin:0 .55em 0 0}
+.mr-1 .mp-v>p.p-s+p,.mr-1 .mp-out>p.p-s+p{margin-top:0}
+.mr-1 .mp-v>p.p-s strong,.mr-1 .mp-out>p.p-s strong{font:400 1.2em/1 var(--disp);text-transform:uppercase;letter-spacing:.035em;color:var(--bone)}
+.mr-1 .mp-out>p.p-s{margin:0 0 .5em}
+.mr-1 .ry{font:300 1em/1 var(--sans);color:var(--acc)}
+/* t385 · Marca personal · tira: fotos enteras (sin recorte ni proporción forzada), a igual altura y colgadas del lomo; en móvil carrusel a altura de pantalla */
+@media (min-width:821px){
+ .pd-s2 .fx-va{display:flex;grid-column:4/-1;gap:var(--gap)}
+ .pd-s2 .fx-va>li{flex:var(--ar) 1 0;min-width:0}
+ .pd-s2 .fx-va img,.pd-s2 .fx-va>li:first-child img{aspect-ratio:var(--ar);object-fit:initial;width:100%;height:auto}
+}
+@media (max-width:820px){
+ .pd-s2 .fx-va{--h:clamp(280px,min(56svh,calc(78vw / var(--armax,1))),480px)}
+ .pd-s2 .fx-va>li{flex:0 0 auto}
+ .pd-s2 .fx-va img,.pd-s2 .fx-va>li:first-child img{height:var(--h);width:auto;max-width:none;aspect-ratio:var(--ar);object-fit:initial}
+}
+
+/* t386 · perfil A (aprobado) «Centro con prueba»: @weloveurban bajo la frase (la afirmación y su prueba juntas); lateral solo la credencial; primeras líneas base alineadas */
+@media (min-width:901px){
+ .cb-in-r,.cb-in-k,.cb-in-b{align-self:baseline}
+ .cb-in-r,.cb-in-b{padding-top:0}
+ .cb-in-k{grid-row:2}
+ .cb-in-w{grid-column:4/10;grid-row:3;margin-top:1.15em}
+ .cb-in-f,.cb-in-w{align-self:baseline}
+}
+
+/* t390 · Gabinete: títulos de sección con el gesto de Marca personal (número romano en el color de puntero, título en Anton a cuerpo) */
+.prose-pd p.gh strong{font:400 1.2em/1.1 var(--disp);text-transform:uppercase;letter-spacing:.035em;color:var(--bone)}
+.prose-pd p.gh .gh-n{color:var(--acc)}

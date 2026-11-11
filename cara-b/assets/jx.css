@@ -60,3 +60,7 @@
  .jx-wf .wx-close{grid-template-columns:1fr;padding-inline:0}.jx-wf .wx-close img{grid-column:1/-1}
  .jx-wf .abody.wx-end .prose.pull,.jx-wf .abody.wx-end .prose.note.wx-s,.jx-wf .abody.wx-end .prose.note.w-end{grid-column:1/-1}
 }
+
+/* t371 · All I Need: mismo justificado sin guiones en el texto íntegro (inglés y español); citas, etiquetas y firma en bandera */
+.ja .abody .prose.main.jx-essay>p:not(.p-k):not(.p-l):not(.sig):not(.p-x):not(.p-q):not(.outro):not(.ak){text-align:justify;text-align-last:left;-webkit-hyphens:manual;hyphens:manual;text-wrap:pretty;word-spacing:-.02em}
+.ja .abody .prose.main.jx-essay .q-b{text-align:left}
