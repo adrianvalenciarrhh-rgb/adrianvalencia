@@ -1,10 +1,185 @@
 <!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Gabinete — IA — Adrián Valencia</title><meta name="description" content="La inteligencia artificial no es una respuesta; es un organismo vivo. No uso un chat. Uso un ecosistema, y sigue vivo cuando cierro la ventana. Hoy son…"><meta name="author" content="Adrián Valencia Ríos"><meta name="theme-color" content="#0a0a0a"><meta name="color-scheme" content="dark">
-<link rel="canonical" href="https://adrianvalencia.es/cara-b/work/tech/"><meta property="og:site_name" content="Adrián Valencia Ríos"><meta property="og:locale" content="es_ES"><meta property="og:type" content="article"><meta property="og:url" content="https://adrianvalencia.es/cara-b/work/tech/"><meta property="og:title" content="Gabinete — IA — Adrián Valencia"><meta property="og:description" content="La inteligencia artificial no es una respuesta; es un organismo vivo. No uso un chat. Uso un ecosistema, y sigue vivo cuando cierro la ventana. Hoy son…"><meta property="og:image" content="https://adrianvalencia.es/cara-b/assets/og.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Portada de la web Adrián Valencia — Cara B">
-<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Gabinete — IA — Adrián Valencia"><meta name="twitter:description" content="La inteligencia artificial no es una respuesta; es un organismo vivo. No uso un chat. Uso un ecosistema, y sigue vivo cuando cierro la ventana. Hoy son…"><meta name="twitter:image" content="https://adrianvalencia.es/cara-b/assets/og.jpg">
+<title>Gabinete — IA — Adrián Valencia</title><meta name="description" content="La IA me ha ayudado a potenciar mis decisiones, mis ideas. Un sistema con memoria, reglas y límites, y el trabajo concreto que ha salido de él."><meta name="author" content="Adrián Valencia Ríos"><meta name="theme-color" content="#0a0a0a"><meta name="color-scheme" content="dark">
+<link rel="canonical" href="https://adrianvalencia.es/cara-b/work/tech/"><meta property="og:site_name" content="Adrián Valencia Ríos"><meta property="og:locale" content="es_ES"><meta property="og:type" content="article"><meta property="og:url" content="https://adrianvalencia.es/cara-b/work/tech/"><meta property="og:title" content="Gabinete — IA — Adrián Valencia"><meta property="og:description" content="La IA me ha ayudado a potenciar mis decisiones, mis ideas. Un sistema con memoria, reglas y límites, y el trabajo concreto que ha salido de él."><meta property="og:image" content="https://adrianvalencia.es/cara-b/assets/og.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Portada de la web Adrián Valencia — Cara B">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Gabinete — IA — Adrián Valencia"><meta name="twitter:description" content="La IA me ha ayudado a potenciar mis decisiones, mis ideas. Un sistema con memoria, reglas y límites, y el trabajo concreto que ha salido de él."><meta name="twitter:image" content="https://adrianvalencia.es/cara-b/assets/og.jpg">
 <link rel="icon" href="../../favicon.png" type="image/png"><link rel="apple-touch-icon" href="../../apple-touch-icon.png">
 <link rel="preload" href="../../assets/fonts/Anton-Regular.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="../../assets/fonts/Archivo-var.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="../../assets/fonts/JetBrainsMono-Regular.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../../assets/style.css?v=d5935b84fc"><script>document.documentElement.classList.add('js')</script>
+<style>
+/* Gabinete — IA · V2 · sección propia sobre el sistema de Cara B (prefijo gb-) */
+.gb-b{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:0 var(--gap);margin-top:clamp(96px,9vw,152px);align-items:start}
+.gb-b>*{grid-column:4/span 7;min-width:0}
+.gb-h{grid-column:1/-1;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:var(--gap);align-items:start;border-top:1px solid var(--line);padding-top:16px;margin-bottom:clamp(40px,4.4vw,72px)}
+.gb-n{grid-column:1/span 3;padding-top:.5em;font:400 11.5px/1.4 var(--mono);letter-spacing:.08em;color:var(--acc)}
+.gb-n.mu{color:var(--mute)}
+.gb-t{grid-column:4/span 6;margin:0;font:400 clamp(34px,4.4vw,72px)/.95 var(--disp);text-transform:uppercase;letter-spacing:.005em;color:var(--bone)}
+.gb-k{grid-column:10/span 3;padding-top:.5em;justify-self:end;font:400 11.5px/1.4 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
+.gb-lede{font:300 clamp(22px,1.95vw,30px)/1.3 var(--sans);letter-spacing:-.012em;color:var(--bone);max-width:30ch;margin:0 0 clamp(28px,3vw,48px)}
+.gb-cap{margin:18px 0 0;font:400 11.5px/1.6 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
+.gb .eyebrow{color:var(--mute);margin:0 0 18px}
+.gb figure{margin:0}
+.gb figure img{display:block;width:100%;height:auto}
+.gb-hero{grid-column:4/span 6!important}
+
+/* 01 · a todo lo ancho: la frase, y la imagen que dialoga con ella */
+.gb-mf{grid-column:1/-1;margin:0 0 clamp(56px,6vw,104px);font:300 clamp(34px,6.3vw,104px)/1 var(--sans);letter-spacing:-.04em;color:var(--bone);max-width:15em}
+.gb-mf em{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:-.01em}
+.js .gb-mf .w{opacity:.16;transition:opacity .5s var(--ease)}.js .gb-mf .w.on{opacity:1}
+.gb-f1{grid-column:1/span 7!important;overflow:hidden}
+.gb-t1{grid-column:9/span 4!important;align-self:end}
+.gb-side{margin:36px 0 0;padding-top:14px;border-top:1px solid var(--line);font:400 11.5px/1.7 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--bone)}
+.gb-side span{display:block;color:var(--mute)}
+
+/* 02 · texto sereno a tamaño normal, con la figura de cristal al lado */
+.gb-t2{grid-column:4/span 5!important}
+.gb-f2{grid-column:10/span 3!important;grid-row:2;overflow:hidden;margin-top:8px}
+.gb-code{font:400 13px/1.6 var(--mono);letter-spacing:.06em;color:var(--bone);border-left:1px solid var(--line2);padding:2px 0 2px 14px}
+.gb-code span{color:var(--mute);text-transform:uppercase;letter-spacing:.08em}
+.gb-st{list-style:none;margin:26px 0 30px;padding:0}
+.gb-st li{font:400 clamp(26px,2.3vw,36px)/1.18 var(--serif);color:var(--mute)}
+.gb-out .ar,.gb-li .ar{color:var(--mute)}
+.gb-st s{text-decoration:none;position:relative;display:inline-block}
+.gb-st s::after{content:"";position:absolute;left:-.04em;right:-.04em;top:56%;height:1px;background:var(--bone);transform-origin:0 50%}
+
+/* 03 · el encargo como documento, protagonista */
+.gb-dn{grid-column:1/span 3!important;margin:6px 0 0;font:400 11.5px/1.7 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--mute);max-width:24ch;position:sticky;top:120px}
+.gb-doc{grid-column:4/-1!important}
+.gb-doc-h{display:flex;justify-content:space-between;gap:16px;margin:0;padding-bottom:14px;border-bottom:1px solid var(--line2);font:400 11.5px/1.4 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--bone)}
+.gb-doc-h span+span{color:var(--mute)}
+.gb-dl{margin:0;padding:0}
+.gb-dr{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,7fr);gap:var(--gap);align-items:baseline;padding:clamp(16px,1.6vw,24px) 0;position:relative}
+.gb-dr::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--line);transform-origin:0 50%}
+.gb-dr dt{font:400 12px/1.4 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
+.gb-dr dd{margin:0;font:300 clamp(22px,2.15vw,36px)/1.2 var(--sans);letter-spacing:-.018em;color:var(--bone);max-width:28ch}
+
+/* 04 · la misión: cada paso con su prueba */
+.gb-l4{grid-column:4/span 6!important}
+.gb-ms{grid-column:1/-1!important;list-style:none;margin:clamp(12px,2vw,32px) 0 0;padding:0;border-bottom:1px solid var(--line);counter-reset:none}
+.gb-m{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:var(--gap);align-items:start;border-top:1px solid var(--line);padding:clamp(22px,2.4vw,36px) 0}
+.gb-mn{grid-column:1/span 3;font:400 11.5px/1.4 var(--mono);letter-spacing:.08em;color:var(--mute);padding-top:.6em;position:relative}
+.gb-mt{grid-column:4/span 3}
+.gb-mt h3{margin:0;font:400 clamp(28px,2.7vw,44px)/.95 var(--disp);text-transform:uppercase;color:var(--bone)}
+.gb-mt p{margin:12px 0 0;font-size:clamp(15px,1.1vw,17px);line-height:1.55;color:var(--mute);max-width:30ch}
+.gb-ma{grid-column:7/-1}
+.gb-m-last .gb-mn{color:var(--acc)}
+.gb-m-last .gb-mn::before{content:"";position:absolute;left:-18px;top:calc(.6em + 2px);width:7px;height:7px;border-radius:50%;background:var(--acc)}
+.gb-esc{border-left:1px solid var(--line2);padding:2px 0 2px clamp(18px,2vw,28px)}
+.gb-esc-h{margin:0 0 14px;font:400 11.5px/1.4 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
+.gb-esc-t{margin:0 0 18px;font:300 clamp(19px,1.6vw,24px)/1.3 var(--sans);color:var(--bone);max-width:34ch}
+.gb-esc-t span{display:block;margin-bottom:4px;font:400 11px/1.4 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
+.gb-esc ol{list-style:none;margin:0;padding:0;columns:2;column-gap:var(--gap)}
+.gb-esc li{break-inside:avoid;padding:9px 0;border-top:1px solid var(--line);font:400 clamp(16px,1.25vw,20px)/1.1 var(--disp);text-transform:uppercase;color:var(--bone)}
+.gb-esc li span{display:inline-block;width:2.6em;font:400 11px/1 var(--mono);color:var(--mute);letter-spacing:.06em}
+.gb-sh img{border:1px solid var(--line);filter:grayscale(1) contrast(1.02)}
+.gb-sh figcaption{margin-top:10px;font:400 11px/1.5 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
+.gb-dup{display:grid;grid-template-columns:1fr 1fr;gap:var(--gap);max-width:620px}
+
+/* 05 · resultados, en filas */
+.gb-l5{grid-column:4/span 6!important}
+.gb-lg{grid-column:1/-1!important;list-style:none;margin:0;padding:0;border-bottom:1px solid var(--line)}
+.gb-lg li{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:0 var(--gap);align-items:baseline;border-top:1px solid var(--line);padding:clamp(18px,2vw,28px) 0}
+.gb-lg .num{grid-column:1/span 3;color:var(--mute)}
+.gb-lt{grid-column:4/span 3;font:400 clamp(30px,3.4vw,54px)/.95 var(--disp);text-transform:uppercase;color:var(--bone)}
+.gb-ld{grid-column:7/span 4;font-size:clamp(15px,1.1vw,17px);line-height:1.55;color:var(--mute);max-width:44ch}
+.gb-lm{grid-column:11/span 2;justify-self:end;text-align:right;font:400 11.5px/1.4 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
+.gb-li{grid-column:7/span 5;margin-top:22px!important;padding:18px 0 4px 20px;border-left:1px solid var(--line2)}
+.gb-li-k{margin:0 0 10px;font:400 11px/1.4 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
+.gb-li-t{margin:0;font:500 clamp(18px,1.45vw,22px)/1.25 var(--sans);color:var(--bone)}
+.gb-li-d{margin:4px 0 14px;font:400 11px/1.4 var(--mono);letter-spacing:.08em;color:var(--mute)}
+.gb-li blockquote{margin:0 0 16px}
+.gb-li blockquote p{margin:0;font:300 clamp(18px,1.5vw,23px)/1.35 var(--sans);letter-spacing:-.01em;color:var(--bone);max-width:36ch}
+
+/* 06 · la criba, casi solo pieza visual, a todo lo ancho */
+.gb-l6{grid-column:4/span 6!important}
+.gb-cb{grid-column:1/-1!important;margin-top:clamp(8px,1.5vw,24px)}
+.gb-sv{list-style:none;margin:0;padding:0}
+.gb-sv li{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:0 var(--gap);align-items:center;padding:clamp(14px,1.4vw,22px) 0;border-top:1px solid var(--line)}
+.gb-sn{grid-column:1/span 3;font:400 clamp(72px,9vw,150px)/.86 var(--disp);color:var(--bone);font-variant-numeric:tabular-nums}
+.gb-sb{grid-column:4/-1;height:clamp(10px,1.1vw,16px);width:calc(var(--w)*100%);background:var(--bone);opacity:.9;transform-origin:0 50%}
+.gb-sl{grid-column:4/-1;margin-top:12px;font-size:clamp(15px,1.1vw,17px);color:var(--mute)}
+.gb-sl b{font-weight:500;color:var(--bone)}
+.gb-sv li:last-child .gb-sb{background:var(--acc);opacity:1}
+.gb-sv li:last-child .gb-sn{color:var(--acc)}
+.gb-fx{grid-column:4/-1!important;list-style:none;margin:clamp(56px,6vw,96px) 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--gap)}
+.gb-fx li{border-top:1px solid var(--line);padding-top:14px;display:grid;gap:6px;align-content:start}
+.gb-fx-n{font:400 clamp(44px,4.2vw,68px)/.9 var(--disp);color:var(--bone)}
+.gb-fx-l{font:400 11.5px/1.4 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--bone);margin-top:4px}
+.gb-fx-d{font-size:15px;line-height:1.5;color:var(--mute);max-width:26ch}
+
+/* cierre con salida */
+.gb-7{border-top:1px solid var(--line);padding-top:clamp(40px,4vw,64px)}
+.gb-end{grid-column:4/span 7!important;margin:0;font:300 clamp(34px,4.6vw,76px)/1.05 var(--sans);letter-spacing:-.035em;color:var(--bone);max-width:14ch}
+.gb-end em{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:-.01em}
+.gb-out{grid-column:10/span 3!important;align-self:end;margin:0;display:grid;gap:14px;justify-items:start}
+.gb+.next{padding-top:clamp(72px,7vw,112px)}
+
+/* movimiento: solo si el usuario no pide reducirlo */
+@media (prefers-reduced-motion:no-preference){
+ .js .gb-dr{opacity:0;transform:translateY(8px);transition:opacity .7s var(--ease),transform .7s var(--ease);transition-delay:calc(var(--i)*140ms + 200ms)}
+ .js .gb-dr::after{transform:scaleX(0);transition:transform 1s var(--ease2);transition-delay:calc(var(--i)*140ms + 250ms)}
+ .js .gb-doc.in .gb-dr{opacity:1;transform:none}
+ .js .gb-doc.in .gb-dr::after{transform:scaleX(1)}
+ .js .gb-st s::after{transform:scaleX(0);transition:transform .8s var(--ease2);transition-delay:calc(var(--i)*220ms + 300ms)}
+ .js .gb-st.in s::after{transform:scaleX(1)}
+ .js .gb-m-last.in .gb-mn::before{animation:gbping 2.4s var(--ease) .8s infinite}
+ .js .gb-sb{transform:scaleX(0);transition:transform 1.5s var(--ease2);transition-delay:calc(var(--i)*260ms + 250ms)}
+ .js .gb-cb.in .gb-sb{transform:scaleX(1)}
+}
+@keyframes gbping{0%{box-shadow:0 0 0 0 rgba(255,91,46,.6)}70%,100%{box-shadow:0 0 0 10px rgba(255,91,46,0)}}
+@media (prefers-reduced-motion:reduce){.js .gb-mf .w{opacity:1}}
+
+/* tableta */
+@media (max-width:1100px){
+ .gb-hero{grid-column:4/span 8!important}
+ .gb-f1{grid-column:1/span 7!important}.gb-t1{grid-column:8/span 5!important}
+ .gb-t2{grid-column:4/span 6!important}.gb-f2{grid-column:10/span 3!important}
+ .gb-dr{grid-template-columns:minmax(0,3fr) minmax(0,7fr)}
+ .gb-mt{grid-column:4/span 3}.gb-ma{grid-column:7/-1}
+ .gb-esc ol{columns:1}
+ .gb-li{grid-column:4/-1}
+ .gb-end{grid-column:4/span 9!important}.gb-out{grid-column:4/span 9!important;margin-top:32px;grid-auto-flow:column;justify-content:start;gap:28px}
+}
+/* móvil: una columna, composición propia */
+@media (max-width:820px){
+ .gb-b{grid-template-columns:minmax(0,1fr);margin-top:96px}
+ .gb-b>*,.gb-b>.gb-h{grid-column:1/-1!important;grid-row:auto!important}
+ .gb-hero{grid-column:1/-1!important}
+ .gb-h{grid-template-columns:1fr auto;gap:14px 12px;margin-bottom:36px}
+ .gb-n{grid-column:1}.gb-k{grid-column:2}
+ .gb-t{grid-column:1/-1;grid-row:2;font-size:clamp(40px,11.6vw,56px)}
+ .gb-mf{font-size:clamp(34px,9.6vw,44px);line-height:1.08;margin-bottom:44px}
+ .gb-f1{margin:0 calc(var(--pad)*-1) 36px!important}
+ .gb-lede{font-size:clamp(22px,6vw,26px)}
+ .gb-f2{width:52%;align-self:flex-end;margin:0 0 36px!important;order:-1}
+ .gb-2{display:flex;flex-direction:column}
+ .gb-2 .gb-h{order:-2}
+ .gb-dn{position:static;margin:0 0 22px;max-width:none}
+ .gb-dr{grid-template-columns:1fr;gap:6px;padding:16px 0 18px}
+ .gb-dr dd{font-size:clamp(21px,5.8vw,25px)}
+ .gb-doc-h{flex-direction:column;gap:4px}
+ .gb-m{grid-template-columns:auto 1fr;gap:0 16px;padding:26px 0}
+ .gb-mn{grid-column:1;padding-top:.75em}
+ .gb-mt{grid-column:2}
+ .gb-ma{grid-column:1/-1;margin-top:22px}
+ .gb-m-last .gb-mn::before{left:auto;right:-14px}
+ .gb-esc ol{columns:1}
+ .gb-dup{max-width:none}
+ .gb-lg li{grid-template-columns:auto 1fr;gap:10px 12px;padding:22px 0}
+ .gb-lg .num{grid-column:1;grid-row:1}.gb-lm{grid-column:2;grid-row:1}
+ .gb-lt{grid-column:1/-1;grid-row:2;font-size:clamp(34px,9.4vw,44px)}
+ .gb-ld{grid-column:1/-1;grid-row:3}
+ .gb-li{grid-column:1/-1;grid-row:4;margin-top:16px!important;padding-left:16px}
+ .gb-sv li{grid-template-columns:1fr;padding:18px 0}
+ .gb-sn,.gb-sb,.gb-sl{grid-column:1}
+ .gb-sn{font-size:clamp(76px,22vw,104px);margin-bottom:12px}
+ .gb-fx{grid-template-columns:1fr;gap:28px;margin-top:56px}
+ .gb-fx li{grid-template-columns:auto 1fr;column-gap:16px;align-items:baseline}
+ .gb-fx-n{grid-row:1/span 2}
+ .gb-7{padding-top:40px}
+ .gb-end{font-size:clamp(34px,9.6vw,44px);max-width:12ch}
+ .gb-out{margin-top:32px;grid-auto-flow:row;gap:14px}
+}
+</style>
 </head><body class="pg-proj" id="top"><a class="skip" href="#main">Saltar al contenido</a>
 <header class="hd"><div class="hd-in wrap">
 <a class="brand" href="../../" aria-label="Adrián Valencia Ríos — inicio"><svg class="smile" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><circle cx="16" cy="16" r="14.5"/><path d="M11.2 12.6v2.2M20.8 12.6v2.2"/><path d="M10.2 19.2c1.4 2.4 3.4 3.6 5.8 3.6s4.4-1.2 5.8-3.6"/></svg><span class="brand-t">Adrián Valencia Ríos</span></a>
@@ -14,11 +189,73 @@
 <div class="menu" id="menu" hidden><nav aria-label="Menú móvil"><ol><li><a href="../../"><small>01</small>Inicio</a></li><li><a href="../../work/" aria-current="page"><small>02</small>Proyectos</a></li><li><a href="../../gallery/"><small>03</small>Publicaciones</a></li><li><a href="../../article/"><small>04</small>Journal</a></li><li><a href="../../contact/"><small>05</small>Contacto</a></li><li class="mA"><a href="/" aria-label="Cara A: web profesional, adrianvalencia.es"><small>A</small>Cara A<em>adrianvalencia.es</em></a></li></ol></nav>
 <div class="menu-f"><a href="mailto:adrianvalencia.rrhh@gmail.com">adrianvalencia.rrhh@gmail.com</a><div><a href="https://www.instagram.com/adrivarix11" target="_blank" rel="noopener">Instagram</a><a href="https://www.linkedin.com/in/adrianvalenciarios" target="_blank" rel="noopener">LinkedIn</a><a href="https://open.spotify.com/playlist/6QJf0xYg1cFt41ECWoVEH4" target="_blank" rel="noopener">Spotify</a></div></div></div><main id="main">
 <section class="phead wrap"><p class="eyebrow ld"><a href="../../work/">Proyectos</a> / 02 — TECH</p><h1 class="ph-h" style="--w:3.79"><span class="ln"><span>Gabinete — IA</span></span></h1></section>
-<section class="wrap pd">
-<div class="pd-top" data-r><p class="pd-marq">Engineering Digital Authority</p><dl class="meta meta-row"><div><dt>Categoría</dt><dd>TECH</dd></div><div><dt>Tipo</dt><dd>Proyecto personal.</dd></div><div><dt>Duración</dt><dd>2025 — act.</dd></div><div><dt>Ubicación</dt><dd>Online.</dd></div></dl><div class="pd-go"><a class="lk lk-acc" href="https://www.linkedin.com/in/adrianvalenciarios/" target="_blank" rel="noopener"><span class="lk-t">Ver en LinkedIn</span><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5.5 4H12v6.5" fill="none" stroke="currentColor" stroke-width="1.25"/></svg><span class="vh"> (se abre en una pestaña nueva)</span></a></div></div>
-<div class="pd-s"><figure class="pd-hero pd-hero-s" data-r><img src="../../assets/img/l/gab-figura.webp" width="1600" height="1071" alt="Figura femenina abstracta en movimiento, fotografía movida con grano" fetchpriority="high" decoding="async"></figure></div>
-<div class="pd-g"><div class="prose prose-pd" data-r><p class="p-s"><strong>La inteligencia artificial no es una respuesta; es un organismo vivo.</strong></p><p>No uso un chat. Uso un ecosistema, y sigue vivo cuando cierro la ventana.</p><p>Hoy son dos piezas.<br><strong>Grok Bot</strong> — donde los agentes trabajan.<br><strong>Notion</strong> — donde la evolución se almacena.<br>Sin las dos, sería otra ventana que se olvida al cerrarse.</p><p class="p-s gh"><strong><span class="gh-n">I.</span> EL GABINETE</strong></p><p>Diseñé mi gabinete contra la generalidad. Mientras el mercado usa la IA de forma reactiva, yo he construido una infraestructura basada en la memoria.</p><p>No es una sola voz. Es una red de oficios <br>— <em>estrategia | derecho | datos | mercado | inglés | arquitectura | voz</em>. Cada uno tiene un prompt propio, escrito y guardado, no improvisado en el hilo.</p><p>Si no nombro a nadie, responde quien dirige. Reparte, reúne y cierra. <strong>Yo decido.</strong> Una instrucción mía anula cualquier protocolo.</p><p class="p-s gh"><strong><span class="gh-n">II.</span> LO QUE NO DEJO A LA SUERTE</strong></p><p><em>La calidad no está en el modelo. Está en lo que no dejo a la suerte.</em></p><p>Hay skills. Un proceso que se repite deja de vivir en mi cabeza y pasa a tener nombre —⁠activar una figura, delegar, repartir el esfuerzo, escribir un prompt. Se ejecuta igual la segunda vez que la primera. <em>Misión, evidencia, tono y límite.</em></p><p>La memoria vive en Notion, no en la conversación. Lo que se decide queda fechado —⁠una sesión, una decisión, un activo. La siguiente vez se lee en un orden fijo, antes de opinar. Por eso no empieza de cero, y por eso no reabre lo que ya cerré.</p><p>Hay rutinas que corren solas. El sistema trabaja cuando la conversación ya terminó. Tareas rutinarias quedan automatizadas —⁠el correo, la agenda, lo que se mueve en el sector.</p><p class="p-s gh"><strong><span class="gh-n">III.</span> LO QUE HA SALIDO DE AQUÍ</strong></p><p>Actualmente ha evolucionado. Tengo a mi disposición un grupo de especialistas que no solo me asesoran en aspectos materiales, sino significativos y trascendentales. <strong>Tech + Heart</strong>, en el mismo sitio.</p><p>Nada de esto se ha hecho solo. La IA propone, ordena y no olvida. <em>La palabra, el criterio y la dirección son míos.</em> Una misión significativa no sale de un prompt.</p><p>De aquí ha salido trabajo concreto, y lo he cerrado yo.<br><br><strong>LinkedIn</strong> — supervisado y asesorado creativamente.<br><strong>Web</strong> — personal, y otros portfolios.<br><strong>Notion</strong> — el legado, los cimientos, y el camino de estos meses. Pasado, presente y futuro.</p><p>Diseñé agentes de IA aplicada al estudio, obteniendo sobresaliente en diversas asignaturas.</p><p>… y mucho más.</p><p class="p-s"><strong>IV. MÁS</strong></p><p>La materialización de mi pilar Tech —⁠un cerebro externo que guía, pero no encadena.<br><br><em>La innovación deja de ser una promesa para convertirse en la normalidad.</em></p><p class="p-s"><strong>Es la infraestructura con la que pienso. No la que piensa por mí.</strong></p></div></div>
-<div class="pd-s pd-s2"><ul class="pd-strip fxm fx-car fx-peek" style="--armax:0.800" aria-label="Imágenes del proyecto"><li data-r style="--ar:0.667"><figure><img src="../../assets/img/m/7EkdEKDfbw.webp" width="760" height="1140" alt="Figura humana translúcida, como de cristal, sobre fondo gris claro" loading="lazy" decoding="async"><figcaption><span class="num">01/03</span></figcaption></figure></li><li data-r style="--ar:0.800"><figure><img src="../../assets/img/m/4irQ4Pwblt.webp" width="760" height="950" alt="Retrato movido de un rostro sobre fondo oscuro" loading="lazy" decoding="async"><figcaption><span class="num">02/03</span></figcaption></figure></li><li data-r style="--ar:0.690"><figure><img src="../../assets/img/m/ZOaKUstOa1.webp" width="760" height="1101" alt="Silueta desenfocada sobre fondo blanco" loading="lazy" decoding="async"><figcaption><span class="num">03/03</span></figcaption></figure></li></ul></div>
+<section class="wrap pd gb">
+<div class="pd-top" data-r><dl class="meta meta-row"><div><dt>Categoría</dt><dd>TECH</dd></div><div><dt>Tipo</dt><dd>Proyecto personal.</dd></div><div><dt>Duración</dt><dd>2025 — act.</dd></div><div><dt>Ubicación</dt><dd>Online.</dd></div></dl><div class="pd-go"><a class="lk lk-acc" href="https://www.linkedin.com/in/adrianvalenciarios/" target="_blank" rel="noopener"><span class="lk-t">Ver en LinkedIn</span><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5.5 4H12v6.5" fill="none" stroke="currentColor" stroke-width="1.25"/></svg><span class="vh"> (se abre en una pestaña nueva)</span></a></div></div>
+<div class="pd-s"><figure class="pd-hero pd-hero-s gb-hero" data-r><img src="../../assets/img/l/eNhVzwe79C.webp" width="1100" height="1069" alt="Portátil abierto con una peonía blanca encima" fetchpriority="high" decoding="async"></figure></div>
+
+<section class="gb-b gb-1" aria-labelledby="gb1">
+<header class="gb-h" data-r><span class="gb-n">(01)</span><h2 class="gb-t" id="gb1">Por qué existe</h2><span class="gb-k">Criterio</span></header>
+<p class="gb-mf" data-words>La IA me ha ayudado a potenciar mis decisiones, mis ideas. He alcanzado mejores versiones de <em>quien ya era.</em></p>
+<figure class="gb-f1" data-r><img data-par="-.025" src="../../assets/img/l/gab-figura.webp" width="1600" height="1071" alt="Figura femenina abstracta en movimiento, fotografía movida con grano" loading="lazy" decoding="async"></figure>
+<div class="gb-t1" data-r>
+<div class="prose prose-pd"><p>No uso la IA como un chat que se olvida al cerrarse. La he convertido en un sistema con memoria, reglas y límites.</p>
+<p>Lo fijé al empezar: el experto humano final soy yo. La IA propone y pone a prueba; si hay un conflicto fundamentado, cuenta mi corrección.</p></div>
+<p class="gb-side"><span>Primeras decisiones</span>12 de octubre de 2025</p>
+</div>
+</section>
+
+<section class="gb-b gb-2" aria-labelledby="gb2">
+<header class="gb-h" data-r><span class="gb-n">(02)</span><h2 class="gb-t" id="gb2">Cómo trabaja</h2><span class="gb-k">Método</span></header>
+<div class="gb-t2">
+<p class="gb-lede" data-r>Si no nombro a nadie, responde quien dirige. Reparte, reúne y cierra.</p>
+<div class="prose prose-pd" data-r>
+<p>Cada oficio tiene su instrucción escrita y guardada, no improvisada en la conversación. Si a mitad de camino el trabajo es de otro, se para y se deriva, con destino y motivo en una línea.</p>
+<p class="gb-code" aria-label="Ejemplo de línea de derivación"><span>Derivación:</span> destino — motivo</p>
+<p>Las plantillas son un punto de partida, no una cárcel. Si una idea mía no es buena, me lo dice con razones. Si falta un dato, pregunta; no lo inventa. Y el relleno está prohibido:</p>
+</div>
+<ul class="gb-st" data-r aria-label="Frases prohibidas"><li style="--i:0"><s>Encantado de ayudar.</s></li><li style="--i:1"><s>¡Claro!</s></li><li style="--i:2"><s>¡Qué buena pregunta!</s></li></ul>
+<div class="prose prose-pd" data-r><p><strong>Yo decido.</strong> Una instrucción mía anula cualquier protocolo, y nada irreversible —⁠publicar, enviar, contactar⁠— sale sin mi visto bueno.</p></div>
+</div>
+<figure class="gb-f2" data-r><img data-par="-.03" src="../../assets/img/m/7EkdEKDfbw.webp" width="760" height="1140" alt="Figura humana translúcida, como de cristal, sobre fondo gris claro" loading="lazy" decoding="async"></figure>
+</section>
+
+<section class="gb-b gb-3" aria-labelledby="gb3">
+<header class="gb-h" data-r><span class="gb-n">(03)</span><h2 class="gb-t" id="gb3">El encargo</h2><span class="gb-k">Documento</span></header>
+<p class="gb-dn" data-r>Así se pasa cualquier encargo. Este es el de esta sección.</p>
+<div class="gb-doc" data-r>
+<p class="gb-doc-h"><span>Encargo · Gabinete — IA</span><span>Noviembre de 2026</span></p>
+<dl class="gb-dl"><div class="gb-dr" style="--i:0"><dt>Objetivo</dt><dd>Contar qué es el gabinete y qué ha salido de él.</dd></div><div class="gb-dr" style="--i:1"><dt>Formato</dt><dd>Una sección de esta web, compuesta para móvil y para escritorio.</dd></div><div class="gb-dr" style="--i:2"><dt>Herramientas</dt><dd>La web publicada y el archivo del propio sistema.</dd></div><div class="gb-dr" style="--i:3"><dt>Límites</dt><dd>Nada privado. Ningún eslogan. Ninguna foto recortada.</dd></div><div class="gb-dr" style="--i:4"><dt>Esfuerzo</dt><dd>Alto.</dd></div><div class="gb-dr" style="--i:5"><dt>Responsable</dt><dd>El oficio de web. El texto lo cierro yo.</dd></div><div class="gb-dr" style="--i:6"><dt>Hecho cuando</dt><dd>La veo dentro de la web y le doy mi visto bueno.</dd></div></dl>
+<p class="gb-cap">Siete campos. Sin ellos, no se delega.</p>
+</div>
+</section>
+
+<section class="gb-b gb-4" aria-labelledby="gb4">
+<header class="gb-h" data-r><span class="gb-n">(04)</span><h2 class="gb-t" id="gb4">Una misión real</h2><span class="gb-k">Esta sección</span></header>
+<p class="gb-lede gb-l4" data-r>Esta sección ha seguido el mismo camino que cualquier cambio en la web.</p>
+<ol class="gb-ms"><li class="gb-m" data-r><span class="gb-mn">01</span><div class="gb-mt"><h3>Encargo</h3><p>El documento de arriba.</p></div></li><li class="gb-m gb-m-art" data-r><span class="gb-mn">02</span><div class="gb-mt"><h3>Especificación</h3><p>Primero el contenido: una tesis y seis partes, cada una con su fuente.</p></div><div class=gb-ma><div class="gb-esc"><p class="gb-esc-h">Escaleta</p><p class="gb-esc-t"><span>Tesis</span>La IA me ha ayudado a potenciar mis decisiones, mis ideas.</p><ol><li><span>01</span>Por qué existe</li><li><span>02</span>Cómo entra un encargo</li><li><span>03</span>Lo que no hace</li><li><span>04</span>Una misión real</li><li><span>05</span>Lo que ha salido</li><li><span>06</span>Memoria y escala</li></ol></div></div></li><li class="gb-m gb-m-art" data-r><span class="gb-mn">03</span><div class="gb-mt"><h3>Vista previa</h3><p>Una primera versión, en un enlace aparte, para leerla dentro de la web.</p></div><div class=gb-ma><figure class="gb-sh gb-sh-w"><img src="../../assets/img/gab/previa-1440.webp" width="1440" height="900" alt="Captura de la primera vista previa de esta sección en escritorio: el bloque «Cómo entra un encargo»" loading="lazy" decoding="async"><figcaption>Primera vista previa · escritorio</figcaption></figure></div></li><li class="gb-m gb-m-art" data-r><span class="gb-mn">04</span><div class="gb-mt"><h3>Visto bueno</h3><p>No lo di a la primera. Pedí otra versión, en otro enlace, para comparar.</p></div><div class=gb-ma><div class="gb-dup"><figure class="gb-sh "><img src="../../assets/img/gab/antes-390.webp" width="780" height="1721" alt="Captura en móvil de la versión publicada de esta sección: texto corrido con apartados numerados" loading="lazy" decoding="async"><figcaption>Publicada</figcaption></figure><figure class="gb-sh "><img src="../../assets/img/gab/previa-390.webp" width="780" height="1688" alt="Captura en móvil de la primera vista previa: frases tachadas en tipografía grande" loading="lazy" decoding="async"><figcaption>Primera vista previa</figcaption></figure></div></div></li><li class="gb-m gb-m-last" data-r><span class="gb-mn">05</span><div class="gb-mt"><h3>Publicar</h3><p>Solo con mi visto bueno. Si lees esto, lo di.</p></div></li></ol>
+</section>
+
+<section class="gb-b gb-5" aria-labelledby="gb5">
+<header class="gb-h" data-r><span class="gb-n">(05)</span><h2 class="gb-t" id="gb5">Lo que ha salido</h2><span class="gb-k">Resultados</span></header>
+<p class="gb-lede gb-l5" data-r>Cada uno de estos trabajos lo he cerrado yo.</p>
+<ol class="gb-lg"><li data-r><span class="num">01</span><span class="gb-lt">Web</span><span class="gb-ld">Dos caras, una profesional y esta. Diseñadas, construidas y mantenidas con el gabinete.</span><span class="gb-lm">adrianvalencia.es</span></li><li data-r><span class="num">02</span><span class="gb-lt">LinkedIn</span><span class="gb-ld">Supervisado y asesorado de forma creativa, y alineado con esta web y con la marca personal. El gabinete figura en él como proyecto.</span><span class="gb-lm">Perfil</span><figure class="gb-li"><p class="gb-li-k">LinkedIn · Proyectos</p><p class="gb-li-t">AI Agents | Gabinete multiagente de IA</p><p class="gb-li-d">2025 — act.</p><blockquote><p>«Sistema personal, en uso real. Su arquitectura lo distingue: varios agentes, una memoria común y una persona que conserva la decisión».</p></blockquote><a class="lk" href="https://www.linkedin.com/in/adrianvalenciarios/" target="_blank" rel="noopener"><span class="lk-t">Ver el perfil</span><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5.5 4H12v6.5" fill="none" stroke="currentColor" stroke-width="1.25"/></svg><span class="vh"> (se abre en una pestaña nueva)</span></a></figure></li><li data-r><span class="num">03</span><span class="gb-lt">Currículum</span><span class="gb-ld">Reescrito y optimizado con el gabinete.</span><span class="gb-lm">CV</span></li><li data-r><span class="num">04</span><span class="gb-lt">Grado</span><span class="gb-ld">Relaciones Laborales y Recursos Humanos, Universidad de Sevilla. Apliqué agentes de IA al estudio: sobresaliente en diversas asignaturas y todas aprobadas.</span><span class="gb-lm">Estudio</span></li><li data-r><span class="num">05</span><span class="gb-lt">Formación</span><span class="gb-ld">Rutas propias, con fecha y motivo: Python aplicada a recursos humanos y People Analytics, y la preparación del APTIS C1.</span><span class="gb-lm">En curso</span></li><li data-r><span class="num">06</span><span class="gb-lt">Hoja de ruta</span><span class="gb-ld">Diecisiete decisiones registradas, cada una con su porqué: qué estudiar, qué priorizar, hacia dónde ir.</span><span class="gb-lm">Decisiones</span></li><li data-r><span class="num">07</span><span class="gb-lt">Sector</span><span class="gb-ld">Rutinas que corren solas: siguen lo que se mueve en el sector y ordenan cada día el correo y la agenda.</span><span class="gb-lm">Activas</span></li></ol>
+</section>
+
+<section class="gb-b gb-6" aria-labelledby="gb6">
+<header class="gb-h" data-r><span class="gb-n mu">(06)</span><h2 class="gb-t" id="gb6">Memoria y escala</h2><span class="gb-k">Sistema</span></header>
+<p class="gb-lede gb-l6" data-r>No empieza de cero: lo decidido queda fechado y se lee en un orden fijo antes de opinar.</p>
+<div class="gb-cb" data-r>
+<p class="eyebrow">La criba</p>
+<ol class="gb-sv"><li style="--w:1.0000;--i:0"><span class="gb-sn" data-count="771">771</span><span class="gb-sb" aria-hidden="true"></span><span class="gb-sl"><b>archivos</b> de agentes, instrucciones y comandos, en 14 repositorios</span></li><li style="--w:0.8962;--i:1"><span class="gb-sn" data-count="691">691</span><span class="gb-sb" aria-hidden="true"></span><span class="gb-sl"><b>únicos</b> sin duplicados</span></li><li style="--w:0.0856;--i:2"><span class="gb-sn" data-count="66">66</span><span class="gb-sb" aria-hidden="true"></span><span class="gb-sl"><b>roles</b> en reserva, en 19 sectores</span></li></ol>
+<p class="gb-cap">Un rol solo sale de la reserva si se usa, y ese paso lo apruebo yo.</p>
+</div>
+<ul class="gb-fx" data-r aria-label="El gabinete hoy"><li><span class="gb-fx-n">15</span><span class="gb-fx-l">figuras</span><span class="gb-fx-d">Nueve en uso, dos a prueba y cuatro aparcadas a propósito.</span></li><li><span class="gb-fx-n">6</span><span class="gb-fx-l">protocolos</span><span class="gb-fx-d">Comunes a todas: fuentes, estilo, orden y registro.</span></li><li><span class="gb-fx-n">49</span><span class="gb-fx-l">procedimientos</span><span class="gb-fx-d">Escritos y con nombre. Se ejecutan igual la segunda vez.</span></li></ul>
+</section>
+
+<section class="gb-b gb-7" aria-label="Cierre">
+<p class="gb-end" data-r>La palabra, el criterio y la dirección <em>son míos.</em></p>
+<p class="gb-out" data-r><a class="lk" href="https://www.linkedin.com/in/adrianvalenciarios/" target="_blank" rel="noopener"><span class="lk-t">El proyecto en LinkedIn</span><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5.5 4H12v6.5" fill="none" stroke="currentColor" stroke-width="1.25"/></svg><span class="vh"> (se abre en una pestaña nueva)</span></a><a class="lk" href="https://adrianvalencia.es/"><span class="lk-t">Ver la Cara A</span><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5.5 4H12v6.5" fill="none" stroke="currentColor" stroke-width="1.25"/></svg></a></p>
+</section>
 </section>
 <section class="sec wrap next" aria-label="Siguiente proyecto"><a class="next-a" href="../../work/mi-vida/"><span class="eyebrow">Siguiente proyecto — 03</span><span class="next-t">Mi vida</span><span class="next-i bw"><img src="../../assets/img/l/JCHJjIOxZ1.webp" width="1080" height="1468" alt="" loading="lazy" decoding="async"></span></a>
 <div class="more"><a class="more-a" href="../../work/sonido/"><span class="num">01</span><span class="rl" data-t="Music — Content Collaborator"><span>Music — Content Collaborator</span></span><span class="eyebrow">SONIDO</span></a><a class="more-a" href="../../work/personas/"><span class="num">04</span><span class="rl" data-t="Marca, personal"><span>Marca, personal</span></span><span class="eyebrow">PERSONAS</span></a></div></section></main><footer class="ft"><div class="wrap">
@@ -33,4 +270,11 @@
 <p class="ft-wm fit" aria-hidden="true"><span class="wm">Adrián Valencia</span></p>
 <div class="ft-bot"><span>©2026 Adrián Valencia Ríos</span><span class="mute">Humanist HR + Tech Orchestrator</span><a href="#top" class="totop"><span class="rl" data-t="Volver arriba"><span>Volver arriba</span></span> ↑</a></div>
 </div></footer><div class="sp"><button class="sp-b" type="button" aria-expanded="false" aria-controls="sp-panel"><svg class="sp-ic" width="15" height="15" viewBox="0 0 24 24" aria-hidden="true" focusable="false" style="flex:none;fill:currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg><span class="sp-l">Resonancia</span><span class="vh">: abrir playlist de Spotify</span></button>
-<div class="sp-panel" id="sp-panel" hidden data-src="https://open.spotify.com/embed/playlist/6QJf0xYg1cFt41ECWoVEH4?theme=0"><div class="sp-h"><span>Playlist varix — Spotify</span><a href="https://open.spotify.com/playlist/6QJf0xYg1cFt41ECWoVEH4" target="_blank" rel="noopener">Abrir ↗<span class="vh"> (se abre en una pestaña nueva)</span></a></div><div class="sp-f"></div></div></div><script src="../../assets/site.js?v=5adb731ae1" defer></script></body></html>
+<div class="sp-panel" id="sp-panel" hidden data-src="https://open.spotify.com/embed/playlist/6QJf0xYg1cFt41ECWoVEH4?theme=0"><div class="sp-h"><span>Playlist varix — Spotify</span><a href="https://open.spotify.com/playlist/6QJf0xYg1cFt41ECWoVEH4" target="_blank" rel="noopener">Abrir ↗<span class="vh"> (se abre en una pestaña nueva)</span></a></div><div class="sp-f"></div></div></div><script src="../../assets/site.js?v=5adb731ae1" defer></script><script>
+/* Gabinete: las cifras de la criba cuentan al entrar en pantalla (no con movimiento reducido) */
+(()=>{const RM=matchMedia('(prefers-reduced-motion: reduce)');const els=[...document.querySelectorAll('.gb [data-count]')];if(!els.length||RM.matches||!('IntersectionObserver' in window))return;
+const run=el=>{const n=+el.dataset.count,t0=performance.now(),D=n>100?1500:1100;const f=now=>{const p=Math.min(1,(now-t0)/D),e=1-Math.pow(1-p,3);el.textContent=Math.round(n*e);if(p<1)requestAnimationFrame(f)};requestAnimationFrame(f)};
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){io.unobserve(e.target);run(e.target)}}),{rootMargin:'0px 0px -12% 0px'});
+els.forEach(el=>{el.setAttribute('aria-label',el.dataset.count);io.observe(el)});})();
+</script>
+</body></html>
