@@ -1,10 +1,146 @@
 <!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Gabinete — IA — Adrián Valencia</title><meta name="description" content="La inteligencia artificial no es una respuesta; es un organismo vivo. No uso un chat. Uso un ecosistema, y sigue vivo cuando cierro la ventana. Hoy son…"><meta name="author" content="Adrián Valencia Ríos"><meta name="theme-color" content="#0a0a0a"><meta name="color-scheme" content="dark">
-<link rel="canonical" href="https://adrianvalencia.es/cara-b/work/tech/"><meta property="og:site_name" content="Adrián Valencia Ríos"><meta property="og:locale" content="es_ES"><meta property="og:type" content="article"><meta property="og:url" content="https://adrianvalencia.es/cara-b/work/tech/"><meta property="og:title" content="Gabinete — IA — Adrián Valencia"><meta property="og:description" content="La inteligencia artificial no es una respuesta; es un organismo vivo. No uso un chat. Uso un ecosistema, y sigue vivo cuando cierro la ventana. Hoy son…"><meta property="og:image" content="https://adrianvalencia.es/cara-b/assets/og.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Portada de la web Adrián Valencia — Cara B">
-<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Gabinete — IA — Adrián Valencia"><meta name="twitter:description" content="La inteligencia artificial no es una respuesta; es un organismo vivo. No uso un chat. Uso un ecosistema, y sigue vivo cuando cierro la ventana. Hoy son…"><meta name="twitter:image" content="https://adrianvalencia.es/cara-b/assets/og.jpg">
+<title>Gabinete — IA — Adrián Valencia</title><meta name="description" content="La IA me ha ayudado a potenciar mis decisiones, mis ideas. Un sistema con memoria, reglas y límites, y el trabajo concreto que ha salido de él."><meta name="author" content="Adrián Valencia Ríos"><meta name="theme-color" content="#0a0a0a"><meta name="color-scheme" content="dark">
+<link rel="canonical" href="https://adrianvalencia.es/cara-b/work/tech/"><meta property="og:site_name" content="Adrián Valencia Ríos"><meta property="og:locale" content="es_ES"><meta property="og:type" content="article"><meta property="og:url" content="https://adrianvalencia.es/cara-b/work/tech/"><meta property="og:title" content="Gabinete — IA — Adrián Valencia"><meta property="og:description" content="La IA me ha ayudado a potenciar mis decisiones, mis ideas. Un sistema con memoria, reglas y límites, y el trabajo concreto que ha salido de él."><meta property="og:image" content="https://adrianvalencia.es/cara-b/assets/og.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Portada de la web Adrián Valencia — Cara B">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Gabinete — IA — Adrián Valencia"><meta name="twitter:description" content="La IA me ha ayudado a potenciar mis decisiones, mis ideas. Un sistema con memoria, reglas y límites, y el trabajo concreto que ha salido de él."><meta name="twitter:image" content="https://adrianvalencia.es/cara-b/assets/og.jpg">
 <link rel="icon" href="../../favicon.png" type="image/png"><link rel="apple-touch-icon" href="../../apple-touch-icon.png">
 <link rel="preload" href="../../assets/fonts/Anton-Regular.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="../../assets/fonts/Archivo-var.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="../../assets/fonts/JetBrainsMono-Regular.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../../assets/style.css?v=d5935b84fc"><script>document.documentElement.classList.add('js')</script>
+<style>
+/* Gabinete
+/* V8 B · Deck: la sección es una tira de láminas que se recorre en horizontal; el camino se detiene en el visto bueno */
+.gB{padding-bottom:0}
+.gb2{position:relative;margin-top:clamp(56px,6vw,96px)}
+.gb2-pin{overflow-x:auto;overflow-y:hidden}
+.gb2-track{display:flex;align-items:stretch;width:max-content;padding:0 var(--pad)}
+.gb2-f{flex:none;position:relative;height:min(100svh,980px);box-sizing:border-box;padding:clamp(88px,11vh,120px) clamp(28px,3vw,56px) clamp(70px,10vh,96px);display:flex;flex-direction:column;justify-content:center;border-left:1px solid var(--line)}
+.gb2-f:first-child{border-left:0;padding-left:0}
+.gb2-on .gb2-pin{position:sticky;top:0;height:100svh;overflow:clip}
+.gb2-on .gb2-track{will-change:transform}
+/* láminas */
+.gb2-cover{width:88vw;justify-content:flex-end}
+.gb2-mf{margin:0;font:300 clamp(44px,6.2vw,108px)/1 var(--sans);letter-spacing:-.04em;color:var(--bone);max-width:14em}
+.gb2-mf em{font:italic 400 1.02em/1 var(--serif);letter-spacing:-.01em}
+.gb2-open{width:auto;flex-direction:row;align-items:center;gap:clamp(32px,3.4vw,64px)}
+.gb2-fig{margin:0}.gb2-fx{position:relative}.gb2-fx img{display:block;height:min(58vh,560px);width:auto;max-width:none}
+.gb2-fx canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.gb2-fig figcaption{display:flex;justify-content:space-between;gap:16px;margin-top:10px;padding-top:8px;border-top:1px solid var(--line);font:400 10.5px/1.4 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--mute)}
+.gb2-fig figcaption span:first-child{color:var(--bone)}
+.gb2-pr{width:min(34ch,30vw);font-size:16px;line-height:1.6;color:var(--bone)}.gb2-pr p{margin:0 0 1em}
+.gb2-pr strong{font-weight:600}
+.gb2-ti{width:clamp(300px,30vw,480px);justify-content:space-between}
+.gb2-n{font:400 11.5px/1 var(--mono);letter-spacing:.08em;color:var(--acc)}
+.gb2-t{margin:0;font:400 clamp(72px,8.4vw,150px)/.88 var(--disp);text-transform:uppercase;color:var(--bone);letter-spacing:.005em;padding-top:.08em}
+.gb2-k{font:400 11.5px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
+.gb2-port{width:auto;flex-direction:row;align-items:center;gap:clamp(28px,3vw,56px)}
+.gb2-lede{margin:0;font:300 clamp(24px,2.2vw,36px)/1.25 var(--sans);letter-spacing:-.015em;color:var(--bone);max-width:20ch}
+.gb2-sel{position:relative;white-space:nowrap;background:linear-gradient(rgba(239,233,223,.18),rgba(239,233,223,.18)) no-repeat 0 0/100% 100%;padding:0 .05em}
+.gb2-sel::before,.gb2-sel::after{content:"";position:absolute;width:9px;height:calc(100% + 9px);background:radial-gradient(circle 4.5px at 50% 4.5px,var(--bone) 98%,transparent) no-repeat,linear-gradient(var(--bone),var(--bone)) no-repeat 50% 0/1.5px 100%}
+.gb2-sel::before{left:-5px;top:-9px}.gb2-sel::after{right:-5px;bottom:-9px;transform:rotate(180deg)}
+.gb2-res{width:min(46vw,720px)}
+.gb2-rs{list-style:none;margin:0;padding:0;display:grid;gap:clamp(22px,3.2vh,40px)}
+.gb2-rs li{display:grid;grid-template-columns:2.6em minmax(0,1fr);gap:6px 14px;padding-top:14px;border-top:1px solid var(--line)}
+.gb2-rn{font:400 11.5px/2.6 var(--mono);color:var(--mute)}
+.gb2-rk{font:400 clamp(40px,4.4vw,76px)/.9 var(--disp);text-transform:uppercase;color:var(--bone)}
+.gb2-rh{grid-column:2;font:300 clamp(18px,1.4vw,22px)/1.25 var(--sans);color:var(--bone)}
+.gb2-rd{grid-column:2;font-size:14.5px;line-height:1.5;color:var(--mute);max-width:46ch}
+.gb2-cif{width:min(92vw,1320px);justify-content:space-between}
+.gb2-fg{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--gap)}
+.gb2-fg li{display:grid;gap:8px;align-content:start;padding-top:14px;border-top:1px solid var(--line)}
+.gb2-big{font:400 clamp(110px,15vw,260px)/.84 var(--disp);color:var(--bone);font-variant-numeric:tabular-nums}
+.gb2-bl{font:400 11.5px/1.4 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--bone)}
+.gb2-bd{font-size:15px;line-height:1.5;color:var(--mute);max-width:24ch}
+.gb2-cri{width:min(70vw,1000px);gap:48px}
+.gb2-sv{list-style:none;margin:0;padding:0}
+.gb2-sv li{display:grid;grid-template-columns:3em minmax(0,1fr);gap:6px 16px;align-items:baseline;padding:16px 0 18px;border-top:1px solid var(--line)}
+.gb2-sn{font:400 clamp(44px,4vw,64px)/1 var(--disp);color:var(--bone);font-variant-numeric:tabular-nums}
+.gb2-sl{font-size:16px;color:var(--mute)}.gb2-sl b{font-weight:500;color:var(--bone)}
+.gb2-tr{grid-column:1/-1;height:8px;background:rgba(239,233,223,.07);margin-top:8px}
+.gb2-tr i{display:block;height:100%;width:calc(var(--w)*100%);background:var(--bone);transform-origin:0 50%;transition:transform 1.4s var(--ease2) .2s}
+.gb2-sv li:last-child .gb2-tr i{background:var(--acc)}.gb2-sv li:last-child .gb2-sn{color:var(--acc)}
+.gb2-note{margin:0;font:400 11.5px/1.7 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--bone);max-width:30ch}
+.gb2-note span{display:block;color:var(--mute);margin-bottom:6px}
+.gb2-con{width:min(118vw,1700px);display:grid;grid-template-columns:repeat(7,minmax(0,1fr));grid-template-rows:auto auto 1fr auto;column-gap:var(--gap);align-content:center}
+.gb2-con .gb2-lede{grid-column:1/span 3}.gb2-con .gb2-note{grid-column:5/span 3;align-self:end;justify-self:end;text-align:right}
+.gb2-cr{grid-column:1/-1;list-style:none;margin:clamp(40px,7vh,80px) 0 0;padding:0;display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:var(--gap)}
+.gb2-cr li{display:grid;align-content:start;gap:12px;padding-top:16px;border-top:1px solid var(--bone)}
+.gb2-cn{font:400 11.5px/1 var(--mono);color:var(--mute)}
+.gb2-cl{font:400 clamp(24px,1.9vw,32px)/1 var(--disp);text-transform:uppercase;color:var(--bone)}
+.gb2-cv{font-size:15px;line-height:1.5;color:var(--mute)}
+.gb2-cap{grid-column:1/-1;margin:36px 0 0;font:400 11.5px/1.6 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
+.gb2-cry,.gb2-lim{width:auto;flex-direction:row;align-items:center;gap:clamp(32px,3.4vw,64px)}
+.gb2-code{font:400 13px/1.6 var(--mono);letter-spacing:.06em;border-left:1px solid var(--line2);padding-left:14px}
+.gb2-code span{color:var(--mute);text-transform:uppercase;letter-spacing:.08em}
+.gb2-stf{width:auto;padding-right:clamp(48px,5vw,96px)}
+.gb2-st{list-style:none;margin:0;padding:0}
+.gb2-st li{font:400 clamp(64px,9vw,150px)/1.04 var(--serif);color:var(--mute);letter-spacing:-.015em;white-space:nowrap}
+.gb2-st li:nth-child(2){padding-left:1.2em}.gb2-st li:nth-child(3){padding-left:.5em}
+.gb2-st s{text-decoration:none;position:relative}
+.gb2-st s::after{content:"";position:absolute;left:-.04em;right:-.04em;top:55%;height:max(2px,.03em);background:var(--acc);transform-origin:0 50%;transition:transform .8s var(--ease2);transition-delay:calc(var(--i)*240ms + 200ms)}
+.gb2-sinf{width:min(52vw,760px)}
+.gb2-sin{margin:0}
+.gb2-sin p{margin:0;font:italic 400 clamp(28px,2.8vw,46px)/1.25 var(--serif);color:var(--mute)}.gb2-sin span{color:var(--bone)}
+.gb2-sin footer{margin-top:24px;font:400 11.5px/1.6 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
+.gb2-path{width:min(130vw,1900px);justify-content:space-between}
+.gb2-fw{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));position:relative}
+.gb2-fw::before{content:"";position:absolute;left:0;right:0;top:6px;height:1px;background:var(--line2)}
+.gb2-fw::after{content:"";position:absolute;left:0;top:6px;height:1px;width:calc(var(--fp,0)*100%);background:var(--bone)}
+.gb2-fw li{position:relative;padding-top:40px;display:grid;gap:12px}
+.gb2-dot{position:absolute;left:0;top:0;width:13px;height:13px;border-radius:50%;background:var(--ink);border:1px solid var(--bone);z-index:1;transition:background .3s}
+.gb2-fw li.on .gb2-dot{background:var(--bone)}
+.gb2-fw li.ok .gb2-dot{border-color:var(--acc)}.gb2-fw li.ok.on .gb2-dot{background:var(--acc)}
+.gb2-fw li.ok.wait .gb2-dot{animation:gb2p 1.2s var(--ease) infinite}
+@keyframes gb2p{0%{box-shadow:0 0 0 0 rgba(255,91,46,.6)}100%{box-shadow:0 0 0 18px rgba(255,91,46,0)}}
+.gb2-pn{font:400 11.5px/1 var(--mono);color:var(--mute)}
+.gb2-pl{font:400 clamp(34px,3.6vw,64px)/.95 var(--disp);text-transform:uppercase;color:var(--mute);transition:color .3s}
+.gb2-fw li.on .gb2-pl{color:var(--bone)}.gb2-fw li.ok.on .gb2-pl{color:var(--acc)}
+.gb2-p5{width:min(40ch,34vw)}
+.gb2-end{width:min(82vw,1200px);justify-content:center;gap:40px}
+.gb2-endp{margin:0;font:300 clamp(44px,5.6vw,96px)/1.02 var(--sans);letter-spacing:-.038em;color:var(--bone);max-width:13ch}
+.gb2-endp em{font:italic 400 1.02em/1 var(--serif);letter-spacing:-.01em}
+.gb2-out{display:flex;gap:28px;margin:0}.gb2-out .ar{color:var(--mute)}
+.gb2-ui{display:none}
+.gb2-on .gb2-ui{display:flex;position:absolute;left:var(--pad);right:calc(var(--pad) + 150px);bottom:26px;align-items:center;gap:14px;font:400 10.5px/1 var(--mono);letter-spacing:.1em;color:var(--mute);z-index:3}
+.gb2-cur{color:var(--bone);min-width:2ch}
+.gb2-bar{position:relative;flex:1;height:1px;background:var(--line2)}
+.gb2-bar i{position:absolute;left:0;top:0;height:1px;width:100%;background:var(--bone);transform:scaleX(var(--pr,0));transform-origin:0 50%}
+.gb2-bar b{position:absolute;top:-3px;width:1px;height:7px;background:var(--mute);left:calc(var(--p)*100%)}
+.gb2-bar b.on{background:var(--bone)}
+.gB+.gb2+.next{padding-top:clamp(80px,8vw,128px)}
+@media (prefers-reduced-motion:no-preference){
+ .js .gb2-f:not(.in) .gb2-tr i{transform:scaleX(0)}
+ .js .gb2-f:not(.in) .gb2-st s::after{transform:scaleX(0)}
+ .js .gb2-sel{background-size:0 100%;transition:background-size .8s var(--ease2) .5s}.js .gb2-f.in .gb2-sel{background-size:100% 100%}
+ .js .gb2-sel::before,.js .gb2-sel::after{opacity:0;transition:opacity .3s 1.2s}.js .gb2-f.in .gb2-sel::before,.js .gb2-f.in .gb2-sel::after{opacity:1}
+ .js .gb2-f>*{transition:opacity .8s var(--ease),transform .9s var(--ease2)}
+ .js .gb2-on .gb2-f:not(.in)>*{opacity:0;transform:translateX(40px)}
+}
+@media (max-width:820px){
+ .gb2-f{width:100vw!important;padding:96px var(--pad) 84px;border-left:0}
+ .gb2-track{padding:0}
+ .gb2-f:first-child{padding-left:var(--pad)}
+ .gb2-open,.gb2-port,.gb2-cry,.gb2-lim{flex-direction:column;align-items:flex-start;justify-content:center;gap:24px}
+ .gb2-fx img{height:auto;width:100%;max-height:46svh;object-fit:contain;width:auto;max-width:100%}
+ .gb2-fig{max-width:100%}
+ .gb2-pr,.gb2-p5{width:auto;font-size:15px}
+ .gb2-mf{font-size:clamp(40px,11.4vw,52px)}
+ .gb2-t{font-size:clamp(64px,19vw,88px)}
+ .gb2-rs{gap:20px}.gb2-rk{font-size:clamp(32px,9vw,40px)}.gb2-rd{font-size:13.5px}
+ .gb2-cif{justify-content:center;gap:32px}
+ .gb2-fg{grid-template-columns:1fr 1fr;gap:26px 16px}.gb2-big{font-size:clamp(84px,24vw,110px)}.gb2-bd{font-size:13.5px}
+ .gb2-cri{justify-content:center}
+ .gb2-con{display:flex;gap:0}.gb2-con .gb2-note{display:none}
+ .gb2-cr{display:block;margin-top:24px}.gb2-cr li{grid-template-columns:2em 7.4em minmax(0,1fr);gap:0 8px;padding:9px 0;border-top:1px solid var(--line);align-items:baseline}
+ .gb2-cl{font-size:18px}.gb2-cv{font-size:13px;line-height:1.4}.gb2-cap{margin-top:14px;font-size:10.5px}
+ .gb2-st li{font-size:clamp(40px,11.4vw,54px);white-space:normal}.gb2-st li:nth-child(n){padding-left:0}
+ .gb2-sin p{font-size:clamp(25px,7vw,30px)}
+ .gb2-path{justify-content:center;gap:28px}
+ .gb2-fw{grid-template-columns:1fr;gap:14px}.gb2-fw::before,.gb2-fw::after{display:none}
+ .gb2-fw li{padding:0 0 0 30px;grid-template-columns:2.4em 1fr;align-items:baseline}.gb2-dot{top:.35em}
+ .gb2-pl{font-size:clamp(28px,8vw,34px)}
+ .gb2-endp{font-size:clamp(40px,11vw,50px)}.gb2-out{flex-direction:column;gap:14px}
+ .gb2-on .gb2-ui{right:calc(var(--pad) + 64px);bottom:22px}
+}
+</style>
 </head><body class="pg-proj" id="top"><a class="skip" href="#main">Saltar al contenido</a>
 <header class="hd"><div class="hd-in wrap">
 <a class="brand" href="../../" aria-label="Adrián Valencia Ríos — inicio"><svg class="smile" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><circle cx="16" cy="16" r="14.5"/><path d="M11.2 12.6v2.2M20.8 12.6v2.2"/><path d="M10.2 19.2c1.4 2.4 3.4 3.6 5.8 3.6s4.4-1.2 5.8-3.6"/></svg><span class="brand-t">Adrián Valencia Ríos</span></a>
@@ -14,12 +150,35 @@
 <div class="menu" id="menu" hidden><nav aria-label="Menú móvil"><ol><li><a href="../../"><small>01</small>Inicio</a></li><li><a href="../../work/" aria-current="page"><small>02</small>Proyectos</a></li><li><a href="../../gallery/"><small>03</small>Publicaciones</a></li><li><a href="../../article/"><small>04</small>Journal</a></li><li><a href="../../contact/"><small>05</small>Contacto</a></li><li class="mA"><a href="/" aria-label="Cara A: web profesional, adrianvalencia.es"><small>A</small>Cara A<em>adrianvalencia.es</em></a></li></ol></nav>
 <div class="menu-f"><a href="mailto:adrianvalencia.rrhh@gmail.com">adrianvalencia.rrhh@gmail.com</a><div><a href="https://www.instagram.com/adrivarix11" target="_blank" rel="noopener">Instagram</a><a href="https://www.linkedin.com/in/adrianvalenciarios" target="_blank" rel="noopener">LinkedIn</a><a href="https://open.spotify.com/playlist/6QJf0xYg1cFt41ECWoVEH4" target="_blank" rel="noopener">Spotify</a></div></div></div><main id="main">
 <section class="phead wrap"><p class="eyebrow ld"><a href="../../work/">Proyectos</a> / 02 — TECH</p><h1 class="ph-h" style="--w:3.79"><span class="ln"><span>Gabinete — IA</span></span></h1></section>
-<section class="wrap pd">
+<section class="wrap pd gb gB">
 <div class="pd-top" data-r><p class="pd-marq">Engineering Digital Authority</p><dl class="meta meta-row"><div><dt>Categoría</dt><dd>TECH</dd></div><div><dt>Tipo</dt><dd>Proyecto personal.</dd></div><div><dt>Duración</dt><dd>2025 — act.</dd></div><div><dt>Ubicación</dt><dd>Online.</dd></div></dl><div class="pd-go"><a class="lk lk-acc" href="https://www.linkedin.com/in/adrianvalenciarios/" target="_blank" rel="noopener"><span class="lk-t">Ver en LinkedIn</span><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5.5 4H12v6.5" fill="none" stroke="currentColor" stroke-width="1.25"/></svg><span class="vh"> (se abre en una pestaña nueva)</span></a></div></div>
-<div class="pd-s"><figure class="pd-hero pd-hero-s" data-r><img src="../../assets/img/l/gab-figura.webp" width="1600" height="1071" alt="Figura femenina abstracta en movimiento, fotografía movida con grano" fetchpriority="high" decoding="async"></figure></div>
-<div class="pd-g"><div class="prose prose-pd" data-r><p class="p-s"><strong>La inteligencia artificial no es una respuesta; es un organismo vivo.</strong></p><p>No uso un chat. Uso un ecosistema, y sigue vivo cuando cierro la ventana.</p><p>Hoy son dos piezas.<br><strong>Grok Bot</strong> — donde los agentes trabajan.<br><strong>Notion</strong> — donde la evolución se almacena.<br>Sin las dos, sería otra ventana que se olvida al cerrarse.</p><p class="p-s gh"><strong><span class="gh-n">I.</span> EL GABINETE</strong></p><p>Diseñé mi gabinete contra la generalidad. Mientras el mercado usa la IA de forma reactiva, yo he construido una infraestructura basada en la memoria.</p><p>No es una sola voz. Es una red de oficios <br>— <em>estrategia | derecho | datos | mercado | inglés | arquitectura | voz</em>. Cada uno tiene un prompt propio, escrito y guardado, no improvisado en el hilo.</p><p>Si no nombro a nadie, responde quien dirige. Reparte, reúne y cierra. <strong>Yo decido.</strong> Una instrucción mía anula cualquier protocolo.</p><p class="p-s gh"><strong><span class="gh-n">II.</span> LO QUE NO DEJO A LA SUERTE</strong></p><p><em>La calidad no está en el modelo. Está en lo que no dejo a la suerte.</em></p><p>Hay skills. Un proceso que se repite deja de vivir en mi cabeza y pasa a tener nombre —⁠activar una figura, delegar, repartir el esfuerzo, escribir un prompt. Se ejecuta igual la segunda vez que la primera. <em>Misión, evidencia, tono y límite.</em></p><p>La memoria vive en Notion, no en la conversación. Lo que se decide queda fechado —⁠una sesión, una decisión, un activo. La siguiente vez se lee en un orden fijo, antes de opinar. Por eso no empieza de cero, y por eso no reabre lo que ya cerré.</p><p>Hay rutinas que corren solas. El sistema trabaja cuando la conversación ya terminó. Tareas rutinarias quedan automatizadas —⁠el correo, la agenda, lo que se mueve en el sector.</p><p class="p-s gh"><strong><span class="gh-n">III.</span> LO QUE HA SALIDO DE AQUÍ</strong></p><p>Actualmente ha evolucionado. Tengo a mi disposición un grupo de especialistas que no solo me asesoran en aspectos materiales, sino significativos y trascendentales. <strong>Tech + Heart</strong>, en el mismo sitio.</p><p>Nada de esto se ha hecho solo. La IA propone, ordena y no olvida. <em>La palabra, el criterio y la dirección son míos.</em> Una misión significativa no sale de un prompt.</p><p>De aquí ha salido trabajo concreto, y lo he cerrado yo.<br><br><strong>LinkedIn</strong> — supervisado y asesorado creativamente.<br><strong>Web</strong> — personal, y otros portfolios.<br><strong>Notion</strong> — el legado, los cimientos, y el camino de estos meses. Pasado, presente y futuro.</p><p>Diseñé agentes de IA aplicada al estudio, obteniendo sobresaliente en diversas asignaturas.</p><p>… y mucho más.</p><p class="p-s"><strong>IV. MÁS</strong></p><p>La materialización de mi pilar Tech —⁠un cerebro externo que guía, pero no encadena.<br><br><em>La innovación deja de ser una promesa para convertirse en la normalidad.</em></p><p class="p-s"><strong>Es la infraestructura con la que pienso. No la que piensa por mí.</strong></p></div></div>
-<div class="pd-s pd-s2"><ul class="pd-strip fxm fx-car fx-peek" style="--armax:0.800" aria-label="Imágenes del proyecto"><li data-r style="--ar:0.667"><figure><img src="../../assets/img/m/7EkdEKDfbw.webp" width="760" height="1140" alt="Figura humana translúcida, como de cristal, sobre fondo gris claro" loading="lazy" decoding="async"><figcaption><span class="num">01/03</span></figcaption></figure></li><li data-r style="--ar:0.800"><figure><img src="../../assets/img/m/4irQ4Pwblt.webp" width="760" height="950" alt="Retrato movido de un rostro sobre fondo oscuro" loading="lazy" decoding="async"><figcaption><span class="num">02/03</span></figcaption></figure></li><li data-r style="--ar:0.690"><figure><img src="../../assets/img/m/ZOaKUstOa1.webp" width="760" height="1101" alt="Silueta desenfocada sobre fondo blanco" loading="lazy" decoding="async"><figcaption><span class="num">03/03</span></figcaption></figure></li></ul></div>
 </section>
+<div class="gb2" aria-label="Gabinete, en capítulos">
+<div class="gb2-pin">
+<div class="gb2-track">
+<div class="gb2-f gb2-cover" data-ch="0"><p class="gb2-mf">La IA me ha ayudado a potenciar mis decisiones, mis ideas. He alcanzado mejores versiones de <em>quien ya era.</em></p></div>
+<div class="gb2-f gb2-open" data-ch="0"><figure class="gb2-fig "><div class="gb2-fx"><img src="../../assets/img/l/gab-figura.webp" width="1600" height="1071" alt="Figura femenina abstracta en movimiento, fotografía movida con grano" loading="lazy" decoding="async"></div><figcaption><span>FIG. 01</span><span>1600 × 1071</span></figcaption></figure><div class="gb2-pr"><p>No la uso como un chat que se olvida al cerrarse. Desde octubre de 2025 he construido con ella un gabinete: un sistema con memoria, reglas y límites, donde cada encargo tiene un responsable y cada decisión, una fecha.</p><p>La primera regla la fijé ese mismo mes: el experto humano final soy yo. La IA propone y pone a prueba; si la corrijo con fundamento, cuenta mi corrección.</p></div></div>
+<div class="gb2-f gb2-ti" data-ch="1"><span class="gb2-n">(01)</span><h2 class="gb2-t" id="gb2-1">Hasta hoy</h2><span class="gb2-k">Resultados</span></div>
+<div class="gb2-f gb2-port" data-ch="1"><figure class="gb2-fig "><div class="gb2-fx"><img src="../../assets/img/m/4irQ4Pwblt.webp" width="760" height="950" alt="Retrato movido de un rostro sobre fondo oscuro" loading="lazy" decoding="async"><canvas class="gb2-blob" aria-hidden="true"></canvas></div><figcaption><span>FIG. 02</span><span>760 × 950</span></figcaption></figure><p class="gb2-lede">Trabajo que se puede comprobar. <span class="gb2-sel">Lo he cerrado yo.</span></p></div>
+<div class="gb2-f gb2-res" data-ch="1"><ol class="gb2-rs"><li><span class="gb2-rn">01</span><span class="gb2-rk">Web</span><span class="gb2-rh">adrianvalencia.es, dos caras.</span><span class="gb2-rd">La profesional y esta: diseño, código y textos.</span></li><li><span class="gb2-rn">02</span><span class="gb2-rk">LinkedIn y currículum</span><span class="gb2-rh">Perfil, web y marca, alineados.</span><span class="gb2-rd">El perfil lo he supervisado y asesorado de forma creativa; el currículum, reescrito y optimizado con el gabinete.</span></li><li><span class="gb2-rn">03</span><span class="gb2-rk">Grado</span><span class="gb2-rh">Sobresaliente en diversas asignaturas.</span><span class="gb2-rd">Relaciones Laborales y Recursos Humanos, Universidad de Sevilla. Apliqué agentes de IA al estudio y las aprobé todas.</span></li></ol></div>
+<div class="gb2-f gb2-res" data-ch="1"><ol class="gb2-rs" start="4"><li><span class="gb2-rn">04</span><span class="gb2-rk">Formación</span><span class="gb2-rh">Dos rutas en curso.</span><span class="gb2-rd">Python aplicada a recursos humanos y People Analytics, y la preparación del APTIS C1.</span></li><li><span class="gb2-rn">05</span><span class="gb2-rk">Hoja de ruta</span><span class="gb2-rh">Diecisiete decisiones registradas.</span><span class="gb2-rd">Sobre qué estudiar, qué priorizar y hacia dónde ir. Ocho cerradas; nueve, abiertas.</span></li><li><span class="gb2-rn">06</span><span class="gb2-rk">Rutinas</span><span class="gb2-rh">Trabajo que corre solo.</span><span class="gb2-rd">Cada mañana ordenan el correo y la agenda, y siguen lo que se mueve en el sector.</span></li></ol></div>
+<div class="gb2-f gb2-ti" data-ch="2"><span class="gb2-n">(02)</span><h2 class="gb2-t" id="gb2-2">En cifras</h2><span class="gb2-k">Memoria y escala</span></div>
+<div class="gb2-f gb2-cif" data-ch="2"><p class="gb2-lede">No empieza de cero. Lo decidido queda escrito, con fecha y motivo, y cada sesión lo lee en el mismo orden antes de opinar.</p><ul class="gb2-fg" aria-label="El gabinete en cifras"><li><span class="gb2-big" data-scr="15">15</span><span class="gb2-bl">figuras</span><span class="gb2-bd">Nueve en uso, dos a prueba y cuatro aparcadas a propósito.</span></li><li><span class="gb2-big" data-scr="49">49</span><span class="gb2-bl">procedimientos</span><span class="gb2-bd">Escritos y con nombre: se ejecutan igual la segunda vez.</span></li><li><span class="gb2-big" data-scr="6">6</span><span class="gb2-bl">protocolos</span><span class="gb2-bd">Comunes a todas las figuras: fuentes, estilo, estructura y registro.</span></li><li><span class="gb2-big" data-scr="33">33</span><span class="gb2-bl">cambios registrados</span><span class="gb2-bd">En dieciocho días de otoño de 2026: qué cambió, cuándo y por qué.</span></li></ul></div>
+<div class="gb2-f gb2-cri" data-ch="2"><ol class="gb2-sv"><li style="--w:1.0000"><span class="gb2-sn" data-scr="771">771</span><span class="gb2-sl"><b>archivos</b> de agentes, instrucciones y comandos, en 14 repositorios abiertos</span><span class="gb2-tr" aria-hidden="true"><i></i></span></li><li style="--w:0.8962"><span class="gb2-sn" data-scr="691">691</span><span class="gb2-sl"><b>únicos</b> al quitar duplicados</span><span class="gb2-tr" aria-hidden="true"><i></i></span></li><li style="--w:0.0856"><span class="gb2-sn" data-scr="66">66</span><span class="gb2-sl"><b>roles</b> en 19 sectores</span><span class="gb2-tr" aria-hidden="true"><i></i></span></li></ol><p class="gb2-note"><span>La biblioteca de roles</span>Un rol solo sale de la reserva si se usa, y ese paso lo apruebo yo.</p></div>
+<div class="gb2-f gb2-ti" data-ch="3"><span class="gb2-n">(03)</span><h2 class="gb2-t" id="gb2-3">Cómo trabaja</h2><span class="gb2-k">Método</span></div>
+<div class="gb2-f gb2-con" data-ch="3"><p class="gb2-lede">Si no nombro a nadie, responde quien dirige. Reparte, reúne y cierra.</p><p class="gb2-note"><span>Antes de delegar</span>Un contrato de siete campos.</p><ol class="gb2-cr"><li><span class="gb2-cn">01</span><span class="gb2-cl">Objetivo</span><span class="gb2-cv">El resultado concreto que hay que conseguir.</span></li><li><span class="gb2-cn">02</span><span class="gb2-cl">Formato</span><span class="gb2-cv">La forma exacta en que vuelve: tabla, borrador, resumen.</span></li><li><span class="gb2-cn">03</span><span class="gb2-cl">Herramientas</span><span class="gb2-cv">Qué fuentes y medios puede usar, y cuáles no.</span></li><li><span class="gb2-cn">04</span><span class="gb2-cl">Límites</span><span class="gb2-cv">Lo que queda fuera y lo que no se toca.</span></li><li><span class="gb2-cn">05</span><span class="gb2-cl">Esfuerzo</span><span class="gb2-cv">Bajo, medio o alto.</span></li><li><span class="gb2-cn">06</span><span class="gb2-cl">Responsable</span><span class="gb2-cv">Quién lo ejecuta y responde.</span></li><li><span class="gb2-cn">07</span><span class="gb2-cl">Hecho cuando</span><span class="gb2-cv">La señal observable de que está terminado.</span></li></ol><p class="gb2-cap">Así se evita el error más común: un «investiga esto» sin objetivo, sin forma y sin final.</p></div>
+<div class="gb2-f gb2-cry" data-ch="3"><figure class="gb2-fig "><div class="gb2-fx"><img src="../../assets/img/m/7EkdEKDfbw.webp" width="760" height="1140" alt="Figura humana translúcida, como de cristal, sobre fondo gris claro" loading="lazy" decoding="async"></div><figcaption><span>FIG. 03</span><span>760 × 1140</span></figcaption></figure><div class="gb2-pr"><p>Ante la duda, quien dirige sintetiza: el testigo no se pasa por inercia. Si a mitad de camino el trabajo es de otro oficio, se para y se deriva, con destino y motivo en una línea.</p><p class="gb2-code"><span>Derivación:</span> destino — motivo</p><p><strong>Yo decido.</strong> Una instrucción mía anula cualquier protocolo.</p></div></div>
+<div class="gb2-f gb2-ti" data-ch="4"><span class="gb2-n">(04)</span><h2 class="gb2-t" id="gb2-4">Lo que no hace</h2><span class="gb2-k">Límites</span></div>
+<div class="gb2-f gb2-stf" data-ch="4"><ul class="gb2-st" aria-label="Frases que tiene prohibidas"><li style="--i:0"><s>Encantado de ayudar.</s></li><li style="--i:1"><s>¡Claro!</s></li><li style="--i:2"><s>¡Qué buena pregunta!</s></li></ul></div>
+<div class="gb2-f gb2-lim" data-ch="4"><figure class="gb2-fig "><div class="gb2-fx"><img src="../../assets/img/m/ZOaKUstOa1.webp" width="760" height="1101" alt="Silueta desenfocada sobre fondo blanco" loading="lazy" decoding="async"></div><figcaption><span>FIG. 04</span><span>760 × 1101</span></figcaption></figure><div class="gb2-pr"><p>Las plantillas son un punto de partida, no una cárcel. Si una idea mía no es buena, me lo dice con razones: no consuela, re-enfoca. Si falta un dato, pregunta; no lo inventa.</p><p>Nada irreversible —⁠publicar, enviar, contactar⁠— sale sin mi visto bueno. Y no se activa una figura nueva por hacer más grande el sistema.</p></div></div>
+<div class="gb2-f gb2-sinf" data-ch="4"><blockquote class="gb2-sin"><p><span>Sin evidencia,</span> el modelo alucina.</p><p><span>Sin sistema lógico,</span> es superficial.</p><p><span>Sin restricciones,</span> es ruidoso.</p><p><span>Sin inferencia de calidad,</span> es perezoso.</p><footer>Cuatro de los ocho pilares con los que escribo y reviso cada instrucción.</footer></blockquote></div>
+<div class="gb2-f gb2-ti" data-ch="5"><span class="gb2-n">(05)</span><h2 class="gb2-t" id="gb2-5">Una misión real</h2><span class="gb2-k">Esta web</span></div>
+<div class="gb2-f gb2-path" data-ch="5"><p class="gb2-lede">Esta web es el caso real: cada cambio en sus dos caras recorre el mismo camino.</p><ol class="gb2-fw" aria-label="Camino de cada cambio"><li><span class="gb2-dot" aria-hidden="true"></span><span class="gb2-pn">01</span><span class="gb2-pl">Encargo</span></li><li><span class="gb2-dot" aria-hidden="true"></span><span class="gb2-pn">02</span><span class="gb2-pl">Especificación</span></li><li><span class="gb2-dot" aria-hidden="true"></span><span class="gb2-pn">03</span><span class="gb2-pl">Vista previa</span></li><li class=ok><span class="gb2-dot" aria-hidden="true"></span><span class="gb2-pn">04</span><span class="gb2-pl">Visto bueno</span></li><li><span class="gb2-dot" aria-hidden="true"></span><span class="gb2-pn">05</span><span class="gb2-pl">Publicar</span></li></ol><div class="gb2-pr gb2-p5"><p>Sin ese visto bueno no se publica nada. Esta sección lo ha recorrido varias veces antes de llegar aquí.</p></div></div>
+<div class="gb2-f gb2-end" data-ch="6"><p class="gb2-endp">La palabra, el criterio y la dirección <em>son míos.</em></p><p class="gb2-out"><a class="lk" href="https://www.linkedin.com/in/adrianvalenciarios/" target="_blank" rel="noopener"><span class="lk-t">El proyecto en LinkedIn</span><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5.5 4H12v6.5" fill="none" stroke="currentColor" stroke-width="1.25"/></svg><span class="vh"> (se abre en una pestaña nueva)</span></a><a class="lk" href="https://adrianvalencia.es/"><span class="lk-t">Ver la Cara A</span><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5.5 4H12v6.5" fill="none" stroke="currentColor" stroke-width="1.25"/></svg></a></p></div>
+</div>
+<div class="gb2-ui" aria-hidden="true"><span class="gb2-cur">00</span><span class="gb2-bar"><i></i><b style="--p:0" data-c="1"></b><b style="--p:0" data-c="2"></b><b style="--p:0" data-c="3"></b><b style="--p:0" data-c="4"></b><b style="--p:0" data-c="5"></b></span><span class="gb2-tot">/ 05</span></div>
+</div>
+</div>
 <section class="sec wrap next" aria-label="Siguiente proyecto"><a class="next-a" href="../../work/mi-vida/"><span class="eyebrow">Siguiente proyecto — 03</span><span class="next-t">Mi vida</span><span class="next-i bw"><img src="../../assets/img/l/JCHJjIOxZ1.webp" width="1080" height="1468" alt="" loading="lazy" decoding="async"></span></a>
 <div class="more"><a class="more-a" href="../../work/sonido/"><span class="num">01</span><span class="rl" data-t="Music — Content Collaborator"><span>Music — Content Collaborator</span></span><span class="eyebrow">SONIDO</span></a><a class="more-a" href="../../work/personas/"><span class="num">04</span><span class="rl" data-t="Marca, personal"><span>Marca, personal</span></span><span class="eyebrow">PERSONAS</span></a></div></section></main><footer class="ft"><div class="wrap">
 <div class="ft-close" data-r><p class="ft-big">El futuro del trabajo<br>es una conversación<span class="acc">.</span><span class="ft-it">Comencemos la nuestra.</span></p><a class="ft-cta" href="../../contact/"><span class="rl" data-t="Hablemos"><span>Hablemos</span></span><span aria-hidden="true">→</span></a></div>
@@ -33,4 +192,65 @@
 <p class="ft-wm fit" aria-hidden="true"><span class="wm">Adrián Valencia</span></p>
 <div class="ft-bot"><span>©2026 Adrián Valencia Ríos</span><span class="mute">Humanist HR + Tech Orchestrator</span><a href="#top" class="totop"><span class="rl" data-t="Volver arriba"><span>Volver arriba</span></span> ↑</a></div>
 </div></footer><div class="sp"><button class="sp-b" type="button" aria-expanded="false" aria-controls="sp-panel"><svg class="sp-ic" width="15" height="15" viewBox="0 0 24 24" aria-hidden="true" focusable="false" style="flex:none;fill:currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg><span class="sp-l">Resonancia</span><span class="vh">: abrir playlist de Spotify</span></button>
-<div class="sp-panel" id="sp-panel" hidden data-src="https://open.spotify.com/embed/playlist/6QJf0xYg1cFt41ECWoVEH4?theme=0"><div class="sp-h"><span>Playlist varix — Spotify</span><a href="https://open.spotify.com/playlist/6QJf0xYg1cFt41ECWoVEH4" target="_blank" rel="noopener">Abrir ↗<span class="vh"> (se abre en una pestaña nueva)</span></a></div><div class="sp-f"></div></div></div><script src="../../assets/site.js?v=5adb731ae1" defer></script></body></html>
+<div class="sp-panel" id="sp-panel" hidden data-src="https://open.spotify.com/embed/playlist/6QJf0xYg1cFt41ECWoVEH4?theme=0"><div class="sp-h"><span>Playlist varix — Spotify</span><a href="https://open.spotify.com/playlist/6QJf0xYg1cFt41ECWoVEH4" target="_blank" rel="noopener">Abrir ↗<span class="vh"> (se abre en una pestaña nueva)</span></a></div><div class="sp-f"></div></div></div><script src="../../assets/site.js?v=5adb731ae1" defer></script><script>
+/* Gabinete */
+const d=document,RM=matchMedia('(prefers-reduced-motion: reduce)').matches,FINE=matchMedia('(hover:hover) and (pointer:fine)').matches,IO='IntersectionObserver' in window,DPR=Math.min(devicePixelRatio||1,2);
+const $$=(s,r=d)=>[...r.querySelectorAll(s)];
+const once=(el,fn,o={})=>{if(!IO){fn();return}const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){io.disconnect();fn()}}),o);io.observe(el)};
+const watch=(el,fn,o={})=>{if(!IO){fn(true);return}new IntersectionObserver(es=>fn(es[0].isIntersecting),o).observe(el)};
+const ready=img=>img.complete&&img.naturalWidth?Promise.resolve():new Promise(r=>{img.addEventListener('load',r,{once:true});img.addEventListener('error',r,{once:true})});
+const GL='#$%&*+=?<>/\\0123456789';
+/* 1 · scramble de cifras y claves (dqnamo · Scramble Text) */
+const scramble=(el,txt,D)=>{if(RM){el.textContent=txt;return}const t0=performance.now();const f=now=>{const p=Math.min(1,(now-t0)/D);let o='';for(let i=0;i<txt.length;i++){const lock=(i+1)/txt.length*.75+.25;o+=p>=lock||txt[i]===' '?txt[i]:(/\d/.test(txt[i])?String(Math.random()*10|0):GL[Math.random()*GL.length|0])}el.textContent=o;if(p<1)requestAnimationFrame(f);else el.textContent=txt};requestAnimationFrame(f)};
+$$('.gB [data-scr]').forEach(el=>{const v=el.dataset.scr;el.setAttribute('aria-label',v);if(RM)return;el.textContent=v.replace(/\d/g,'0');once(el,()=>scramble(el,v,v.length>2?1400:1000),{rootMargin:'0px 0px -12% 0px'})});
+
+/* 6 · seguimiento de blobs sobre el retrato (02 blob tracking) */
+$$('.gb2-blob').forEach(c=>{const fx=c.parentNode,img=fx.querySelector('img'),x=c.getContext('2d');if(!x)return;
+const GW=48,GH=60;let lum=null,cur=[],tgt=[],t0=0,vis=false,raf=0,ph=0,W=0,H=0;
+const fit=()=>{W=fx.clientWidth;H=fx.clientHeight;c.width=W*DPR;c.height=H*DPR;x.setTransform(DPR,0,0,DPR,0,0)};
+const sample=()=>{const o=d.createElement('canvas');o.width=GW;o.height=GH;const ox=o.getContext('2d',{willReadFrequently:true});ox.drawImage(img,0,0,GW,GH);const p=ox.getImageData(0,0,GW,GH).data;lum=new Float32Array(GW*GH);for(let i=0;i<GW*GH;i++)lum[i]=(p[i*4]*.3+p[i*4+1]*.59+p[i*4+2]*.11)/255};
+const find=q=>{const v=[...lum].sort((a,b)=>a-b),floor=v[Math.floor(v.length*.55)],pk=[];
+for(let y=2;y<GH-2;y++)for(let X=2;X<GW-2;X++){const i=y*GW+X,l=lum[i];if(l<floor)continue;let mx=true;for(let dy=-2;dy<=2&&mx;dy++)for(let dx=-2;dx<=2;dx++){if((dx||dy)&&lum[i+dy*GW+dx]>l){mx=false;break}}if(mx)pk.push([l,X,y])}
+pk.sort((a,b)=>b[0]-a[0]);const sel=[];for(const p of pk){if(sel.every(s=>Math.hypot(s[1]-p[1],s[2]-p[2])>9))sel.push(p);if(sel.length>=5)break}
+return sel.map(([l,px,py])=>{const th=l*q;let x0=px,x1=px,y0=py,y1=py;const st=[[px,py]],seen=new Set([py*GW+px]);while(st.length){const[kx,ky]=st.pop();x0=Math.min(x0,kx);x1=Math.max(x1,kx);y0=Math.min(y0,ky);y1=Math.max(y1,ky);for(const[a,b]of[[1,0],[-1,0],[0,1],[0,-1]]){const nx=kx+a,ny=ky+b,qq=ny*GW+nx;if(nx<0||ny<0||nx>=GW||ny>=GH||Math.abs(nx-px)>8||Math.abs(ny-py)>8||seen.has(qq)||lum[qq]<th)continue;seen.add(qq);st.push([nx,ny])}}
+return{x:x0/GW,y:y0/GH,w:(x1-x0+1)/GW,h:(y1-y0+1)/GH}}).sort((a,b)=>a.y-b.y)};
+const pick=()=>{if(!lum)return;const q=[.8,.84,.78,.86,.82][ph++%5];tgt=find(q);while(cur.length<tgt.length)cur.push({...tgt[cur.length]});cur.length=tgt.length;t0=performance.now()};
+const draw=now=>{raf=0;x.clearRect(0,0,W,H);const k=RM?1:Math.min(1,(now-t0)/600),e=1-Math.pow(1-k,3);
+x.strokeStyle='rgba(239,233,223,.8)';x.fillStyle='rgba(239,233,223,.9)';x.lineWidth=1;x.font='9.5px "JetBrains Mono",ui-monospace,monospace';x.textBaseline='bottom';
+const pts=[];cur.forEach((b,i)=>{const t=tgt[i];for(const p of['x','y','w','h'])b[p]+=(t[p]-b[p])*(RM?1:e*.35);const bx=b.x*W,by=b.y*H,bw=Math.max(14,b.w*W),bh=Math.max(14,b.h*H),s=Math.min(8,bw/3,bh/3);
+x.beginPath();x.moveTo(bx,by+s);x.lineTo(bx,by);x.lineTo(bx+s,by);x.moveTo(bx+bw-s,by);x.lineTo(bx+bw,by);x.lineTo(bx+bw,by+s);x.moveTo(bx+bw,by+bh-s);x.lineTo(bx+bw,by+bh);x.lineTo(bx+bw-s,by+bh);x.moveTo(bx+s,by+bh);x.lineTo(bx,by+bh);x.lineTo(bx,by+bh-s);x.stroke();
+x.globalAlpha=.25;x.strokeRect(bx+.5,by+.5,bw-1,bh-1);x.globalAlpha=1;
+const cx=bx+bw/2,cy=by+bh/2;pts.push([cx,cy]);const lb=`ID ${String(i+1).padStart(2,'0')}  x ${(cx/W).toFixed(2).slice(1)} y ${(cy/H).toFixed(2).slice(1)}`;const tw=x.measureText(lb).width;x.fillText(lb,Math.min(Math.max(2,bx),W-tw-2),by>14?by-4:by+bh+13)});
+x.strokeStyle='rgba(239,233,223,.32)';x.setLineDash([2,3]);x.beginPath();pts.forEach((p,i)=>i?x.lineTo(p[0],p[1]):x.moveTo(p[0],p[1]));x.stroke();x.setLineDash([]);
+pts.forEach(p=>{x.fillRect(p[0]-1.5,p[1]-1.5,3,3)});
+if(!RM&&vis)raf=requestAnimationFrame(draw)};
+ready(img).then(()=>{if(!img.naturalWidth)return;fit();try{sample()}catch(e){return}pick();cur=tgt.map(b=>RM?{...b}:{x:b.x+b.w/2,y:b.y+b.h/2,w:0,h:0});draw(performance.now());
+addEventListener('resize',()=>{fit();draw(performance.now())},{passive:true});
+if(!RM){let it=0;watch(fx,v=>{vis=v;clearInterval(it);if(v){it=setInterval(pick,1500);if(!raf)raf=requestAnimationFrame(draw)}})}});});
+
+
+/* el deck: el scroll vertical mueve la tira; en el visto bueno el recorrido se detiene */
+(()=>{const root=d.querySelector('.gb2');if(!root)return;const pin=root.querySelector('.gb2-pin'),tr=root.querySelector('.gb2-track'),fr=$$('.gb2-f',tr),ui=root.querySelector('.gb2-ui'),cur=root.querySelector('.gb2-cur'),bi=$$('.gb2-bar b',root);
+const path=root.querySelector('.gb2-path'),ok=root.querySelector('.gb2-fw li.ok'),lis=$$('.gb2-fw li',root),fw=root.querySelector('.gb2-fw');
+root.classList.add('gb2-on');let max=0,top=0,hold=0,HL=0,ticks=[],chs=[];
+const lay=()=>{max=tr.scrollWidth-innerWidth;HL=RM?0:innerHeight*.9;const okr=ok.getBoundingClientRect(),trr=tr.getBoundingClientRect();hold=Math.min(max,Math.max(0,okr.left-trr.left-innerWidth*.5));
+root.style.height=(max+HL+innerHeight)+'px';top=root.getBoundingClientRect().top+scrollY;
+chs=[];fr.forEach(f=>{const c=+f.dataset.ch;if(f.classList.contains('gb2-ti'))chs.push([c,f.offsetLeft])});bi.forEach((b,i)=>{const c=chs[i];if(c)b.style.setProperty('--p',Math.min(1,c[1]/max).toFixed(4))});upd()};
+let last=-1,waited=false;
+const upd=()=>{let s=Math.min(Math.max(0,scrollY-top),max+HL),x=s;let holding=false;if(s>hold){if(s<hold+HL){x=hold;holding=true}else x=s-HL}
+tr.style.transform=`translate3d(${-x}px,0,0)`;root.style.setProperty('--pr',(x/max).toFixed(4));ui.style.setProperty('--pr',(x/max).toFixed(4));
+let c=0;chs.forEach(([n,l])=>{if(x>=l-innerWidth*.5)c=n});cur.textContent=String(c).padStart(2,'0');bi.forEach((b,i)=>b.classList.toggle('on',i<c));
+fr.forEach(f=>{const r=f.getBoundingClientRect();if(r.left<innerWidth*.82)f.classList.add('in')});
+/* el camino: la línea avanza con el scroll y espera en el visto bueno */
+const pr=path.getBoundingClientRect(),fwr=fw.getBoundingClientRect();if(innerWidth>820){const p=Math.min(1,Math.max(0,(innerWidth*.5-fwr.left)/fwr.width));fw.style.setProperty('--fp',p.toFixed(4));lis.forEach(l=>{const lr=l.getBoundingClientRect();const on=lr.left<innerWidth*.5;if(l===ok){l.classList.toggle('wait',holding);l.classList.toggle('on',on&&!holding&&s>=hold+HL)}else l.classList.toggle('on',on)})}};
+/* móvil: al soltar, la tira se asienta en la lámina más cercana */
+let st=0;const snap=()=>{if(innerWidth>820)return;const s=scrollY-top;if(s<0||s>max+HL)return;let x=s>hold+HL?s-HL:Math.min(s,hold);if(s>hold&&s<hold+HL)return;const W=innerWidth,k=Math.round(x/W)*W,ty=top+(k>hold?k+HL:k);if(Math.abs(ty-scrollY)>4)scrollTo({top:ty,behavior:RM?'auto':'smooth'})};
+addEventListener('scroll',()=>{clearTimeout(st);st=setTimeout(snap,160)},{passive:true});
+addEventListener('scroll',()=>requestAnimationFrame(upd),{passive:true});addEventListener('resize',lay);(d.fonts&&d.fonts.ready?d.fonts.ready:Promise.resolve()).then(lay);$$('img',tr).forEach(i=>i.addEventListener('load',lay,{once:true}));lay();
+/* móvil: el camino se marca al llegar a su lámina, con la espera en el visto bueno */
+if(innerWidth<=820){once(path,()=>{let i=0;const nx=()=>{if(i>=lis.length)return;const l=lis[i++];if(l===ok&&!RM){l.classList.add('wait');setTimeout(()=>{l.classList.remove('wait');l.classList.add('on');setTimeout(nx,350)},1600)}else{l.classList.add('on');setTimeout(nx,RM?0:350)}};nx()},{threshold:.5})}
+/* foco con teclado: lleva la lámina a la vista */
+tr.addEventListener('focusin',e=>{const f=e.target.closest('.gb2-f');if(!f)return;const target=Math.min(max,f.offsetLeft);scrollTo(0,top+(target>hold?target+HL:target))});
+})();
+</script>
+</body></html>
