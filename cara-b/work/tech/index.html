@@ -1,10 +1,90 @@
 <!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Gabinete — IA — Adrián Valencia</title><meta name="description" content="La inteligencia artificial no es una respuesta; es un organismo vivo. No uso un chat. Uso un ecosistema, y sigue vivo cuando cierro la ventana. Hoy son…"><meta name="author" content="Adrián Valencia Ríos"><meta name="theme-color" content="#0a0a0a"><meta name="color-scheme" content="dark">
-<link rel="canonical" href="https://adrianvalencia.es/cara-b/work/tech/"><meta property="og:site_name" content="Adrián Valencia Ríos"><meta property="og:locale" content="es_ES"><meta property="og:type" content="article"><meta property="og:url" content="https://adrianvalencia.es/cara-b/work/tech/"><meta property="og:title" content="Gabinete — IA — Adrián Valencia"><meta property="og:description" content="La inteligencia artificial no es una respuesta; es un organismo vivo. No uso un chat. Uso un ecosistema, y sigue vivo cuando cierro la ventana. Hoy son…"><meta property="og:image" content="https://adrianvalencia.es/cara-b/assets/og.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Portada de la web Adrián Valencia — Cara B">
-<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Gabinete — IA — Adrián Valencia"><meta name="twitter:description" content="La inteligencia artificial no es una respuesta; es un organismo vivo. No uso un chat. Uso un ecosistema, y sigue vivo cuando cierro la ventana. Hoy son…"><meta name="twitter:image" content="https://adrianvalencia.es/cara-b/assets/og.jpg">
+<title>Gabinete — IA — Adrián Valencia</title><meta name="description" content="La IA me ha ayudado a potenciar mis decisiones, mis ideas. Un sistema con memoria, reglas y límites, y el trabajo concreto que ha salido de él."><meta name="author" content="Adrián Valencia Ríos"><meta name="theme-color" content="#0a0a0a"><meta name="color-scheme" content="dark">
+<link rel="canonical" href="https://adrianvalencia.es/cara-b/work/tech/"><meta property="og:site_name" content="Adrián Valencia Ríos"><meta property="og:locale" content="es_ES"><meta property="og:type" content="article"><meta property="og:url" content="https://adrianvalencia.es/cara-b/work/tech/"><meta property="og:title" content="Gabinete — IA — Adrián Valencia"><meta property="og:description" content="La IA me ha ayudado a potenciar mis decisiones, mis ideas. Un sistema con memoria, reglas y límites, y el trabajo concreto que ha salido de él."><meta property="og:image" content="https://adrianvalencia.es/cara-b/assets/og.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Portada de la web Adrián Valencia — Cara B">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Gabinete — IA — Adrián Valencia"><meta name="twitter:description" content="La IA me ha ayudado a potenciar mis decisiones, mis ideas. Un sistema con memoria, reglas y límites, y el trabajo concreto que ha salido de él."><meta name="twitter:image" content="https://adrianvalencia.es/cara-b/assets/og.jpg">
 <link rel="icon" href="../../favicon.png" type="image/png"><link rel="apple-touch-icon" href="../../apple-touch-icon.png">
 <link rel="preload" href="../../assets/fonts/Anton-Regular.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="../../assets/fonts/Archivo-var.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="../../assets/fonts/JetBrainsMono-Regular.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../../assets/style.css?v=d5935b84fc"><script>document.documentElement.classList.add('js')</script>
+<style>
+/* Gabinete
+/* V8 C · Campo vivo: un ensayo que acompaña una sola visualización; 771 puntos que se reordenan según lo que se lee */
+.gc{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:0 var(--gap);margin-top:clamp(64px,7vw,112px);position:relative}
+.gc-viz{grid-column:1/span 6;grid-row:1;position:sticky;top:0;height:100svh;align-self:start}
+.gc-viz canvas{position:absolute;inset:clamp(70px,9vh,96px) 0 clamp(40px,6vh,64px) 0;width:100%;height:calc(100% - clamp(70px,9vh,96px) - clamp(40px,6vh,64px))}
+.gc-lab{position:absolute;left:0;bottom:22px;margin:0;font:400 10.5px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--mute)}
+.gc-txt{grid-column:8/span 5;grid-row:1;min-width:0}
+.gc-st{padding:18vh 0;min-height:70vh}
+.gc-s0{min-height:88vh;display:flex;align-items:center;padding-top:6vh}
+.gc-mf{margin:0;font:300 clamp(36px,3.5vw,58px)/1.05 var(--sans);letter-spacing:-.035em;color:var(--bone)}
+.gc-mf em{font:italic 400 1.03em/1 var(--serif);letter-spacing:-.01em}
+.js .gc-mf .w{opacity:.14;transition:opacity .5s var(--ease)}.js .gc-mf .w.on{opacity:1}
+.gc-rh{display:flex;justify-content:space-between;margin:0 0 14px;padding-top:12px;border-top:1px solid var(--line2);font:400 11px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--mute)}
+.gc-rh span:first-child{color:var(--acc)}
+.gc-t{margin:0 0 30px;font:400 clamp(48px,4.6vw,80px)/.92 var(--disp);text-transform:uppercase;color:var(--bone);padding-top:.1em}
+.gc-lede{margin:0 0 30px;font:300 clamp(22px,1.9vw,30px)/1.28 var(--sans);letter-spacing:-.015em;color:var(--bone)}
+.gc-sel{position:relative;white-space:nowrap;background:linear-gradient(rgba(239,233,223,.18),rgba(239,233,223,.18)) no-repeat 0 0/100% 100%;padding:0 .05em}
+.gc-sel::before,.gc-sel::after{content:"";position:absolute;width:9px;height:calc(100% + 9px);background:radial-gradient(circle 4.5px at 50% 4.5px,var(--bone) 98%,transparent) no-repeat,linear-gradient(var(--bone),var(--bone)) no-repeat 50% 0/1.5px 100%}
+.gc-sel::before{left:-5px;top:-9px}.gc-sel::after{right:-5px;bottom:-9px;transform:rotate(180deg)}
+.gc-pr{font-size:16px;line-height:1.62;color:var(--bone);max-width:46ch}.gc-pr p{margin:0 0 1em}.gc-pr strong{font-weight:600}
+.gc-fig{margin:0 0 36px}.gc-fig img{display:block;width:100%;height:auto}
+.gc-st .gc-fig:not(:first-child){margin-top:44px}
+.gc-fig figcaption{display:flex;justify-content:space-between;margin-top:10px;padding-top:8px;border-top:1px solid var(--line);font:400 10.5px/1.4 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--mute)}
+.gc-fig figcaption span:first-child{color:var(--bone)}
+.gc-f2{max-width:70%}
+.gc-rs{list-style:none;margin:0;padding:0}
+.gc-rs li{display:grid;grid-template-columns:2.4em minmax(0,1fr);gap:4px 12px;padding:14px 0;border-top:1px solid var(--line)}
+.gc-rn{font:400 11px/2.2 var(--mono);color:var(--mute)}
+.gc-rs b{font:400 clamp(26px,2.2vw,34px)/1 var(--disp);text-transform:uppercase;color:var(--bone);font-weight:400}
+.gc-rh2{grid-column:2;color:var(--bone);font-size:16px;margin-top:4px}.gc-rd{grid-column:2;color:var(--mute);font-size:14.5px;line-height:1.5}
+.gc-cf{margin:0;display:grid;gap:22px}
+.gc-cf div{padding-top:14px;border-top:1px solid var(--line)}
+.gc-cf dt{font:400 11.5px/1.4 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--bone);display:flex;align-items:baseline;gap:14px}
+.gc-cf dt span{font:400 clamp(64px,5.6vw,96px)/.85 var(--disp);letter-spacing:0;font-variant-numeric:tabular-nums;min-width:1.2em}
+.gc-cf dd{margin:8px 0 0;color:var(--mute);font-size:15px;line-height:1.5;max-width:40ch}
+.gc-cb{list-style:none;margin:0 0 40px;padding:0}
+.gc-cb li{padding:18px 0;border-top:1px solid var(--line);font-size:16px;color:var(--mute);min-height:30vh}
+.gc-cb li span{display:block;font:400 clamp(64px,5.6vw,96px)/.9 var(--disp);color:var(--bone);font-variant-numeric:tabular-nums;margin-bottom:8px}
+.gc-cb li:last-child span{color:var(--acc)}.gc-cb b{color:var(--bone);font-weight:500}
+.gc-note{margin:0 0 30px;font:400 11.5px/1.7 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--bone);max-width:32ch;padding-top:12px;border-top:1px solid var(--line)}
+.gc-note span{display:block;color:var(--mute);margin-bottom:6px}
+.gc-con{list-style:none;margin:0;padding:0;border-bottom:1px solid var(--line)}
+.gc-con li{display:grid;grid-template-columns:2.4em minmax(0,1fr);padding:11px 0;border-top:1px solid var(--line);color:var(--mute);font-size:15px;line-height:1.45}
+.gc-con li>span:first-child{font:400 11px/1.9 var(--mono)}.gc-con b{color:var(--bone);font:400 12px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;margin-right:6px}
+.gc-cap{margin:14px 0 0;font:400 11px/1.6 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
+.gc-code{font:400 13px/1.6 var(--mono);letter-spacing:.06em;border-left:1px solid var(--line2);padding-left:14px}.gc-code span{color:var(--mute);text-transform:uppercase}
+.gc-strk{list-style:none;margin:0 0 34px;padding:0}
+.gc-strk li{font:400 clamp(40px,3.8vw,64px)/1.06 var(--serif);color:var(--mute)}
+.gc-strk s{text-decoration:none;position:relative}.gc-strk s::after{content:"";position:absolute;left:-.04em;right:-.04em;top:55%;height:2px;background:var(--acc);transform-origin:0 50%}
+.gc-sin{margin:36px 0 0;padding-top:20px;border-top:1px solid var(--line)}
+.gc-sin p{margin:0;font:italic 400 clamp(22px,1.9vw,30px)/1.3 var(--serif);color:var(--mute)}.gc-sin span{color:var(--bone)}
+.gc-sin footer{margin-top:16px;font:400 11px/1.6 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
+.gc-pa{list-style:none;margin:0 0 30px;padding:0}
+.gc-pa li{display:flex;gap:16px;align-items:baseline;padding:10px 0;border-top:1px solid var(--line);font:400 clamp(28px,2.4vw,38px)/1 var(--disp);text-transform:uppercase;color:var(--bone)}
+.gc-pa li span{font:400 11px/1 var(--mono);color:var(--mute)}.gc-pa li.ok{color:var(--acc)}
+.gc-s8{min-height:80vh;display:flex;flex-direction:column;justify-content:center}
+.gc-end{margin:0 0 36px;font:300 clamp(40px,4.2vw,72px)/1.02 var(--sans);letter-spacing:-.036em;color:var(--bone)}
+.gc-end em{font:italic 400 1.03em/1 var(--serif)}
+.gc-out{display:flex;gap:28px;margin:0}.gc-out .ar{color:var(--mute)}
+.gC+.next{padding-top:clamp(60px,6vw,100px)}
+@media (prefers-reduced-motion:no-preference){
+ .js .gc-strk s::after{transform:scaleX(0);transition:transform .8s var(--ease2);transition-delay:calc(var(--i)*240ms + 300ms)}.js .gc-strk.in s::after{transform:none}
+ .js .gc-sel{background-size:0 100%;transition:background-size .8s var(--ease2) .8s}.js .gc-l1.in .gc-sel{background-size:100% 100%}
+ .js .gc-sel::before,.js .gc-sel::after{opacity:0;transition:opacity .3s 1.5s}.js .gc-l1.in .gc-sel::before,.js .gc-l1.in .gc-sel::after{opacity:1}
+}
+@media (prefers-reduced-motion:reduce){.js .gc-mf .w{opacity:1}}
+@media (max-width:900px){
+ .gc{display:block}
+ .gc-viz{position:sticky;top:0;height:34svh;z-index:2;background:linear-gradient(var(--ink) 82%,rgba(10,10,10,0));margin:0 calc(var(--pad)*-1);padding:0 var(--pad)}
+ .gc-viz canvas{inset:56px var(--pad) 26px;width:calc(100% - 2*var(--pad));height:calc(100% - 82px)}
+ .gc-lab{left:var(--pad);bottom:10px}
+ .gc-st{padding:10vh 0;min-height:0}
+ .gc-s0{min-height:56svh;padding-top:4vh}
+ .gc-mf{font-size:clamp(32px,9vw,42px)}
+ .gc-cb li{min-height:0}
+ .gc-s8{min-height:60svh}
+ .gc-out{flex-direction:column;gap:14px}
+}
+</style>
 </head><body class="pg-proj" id="top"><a class="skip" href="#main">Saltar al contenido</a>
 <header class="hd"><div class="hd-in wrap">
 <a class="brand" href="../../" aria-label="Adrián Valencia Ríos — inicio"><svg class="smile" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><circle cx="16" cy="16" r="14.5"/><path d="M11.2 12.6v2.2M20.8 12.6v2.2"/><path d="M10.2 19.2c1.4 2.4 3.4 3.6 5.8 3.6s4.4-1.2 5.8-3.6"/></svg><span class="brand-t">Adrián Valencia Ríos</span></a>
@@ -14,11 +94,22 @@
 <div class="menu" id="menu" hidden><nav aria-label="Menú móvil"><ol><li><a href="../../"><small>01</small>Inicio</a></li><li><a href="../../work/" aria-current="page"><small>02</small>Proyectos</a></li><li><a href="../../gallery/"><small>03</small>Publicaciones</a></li><li><a href="../../article/"><small>04</small>Journal</a></li><li><a href="../../contact/"><small>05</small>Contacto</a></li><li class="mA"><a href="/" aria-label="Cara A: web profesional, adrianvalencia.es"><small>A</small>Cara A<em>adrianvalencia.es</em></a></li></ol></nav>
 <div class="menu-f"><a href="mailto:adrianvalencia.rrhh@gmail.com">adrianvalencia.rrhh@gmail.com</a><div><a href="https://www.instagram.com/adrivarix11" target="_blank" rel="noopener">Instagram</a><a href="https://www.linkedin.com/in/adrianvalenciarios" target="_blank" rel="noopener">LinkedIn</a><a href="https://open.spotify.com/playlist/6QJf0xYg1cFt41ECWoVEH4" target="_blank" rel="noopener">Spotify</a></div></div></div><main id="main">
 <section class="phead wrap"><p class="eyebrow ld"><a href="../../work/">Proyectos</a> / 02 — TECH</p><h1 class="ph-h" style="--w:3.79"><span class="ln"><span>Gabinete — IA</span></span></h1></section>
-<section class="wrap pd">
+<section class="wrap pd gb gC">
 <div class="pd-top" data-r><p class="pd-marq">Engineering Digital Authority</p><dl class="meta meta-row"><div><dt>Categoría</dt><dd>TECH</dd></div><div><dt>Tipo</dt><dd>Proyecto personal.</dd></div><div><dt>Duración</dt><dd>2025 — act.</dd></div><div><dt>Ubicación</dt><dd>Online.</dd></div></dl><div class="pd-go"><a class="lk lk-acc" href="https://www.linkedin.com/in/adrianvalenciarios/" target="_blank" rel="noopener"><span class="lk-t">Ver en LinkedIn</span><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5.5 4H12v6.5" fill="none" stroke="currentColor" stroke-width="1.25"/></svg><span class="vh"> (se abre en una pestaña nueva)</span></a></div></div>
-<div class="pd-s"><figure class="pd-hero pd-hero-s" data-r><img src="../../assets/img/l/gab-figura.webp" width="1600" height="1071" alt="Figura femenina abstracta en movimiento, fotografía movida con grano" fetchpriority="high" decoding="async"></figure></div>
-<div class="pd-g"><div class="prose prose-pd" data-r><p class="p-s"><strong>La inteligencia artificial no es una respuesta; es un organismo vivo.</strong></p><p>No uso un chat. Uso un ecosistema, y sigue vivo cuando cierro la ventana.</p><p>Hoy son dos piezas.<br><strong>Grok Bot</strong> — donde los agentes trabajan.<br><strong>Notion</strong> — donde la evolución se almacena.<br>Sin las dos, sería otra ventana que se olvida al cerrarse.</p><p class="p-s gh"><strong><span class="gh-n">I.</span> EL GABINETE</strong></p><p>Diseñé mi gabinete contra la generalidad. Mientras el mercado usa la IA de forma reactiva, yo he construido una infraestructura basada en la memoria.</p><p>No es una sola voz. Es una red de oficios <br>— <em>estrategia | derecho | datos | mercado | inglés | arquitectura | voz</em>. Cada uno tiene un prompt propio, escrito y guardado, no improvisado en el hilo.</p><p>Si no nombro a nadie, responde quien dirige. Reparte, reúne y cierra. <strong>Yo decido.</strong> Una instrucción mía anula cualquier protocolo.</p><p class="p-s gh"><strong><span class="gh-n">II.</span> LO QUE NO DEJO A LA SUERTE</strong></p><p><em>La calidad no está en el modelo. Está en lo que no dejo a la suerte.</em></p><p>Hay skills. Un proceso que se repite deja de vivir en mi cabeza y pasa a tener nombre —⁠activar una figura, delegar, repartir el esfuerzo, escribir un prompt. Se ejecuta igual la segunda vez que la primera. <em>Misión, evidencia, tono y límite.</em></p><p>La memoria vive en Notion, no en la conversación. Lo que se decide queda fechado —⁠una sesión, una decisión, un activo. La siguiente vez se lee en un orden fijo, antes de opinar. Por eso no empieza de cero, y por eso no reabre lo que ya cerré.</p><p>Hay rutinas que corren solas. El sistema trabaja cuando la conversación ya terminó. Tareas rutinarias quedan automatizadas —⁠el correo, la agenda, lo que se mueve en el sector.</p><p class="p-s gh"><strong><span class="gh-n">III.</span> LO QUE HA SALIDO DE AQUÍ</strong></p><p>Actualmente ha evolucionado. Tengo a mi disposición un grupo de especialistas que no solo me asesoran en aspectos materiales, sino significativos y trascendentales. <strong>Tech + Heart</strong>, en el mismo sitio.</p><p>Nada de esto se ha hecho solo. La IA propone, ordena y no olvida. <em>La palabra, el criterio y la dirección son míos.</em> Una misión significativa no sale de un prompt.</p><p>De aquí ha salido trabajo concreto, y lo he cerrado yo.<br><br><strong>LinkedIn</strong> — supervisado y asesorado creativamente.<br><strong>Web</strong> — personal, y otros portfolios.<br><strong>Notion</strong> — el legado, los cimientos, y el camino de estos meses. Pasado, presente y futuro.</p><p>Diseñé agentes de IA aplicada al estudio, obteniendo sobresaliente en diversas asignaturas.</p><p>… y mucho más.</p><p class="p-s"><strong>IV. MÁS</strong></p><p>La materialización de mi pilar Tech —⁠un cerebro externo que guía, pero no encadena.<br><br><em>La innovación deja de ser una promesa para convertirse en la normalidad.</em></p><p class="p-s"><strong>Es la infraestructura con la que pienso. No la que piensa por mí.</strong></p></div></div>
-<div class="pd-s pd-s2"><ul class="pd-strip fxm fx-car fx-peek" style="--armax:0.800" aria-label="Imágenes del proyecto"><li data-r style="--ar:0.667"><figure><img src="../../assets/img/m/7EkdEKDfbw.webp" width="760" height="1140" alt="Figura humana translúcida, como de cristal, sobre fondo gris claro" loading="lazy" decoding="async"><figcaption><span class="num">01/03</span></figcaption></figure></li><li data-r style="--ar:0.800"><figure><img src="../../assets/img/m/4irQ4Pwblt.webp" width="760" height="950" alt="Retrato movido de un rostro sobre fondo oscuro" loading="lazy" decoding="async"><figcaption><span class="num">02/03</span></figcaption></figure></li><li data-r style="--ar:0.690"><figure><img src="../../assets/img/m/ZOaKUstOa1.webp" width="760" height="1101" alt="Silueta desenfocada sobre fondo blanco" loading="lazy" decoding="async"><figcaption><span class="num">03/03</span></figcaption></figure></li></ul></div>
+<div class="gc">
+<div class="gc-viz" aria-hidden="true"><canvas id="gc-cv"></canvas><p class="gc-lab"><span class="gc-ls">—</span></p></div>
+<div class="gc-txt">
+<div class="gc-st gc-s0" data-st="0"><p class="gc-mf" data-words>La IA me ha ayudado a potenciar mis decisiones, mis ideas. He alcanzado mejores versiones de <em>quien ya era.</em></p></div>
+<div class="gc-st" data-st="1"><figure class="gc-fig" data-r><img src="../../assets/img/l/gab-figura.webp" width="1600" height="1071" alt="Figura femenina abstracta en movimiento, fotografía movida con grano" loading="lazy" decoding="async"><figcaption><span>FIG. 01</span><span>1600 × 1071</span></figcaption></figure><div class="gc-pr" data-r><p>No la uso como un chat que se olvida al cerrarse. Desde octubre de 2025 he construido con ella un gabinete: un sistema con memoria, reglas y límites, donde cada encargo tiene un responsable y cada decisión, una fecha.</p><p>La primera regla la fijé ese mismo mes: el experto humano final soy yo. La IA propone y pone a prueba; si la corrijo con fundamento, cuenta mi corrección.</p></div></div>
+<div class="gc-st" data-st="2"><p class="gc-rh"><span>01</span><span>Resultados</span></p><h2 class="gc-t" id="gc1">Hasta hoy</h2><p class="gc-lede gc-l1" data-r>Trabajo que se puede comprobar. <span class="gc-sel">Lo he cerrado yo.</span></p><ol class="gc-rs" data-r><li><span class="gc-rn">01</span><b>Web</b><span class="gc-rh2">adrianvalencia.es, dos caras.</span><span class="gc-rd">La profesional y esta: diseño, código y textos.</span></li><li><span class="gc-rn">02</span><b>LinkedIn y currículum</b><span class="gc-rh2">Perfil, web y marca, alineados.</span><span class="gc-rd">El perfil lo he supervisado y asesorado de forma creativa; el currículum, reescrito y optimizado con el gabinete.</span></li><li><span class="gc-rn">03</span><b>Grado</b><span class="gc-rh2">Sobresaliente en diversas asignaturas.</span><span class="gc-rd">Relaciones Laborales y Recursos Humanos, Universidad de Sevilla. Apliqué agentes de IA al estudio y las aprobé todas.</span></li><li><span class="gc-rn">04</span><b>Formación</b><span class="gc-rh2">Dos rutas en curso.</span><span class="gc-rd">Python aplicada a recursos humanos y People Analytics, y la preparación del APTIS C1.</span></li><li><span class="gc-rn">05</span><b>Hoja de ruta</b><span class="gc-rh2">Diecisiete decisiones registradas.</span><span class="gc-rd">Sobre qué estudiar, qué priorizar y hacia dónde ir. Ocho cerradas; nueve, abiertas.</span></li><li><span class="gc-rn">06</span><b>Rutinas</b><span class="gc-rh2">Trabajo que corre solo.</span><span class="gc-rd">Cada mañana ordenan el correo y la agenda, y siguen lo que se mueve en el sector.</span></li></ol><figure class="gc-fig" data-r><img src="../../assets/img/m/4irQ4Pwblt.webp" width="760" height="950" alt="Retrato movido de un rostro sobre fondo oscuro" loading="lazy" decoding="async"><figcaption><span>FIG. 02</span><span>760 × 950</span></figcaption></figure></div>
+<div class="gc-st" data-st="3"><p class="gc-rh"><span>02</span><span>Memoria y escala</span></p><h2 class="gc-t" id="gc2">En cifras</h2><p class="gc-lede" data-r>No empieza de cero. Lo decidido queda escrito, con fecha y motivo, y cada sesión lo lee en el mismo orden antes de opinar.</p><dl class="gc-cf" data-r><div><dt><span data-scr="15">15</span> figuras</dt><dd>Nueve en uso, dos a prueba y cuatro aparcadas a propósito.</dd></div><div><dt><span data-scr="49">49</span> procedimientos</dt><dd>Escritos y con nombre: se ejecutan igual la segunda vez.</dd></div><div><dt><span data-scr="6">6</span> protocolos</dt><dd>Comunes a todas las figuras: fuentes, estilo, estructura y registro.</dd></div><div><dt><span data-scr="33">33</span> cambios registrados</dt><dd>En dieciocho días de otoño de 2026: qué cambió, cuándo y por qué.</dd></div></dl></div>
+<div class="gc-st" data-st="4"><ol class="gc-cb" data-r><li data-sub="0"><span data-scr="771">771</span> <b>archivos</b> de agentes, instrucciones y comandos, en 14 repositorios abiertos</li><li data-sub="1"><span data-scr="691">691</span> <b>únicos</b> al quitar duplicados</li><li data-sub="2"><span data-scr="66">66</span> <b>roles</b> en 19 sectores</li></ol><p class="gc-note" data-r><span>La biblioteca de roles</span>Un rol solo sale de la reserva si se usa, y ese paso lo apruebo yo.</p></div>
+<div class="gc-st" data-st="5"><p class="gc-rh"><span>03</span><span>Método</span></p><h2 class="gc-t" id="gc3">Cómo trabaja</h2><p class="gc-lede" data-r>Si no nombro a nadie, responde quien dirige. Reparte, reúne y cierra.</p><p class="gc-note" data-r><span>Antes de delegar</span>Un contrato de siete campos.</p><ol class="gc-con" data-r><li><span>01</span><span class=gc-cv><b>Objetivo</b> El resultado concreto que hay que conseguir.</span></li><li><span>02</span><span class=gc-cv><b>Formato</b> La forma exacta en que vuelve: tabla, borrador, resumen.</span></li><li><span>03</span><span class=gc-cv><b>Herramientas</b> Qué fuentes y medios puede usar, y cuáles no.</span></li><li><span>04</span><span class=gc-cv><b>Límites</b> Lo que queda fuera y lo que no se toca.</span></li><li><span>05</span><span class=gc-cv><b>Esfuerzo</b> Bajo, medio o alto.</span></li><li><span>06</span><span class=gc-cv><b>Responsable</b> Quién lo ejecuta y responde.</span></li><li><span>07</span><span class=gc-cv><b>Hecho cuando</b> La señal observable de que está terminado.</span></li></ol><p class="gc-cap" data-r>Así se evita el error más común: un «investiga esto» sin objetivo, sin forma y sin final.</p><figure class="gc-fig" data-r><img src="../../assets/img/m/7EkdEKDfbw.webp" width="760" height="1140" alt="Figura humana translúcida, como de cristal, sobre fondo gris claro" loading="lazy" decoding="async"><figcaption><span>FIG. 03</span><span>760 × 1140</span></figcaption></figure><div class="gc-pr" data-r><p>Ante la duda, quien dirige sintetiza: el testigo no se pasa por inercia. Si a mitad de camino el trabajo es de otro oficio, se para y se deriva, con destino y motivo en una línea.</p><p class="gc-code"><span>Derivación:</span> destino — motivo</p><p><strong>Yo decido.</strong> Una instrucción mía anula cualquier protocolo.</p></div></div>
+<div class="gc-st" data-st="6"><p class="gc-rh"><span>04</span><span>Límites</span></p><h2 class="gc-t" id="gc4">Lo que no hace</h2><ul class="gc-strk" data-r aria-label="Frases que tiene prohibidas"><li style="--i:0"><s>Encantado de ayudar.</s></li><li style="--i:1"><s>¡Claro!</s></li><li style="--i:2"><s>¡Qué buena pregunta!</s></li></ul><div class="gc-pr" data-r><p>Las plantillas son un punto de partida, no una cárcel. Si una idea mía no es buena, me lo dice con razones: no consuela, re-enfoca. Si falta un dato, pregunta; no lo inventa.</p><p>Nada irreversible —⁠publicar, enviar, contactar⁠— sale sin mi visto bueno. Y no se activa una figura nueva por hacer más grande el sistema.</p></div><figure class="gc-fig" data-r><img src="../../assets/img/m/ZOaKUstOa1.webp" width="760" height="1101" alt="Silueta desenfocada sobre fondo blanco" loading="lazy" decoding="async"><figcaption><span>FIG. 04</span><span>760 × 1101</span></figcaption></figure><blockquote class="gc-sin" data-r><p><span>Sin evidencia,</span> el modelo alucina.</p><p><span>Sin sistema lógico,</span> es superficial.</p><p><span>Sin restricciones,</span> es ruidoso.</p><p><span>Sin inferencia de calidad,</span> es perezoso.</p><footer>Cuatro de los ocho pilares con los que escribo y reviso cada instrucción.</footer></blockquote></div>
+<div class="gc-st" data-st="7"><p class="gc-rh"><span>05</span><span>Esta web</span></p><h2 class="gc-t" id="gc5">Una misión real</h2><p class="gc-lede" data-r>Esta web es el caso real: cada cambio en sus dos caras recorre el mismo camino.</p><ol class="gc-pa" data-r aria-label="Camino de cada cambio"><li><span>01</span>Encargo</li><li><span>02</span>Especificación</li><li><span>03</span>Vista previa</li><li class=ok><span>04</span>Visto bueno</li><li><span>05</span>Publicar</li></ol><div class="gc-pr" data-r><p>Sin ese visto bueno no se publica nada. Esta sección lo ha recorrido varias veces antes de llegar aquí.</p></div></div>
+<div class="gc-st gc-s8" data-st="8"><p class="gc-end" data-r>La palabra, el criterio y la dirección <em>son míos.</em></p><p class="gc-out" data-r><a class="lk" href="https://www.linkedin.com/in/adrianvalenciarios/" target="_blank" rel="noopener"><span class="lk-t">El proyecto en LinkedIn</span><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5.5 4H12v6.5" fill="none" stroke="currentColor" stroke-width="1.25"/></svg><span class="vh"> (se abre en una pestaña nueva)</span></a><a class="lk" href="https://adrianvalencia.es/"><span class="lk-t">Ver la Cara A</span><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5.5 4H12v6.5" fill="none" stroke="currentColor" stroke-width="1.25"/></svg></a></p></div>
+</div>
+</div>
 </section>
 <section class="sec wrap next" aria-label="Siguiente proyecto"><a class="next-a" href="../../work/mi-vida/"><span class="eyebrow">Siguiente proyecto — 03</span><span class="next-t">Mi vida</span><span class="next-i bw"><img src="../../assets/img/l/JCHJjIOxZ1.webp" width="1080" height="1468" alt="" loading="lazy" decoding="async"></span></a>
 <div class="more"><a class="more-a" href="../../work/sonido/"><span class="num">01</span><span class="rl" data-t="Music — Content Collaborator"><span>Music — Content Collaborator</span></span><span class="eyebrow">SONIDO</span></a><a class="more-a" href="../../work/personas/"><span class="num">04</span><span class="rl" data-t="Marca, personal"><span>Marca, personal</span></span><span class="eyebrow">PERSONAS</span></a></div></section></main><footer class="ft"><div class="wrap">
@@ -33,4 +124,76 @@
 <p class="ft-wm fit" aria-hidden="true"><span class="wm">Adrián Valencia</span></p>
 <div class="ft-bot"><span>©2026 Adrián Valencia Ríos</span><span class="mute">Humanist HR + Tech Orchestrator</span><a href="#top" class="totop"><span class="rl" data-t="Volver arriba"><span>Volver arriba</span></span> ↑</a></div>
 </div></footer><div class="sp"><button class="sp-b" type="button" aria-expanded="false" aria-controls="sp-panel"><svg class="sp-ic" width="15" height="15" viewBox="0 0 24 24" aria-hidden="true" focusable="false" style="flex:none;fill:currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg><span class="sp-l">Resonancia</span><span class="vh">: abrir playlist de Spotify</span></button>
-<div class="sp-panel" id="sp-panel" hidden data-src="https://open.spotify.com/embed/playlist/6QJf0xYg1cFt41ECWoVEH4?theme=0"><div class="sp-h"><span>Playlist varix — Spotify</span><a href="https://open.spotify.com/playlist/6QJf0xYg1cFt41ECWoVEH4" target="_blank" rel="noopener">Abrir ↗<span class="vh"> (se abre en una pestaña nueva)</span></a></div><div class="sp-f"></div></div></div><script src="../../assets/site.js?v=5adb731ae1" defer></script></body></html>
+<div class="sp-panel" id="sp-panel" hidden data-src="https://open.spotify.com/embed/playlist/6QJf0xYg1cFt41ECWoVEH4?theme=0"><div class="sp-h"><span>Playlist varix — Spotify</span><a href="https://open.spotify.com/playlist/6QJf0xYg1cFt41ECWoVEH4" target="_blank" rel="noopener">Abrir ↗<span class="vh"> (se abre en una pestaña nueva)</span></a></div><div class="sp-f"></div></div></div><script src="../../assets/site.js?v=5adb731ae1" defer></script><script>
+/* Gabinete */
+const d=document,RM=matchMedia('(prefers-reduced-motion: reduce)').matches,FINE=matchMedia('(hover:hover) and (pointer:fine)').matches,IO='IntersectionObserver' in window,DPR=Math.min(devicePixelRatio||1,2);
+const $$=(s,r=d)=>[...r.querySelectorAll(s)];
+const once=(el,fn,o={})=>{if(!IO){fn();return}const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){io.disconnect();fn()}}),o);io.observe(el)};
+const watch=(el,fn,o={})=>{if(!IO){fn(true);return}new IntersectionObserver(es=>fn(es[0].isIntersecting),o).observe(el)};
+const ready=img=>img.complete&&img.naturalWidth?Promise.resolve():new Promise(r=>{img.addEventListener('load',r,{once:true});img.addEventListener('error',r,{once:true})});
+const GL='#$%&*+=?<>/\\0123456789';
+/* 1 · scramble de cifras y claves (dqnamo · Scramble Text) */
+const scramble=(el,txt,D)=>{if(RM){el.textContent=txt;return}const t0=performance.now();const f=now=>{const p=Math.min(1,(now-t0)/D);let o='';for(let i=0;i<txt.length;i++){const lock=(i+1)/txt.length*.75+.25;o+=p>=lock||txt[i]===' '?txt[i]:(/\d/.test(txt[i])?String(Math.random()*10|0):GL[Math.random()*GL.length|0])}el.textContent=o;if(p<1)requestAnimationFrame(f);else el.textContent=txt};requestAnimationFrame(f)};
+$$('.gC [data-scr]').forEach(el=>{const v=el.dataset.scr;el.setAttribute('aria-label',v);if(RM)return;el.textContent=v.replace(/\d/g,'0');once(el,()=>scramble(el,v,v.length>2?1400:1000),{rootMargin:'0px 0px -12% 0px'})});
+
+
+/* el campo: 771 puntos (los archivos de la criba) que toman la forma de cada parte */
+(()=>{const cv=d.getElementById('gc-cv');if(!cv)return;const x=cv.getContext('2d');if(!x)return;const lab=d.querySelector('.gc-ls');
+const N=771,P=[];let W=0,H=0,st=-1,sub=0,vis=true,raf=0,t0=performance.now();
+for(let i=0;i<N;i++){const r=Math.random;P.push({x:r(),y:r(),tx:r(),ty:r(),a:0,ta:.5,s:2.4,ts:2.4,u:r()*.5,rel:false,c:0,rx:r(),ry:r(),ph:r()*6.28})}
+const fit=()=>{const b=cv.getBoundingClientRect();W=b.width;H=b.height;cv.width=W*DPR;cv.height=H*DPR;x.setTransform(DPR,0,0,DPR,0,0)};
+const LBL=['Deriva','Sistema','Resultados · 6','Memoria · 15 · 49 · 6 · 33','Criba','Contrato · 7','Límites','Camino · 5','—'];
+const names=['Web','LinkedIn y currículum','Grado','Formación','Hoja de ruta','Rutinas'];
+const conN=['Objetivo','Formato','Herramientas','Límites','Esfuerzo','Responsable','Hecho cuando'];
+const pasN=['Encargo','Especificación','Vista previa','Visto bueno','Publicar'];
+const U=Math.min;let deco=null;
+const set=(s,sb=0)=>{if(s===st&&sb===sub)return;st=s;sub=sb;t0=performance.now();lab.textContent=s===4?['771 archivos','691 únicos','66 roles · 19 sectores'][sb]:LBL[s];deco=null;
+const asp=W/H;
+P.forEach((p,i)=>{p.c=0;p.ts=2.4;p.ta=.66;
+if(s===0){p.tx=p.rx;p.ty=p.ry;p.ta=.34}
+else if(s===1){const cols=33,rows=Math.ceil(N/cols);p.tx=.04+(i%cols)/(cols-1)*.92;p.ty=.08+Math.floor(i/cols)/(rows-1)*.84;p.ta=.62}
+else if(s===2){const k=i%6,cx=.2+(k%3)*.3,cy=.32+Math.floor(k/3)*.42,j=Math.floor(i/6),a=j*2.399,r=Math.sqrt(j/128)*.105;p.tx=cx+Math.cos(a)*r/asp;p.ty=cy+Math.sin(a)*r;p.ta=.6}
+else if(s===3){const cx=.5,cy=.5;if(i<15){const a=i/15*6.283-1.57;p.tx=cx+Math.cos(a)*.36/asp;p.ty=cy+Math.sin(a)*.36;p.ts=i<9?7:i<11?5:5;p.ta=1;p.c=i<9?0:i<11?2:3}else if(i<64){const a=(i-15)/49*6.283;p.tx=cx+Math.cos(a)*.22/asp;p.ty=cy+Math.sin(a)*.22;p.ts=2.2;p.ta=.85}else if(i<64+33){const a=-2.2+(i-64)/32*1.4;p.tx=cx+Math.cos(a)*.46/asp;p.ty=cy+Math.sin(a)*.46;p.ts=2;p.ta=.7}else{p.tx=cx+(p.rx-.5)*.08/asp;p.ty=cy+(p.ry-.5)*.08;p.ta=.08}}
+else if(s===4){const cols=33;const gx=.04+(i%cols)/(cols-1)*.5,gy=.1+Math.floor(i/cols)/23*.8;p.tx=gx;p.ty=gy;p.ta=.55;
+ if(sb>=1&&i%10===3&&i<800){p.ta=.06}
+ if(sb>=2){if(i<66){const sec=i%19,row=Math.floor(i/19);p.tx=.62+sec/18*.34;p.ty=.6-row*.075;p.ts=4;p.ta=1;p.c=1}else p.ta=p.ta>.1?.16:.04}}
+else if(s===5){const r=i%7,k=Math.floor(i/7),n=Math.ceil(N/7);p.tx=.26+k/n*.7;p.ty=.1+r*.13;p.ta=.5}
+else if(s===6){const bx=.62;p.tx=.04+p.rx*(bx-.06);p.ty=.06+p.ry*.88;p.ta=.5}
+else if(s===7){p.ta=.6}
+else if(s===8){const a=p.ph,r=.008+p.rx*.02;p.tx=.5+Math.cos(a)*r/asp;p.ty=.5+Math.sin(a)*r;p.ta=.8;if(i===0){p.ts=5}}
+if(RM){p.x=p.tx;p.y=p.ty;p.a=p.ta;p.s=p.ts}});kick()};
+const nodeX=k=>.08+k*.21;
+const draw=now=>{raf=0;x.clearRect(0,0,W,H);const t=(now-t0)/1000;const el=RM?1:Math.min(1,t/1.4);
+x.font='10px "JetBrains Mono",ui-monospace,monospace';x.textBaseline='middle';
+/* guías finas por estado */
+x.strokeStyle='rgba(239,233,223,.14)';x.fillStyle='rgba(239,233,223,.55)';x.lineWidth=1;
+if(st===2){for(let k=0;k<6;k++){const cx=(.2+(k%3)*.3)*W,cy=(.32+Math.floor(k/3)*.42)*H,r=.13*H+6,s=8;x.beginPath();[[-1,-1],[1,-1],[1,1],[-1,1]].forEach(([a,b])=>{const px=cx+a*r,py=cy+b*r;x.moveTo(px,py-b*s);x.lineTo(px,py);x.lineTo(px-a*s,py)});x.stroke();x.fillText(`${String(k+1).padStart(2,'0')} ${names[k]}`,cx-r,cy-r-10)}}
+if(st===3){x.fillText('15',W*.5+.36*H+12,H*.5);x.fillText('49',W*.5+.22*H+10,H*.5+14);x.fillText('33',W*.5+Math.cos(-2.2)*.46*H-24,H*.5+Math.sin(-2.2)*.46*H);for(let k=0;k<6;k++){const a=k/6*6.283+.3;x.beginPath();x.moveTo(W*.5,H*.5);x.lineTo(W*.5+Math.cos(a)*.3*H,H*.5+Math.sin(a)*.3*H);x.stroke()}x.fillText('6',W*.5+Math.cos(.3)*.3*H+6,H*.5+Math.sin(.3)*.3*H)}
+if(st===4&&sub>=2){x.fillText('19',.62*W,.67*H)}
+if(st===5){for(let r=0;r<7;r++){x.fillText(`${String(r+1).padStart(2,'0')} ${conN[r]}`,0,(.1+r*.13)*H)}}
+if(st===6){x.strokeStyle='rgba(239,233,223,.7)';x.beginPath();x.moveTo(.62*W,.04*H);x.lineTo(.62*W,.96*H);x.stroke()}
+if(st===7){x.strokeStyle='rgba(239,233,223,.2)';x.beginPath();x.moveTo(nodeX(0)*W,.5*H);x.lineTo(nodeX(4)*W,.5*H);x.stroke();for(let k=0;k<5;k++){x.beginPath();x.arc(nodeX(k)*W,.5*H,k===3?7:5,0,6.283);x.fillStyle=k===3?'#ff5b2e':'#0a0a0a';x.fill();x.strokeStyle=k===3?'#ff5b2e':'rgba(239,233,223,.8)';x.stroke();x.fillStyle=k===3?'#ff5b2e':'rgba(239,233,223,.6)';x.textAlign=k===4?'right':'left';x.fillText(`${String(k+1).padStart(2,'0')} ${pasN[k]}`,nodeX(k)*W+(k===4?8:-8),.5*H+(k%2?-34:34));x.textAlign='left'}}
+const flow=st===7;const T=now/1000;const open=(T%3.2)<.45;
+for(let i=0;i<N;i++){const p=P[i];
+ if(flow&&!RM){/* cola: avanzan hasta el visto bueno, esperan y salen por tandas */const q=(nodeX(3)-nodeX(0))/(nodeX(4)-nodeX(0));p.u+=(.0012+p.rx*.0012)*(p.rel||p.u<q-.01?1:0);if(!p.rel&&p.u>=q-.01){p.u=q-.01;if(open)p.rel=true}if(p.u>=1){p.u=0;p.rel=false}const back=!p.rel&&p.u>=q-.011?(p.ph/6.283)*.09:0;p.tx=nodeX(0)+(p.u-back)*(nodeX(4)-nodeX(0));p.ty=.5+(p.ry-.5)*.12}
+ else if(flow){p.tx=U(nodeX(0)+p.rx*(nodeX(3)-nodeX(0)-.02),nodeX(3)-.015);p.ty=.5+(p.ry-.5)*.06}
+ const k=flow?.12:el*.09+.02;p.x+=(p.tx-p.x)*(RM?1:k);p.y+=(p.ty-p.y)*(RM?1:k);p.a+=(p.ta-p.a)*(RM?1:.06);p.s+=(p.ts-p.s)*(RM?1:.08);
+ let px=p.x*W,py=p.y*H;if(st===0&&!RM){px+=Math.sin(T*.4+p.ph)*6;py+=Math.cos(T*.33+p.ph)*6}
+ x.globalAlpha=Math.max(0,Math.min(1,p.a));
+ if(p.c===3){x.strokeStyle='#efe9df';x.beginPath();x.arc(px,py,p.s/2,0,6.283);x.stroke()}
+ else if(p.c===2){x.fillStyle='#efe9df';x.beginPath();x.arc(px,py,p.s/2,1.57,4.71);x.fill();x.strokeStyle='#efe9df';x.beginPath();x.arc(px,py,p.s/2,0,6.283);x.stroke()}
+ else if(p.ts>4){x.fillStyle=p.c===1?'#ff5b2e':'#efe9df';x.beginPath();x.arc(px,py,p.s/2,0,6.283);x.fill()}
+ else{x.fillStyle=p.c===1?'#ff5b2e':'#efe9df';x.fillRect(px-p.s/2,py-p.s/2,p.s,p.s)}}
+x.globalAlpha=1;
+if(st===8){x.strokeStyle='rgba(239,233,223,.35)';x.beginPath();x.arc(W*.5,H*.5,.08*H,0,6.283);x.stroke()}
+if(!RM&&vis)raf=requestAnimationFrame(draw)};
+const kick=()=>{if(!raf)raf=requestAnimationFrame(draw)};
+fit();set(0);addEventListener('resize',()=>{fit();const s=st,b=sub;st=-1;set(s,b)},{passive:true});
+watch(cv.parentNode,v=>{vis=v;if(v)kick()});
+/* qué parte se está leyendo */
+const steps=$$('.gc-st'),subs=$$('.gc-cb li');
+const pick=()=>{const mob=innerWidth<=900,line=mob?innerHeight*.62:innerHeight*.5;let cur=0;steps.forEach(s=>{if(s.getBoundingClientRect().top<line)cur=+s.dataset.st});let sb=0;if(cur===4)subs.forEach((l,i)=>{if(l.getBoundingClientRect().top<line)sb=i});set(cur,sb)};
+addEventListener('scroll',()=>requestAnimationFrame(pick),{passive:true});pick();
+})();
+</script>
+</body></html>
